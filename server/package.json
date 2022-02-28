@@ -2,12 +2,19 @@
   "name": "server",
   "version": "1.0.0",
   "description": "server side json file",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"  
+    "dev": "nodemon server.js"
   },
   "author": "Jack, Michelle, Helena, Jihye and Nesh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.3",
+    "method-override": "^3.0.0"
+  },
+  "private": true
 }

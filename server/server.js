@@ -14,6 +14,9 @@ const app = express();
 /* ==== Configuration ==== */
 const config = require("@sapling/config")
 
+// connect to the MongoDB
+require("./config/database");
+
 /* ==== Middleware ==== */
 
 

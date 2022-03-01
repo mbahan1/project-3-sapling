@@ -11,7 +11,8 @@ const postSchema = new Schema(
         title: {type: String, required: true},
         body: {type: String, required: true},
         date: {type: Date}, 
-        comments: [commentSchema]
+        comments: [commentSchema],
+        user: { type: Schema.Types.ObjectId, ref: "User" }
     }, 
     {
         timestamps: true
@@ -19,4 +20,4 @@ const postSchema = new Schema(
 )
 
 module.exports = mongoose.model("Post", postSchema)
-module.exports = mongoose.model("Comment", commentSchema);
+// module.exports = mongoose.model("Comment", commentSchema);

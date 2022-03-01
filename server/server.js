@@ -12,6 +12,7 @@ const cors = require("cors");
 
 /* ==== Instanced Modules  ==== */
 const app = express();
+const routes = require("./routes")
 
 
 /* ==== Configuration ==== */
@@ -23,12 +24,15 @@ require("./config/database");
 /* ==== Middleware ==== */
 app.use(cors());
 app.use(express.static(path.join("build")));
-
-//Required for parsing JSON
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 /* ====  Routes & Controllers  ==== */
+app.use("/api", routes)
 
+app.all("/api/*", (req, res, next) =>{
+	res.send("THESE ARE NOT THE APIS YOU ARE LOOKING FOR")
+})
 
 /* ====  Server Listener  ==== */
 app.listen(config.PORT, () => {

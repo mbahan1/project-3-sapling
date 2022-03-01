@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const Post = require("./Post");
 const Schema = mongoose.Schema;
 
 
@@ -33,8 +32,8 @@ const userSchema = new Schema({
    pronouns: {type: String},
    zodiacSign: {type: String, required: true},
    horoscopeApi: {type: String}, //type depends on what API we choose
-   posts: [Post],
-   comments: [Comment],
+   posts: [{ type: Schema.Types.ObjectId, ref: "Post" }],
+   comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
 });
 const User = mongoose.model("User", userSchema);
 

@@ -55,7 +55,7 @@ const create = async (req, res) => {
 const update = async (req, res) => {
 
     try {
-        const foundUser = await db.User.findById(req.userId)
+        const foundUser = await db.User.findById(req.params.id)
         const updatedUser = await db.User.findByIdAndUpdate(
             {_id : foundUser._id},
             req.body,

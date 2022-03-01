@@ -1,4 +1,5 @@
 const db = require("../models")
+const bcrypt = require("bcryptjs");
 
 // Index
 const index = (req, res) => {
@@ -35,10 +36,13 @@ const show = async (req, res) => {
 // Create
 const create = async (req, res) => {
 
-	const user = new db.User(req.body)
-	const createdUser = await user.save();
-
 	try {
+        const salt = await bcrypt.genSalt(10);
+        const hash = await bcrypt.hash(req.body.password, salt)
+
+        const user = new db.User(req.body);
+        user.password = hash
+        const createdUser = await user.save();
 		return res.status(201).json({
 			message: "Created",
 			data: createdUser

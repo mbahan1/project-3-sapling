@@ -1,7 +1,10 @@
-require("dotenv").config({path: "../.env"})
+const path = require("path");
+require("dotenv").config({path: "../.env"});
 
 /* ==== External Modules ==== */
 const express = require("express");
+//Required for method override
+const cors = require("cors");
 
 
 /* ==== Internal Modules ==== */
@@ -18,6 +21,10 @@ const config = require("@sapling/config")
 require("./config/database");
 
 /* ==== Middleware ==== */
+app.use(cors());
+app.use(express.static(path.join("build")));
+
+//Required for parsing JSON
 app.use(express.json());
 
 /* ====  Routes & Controllers  ==== */

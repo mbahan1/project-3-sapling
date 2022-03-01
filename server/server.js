@@ -18,7 +18,7 @@ const config = require("@sapling/config")
 require("./config/database");
 
 /* ==== Middleware ==== */
-
+app.use(express.json());
 
 /* ====  Routes & Controllers  ==== */
 

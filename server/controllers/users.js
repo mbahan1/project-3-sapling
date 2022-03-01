@@ -20,7 +20,7 @@ const index = (req, res) => {
 const show = async (req, res) => {
 
     try {
-        const foundUser = await db.User.findById(req.params.id)
+        const foundUser = await db.User.findById(req.params.id).populate("posts")
         return res.status(200).json({
             message: "Success",
             data: foundUser

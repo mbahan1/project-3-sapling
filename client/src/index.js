@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import ReactDOM from "react-dom";
 import './index.css';
 import Horoscope from "./components/Horoscope";
+import Kudos from "./components/Kudos";
 
 
 
@@ -31,6 +32,7 @@ function App(){
       <div>
         <Horoscope apiHoroscopeData={apiHoroscopeData} />
         <button onClick={ getHoroscopeData()}>Daily Horoscope </button>
+        <Kudos />
       </div>
     );
 

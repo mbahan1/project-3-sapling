@@ -23,7 +23,7 @@ const userSchema = new Schema({
    password: {
        type: String, 
        required: true,
-       //specifies default path selection behavior aka false excludes "password" from query results by default
+       //specifies default path selection behavior
        select: false
    },
    //google oauth
@@ -33,7 +33,7 @@ const userSchema = new Schema({
    pronouns: {type: String},
    zodiacSign: {type: String, required: true},
    horoscopeApi: {type: String}, //type depends on what API we choose
-   posts: [Post], //change to manifest?
+   posts: [Post],
    comments: [Comment]
 });
 const User = mongoose.model("User", userSchema);

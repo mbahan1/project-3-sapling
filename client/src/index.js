@@ -1,17 +1,49 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {useEffect, useState} from "react";
+import ReactDOM from "react-dom";
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Horoscope from "./components/Horoscope";
+
+
+
+// horoscope Api
+const fetchHoroscopeUrl = `https://aztro.sameerkumar.website/?sign=aries&day=today`;
+
+
+// state variable
+function App(){
+  const [apiHoroscopeData, setApiHoroscopeData] = useState([]);
+
+  useEffect(() => {
+    getHoroscopeData();
+  },[]);
+
+
+  
+  const getHoroscopeData =() =>{
+    (async()=> {
+      const responseHoroscope = await fetch(fetchHoroscopeUrl);
+      const incomingHoroscopeData = await responseHoroscope.json();
+      setApiHoroscopeData(incomingHoroscopeData);
+    })();
+  }
+
+    return (
+      <div>
+        <Horoscope apiHoroscopeData={apiHoroscopeData} />
+        <button onClick={ getHoroscopeData()}>Daily Horoscope </button>
+      </div>
+    );
+
+  } 
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+		<React.StrictMode>
+			<App />
+		</React.StrictMode>,
+	document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  
+  

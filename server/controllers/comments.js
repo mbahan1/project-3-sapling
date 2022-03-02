@@ -39,24 +39,27 @@ const create = (req, res) => {
 }
 
 //Update
-
-// not working, need to be fixed
 const update =  (req, res) => {
-    // db.Post.findOneAndUpdate(
-    //     { "comments._id" : req.params.comment_id},
-    //     { "comments.$" : req.body},
-    //     { new: true },
-    //     (err, updatedPost) => {
-    //         if (err) return res.status(400).json({
-    //             message: "Failure",
-    //             error: err
-    //         })
-    //         return res.status(200).json({
-    //             message: "Success",
-    //             data: updatedPost,
-    //         })
-    //     }
-    // )
+    console.log(req.body)
+    db.Post.findOneAndUpdate(
+        {_id: req.params.id, "comments._id": req.params.commentid},
+        { 
+            $set: {
+            "comments.$.body" : req.body.body}
+        },
+        {new: true},
+        (err, updatedPost) => {
+            if (err) return res.status(400).json({
+                message: "Failure",
+                error: err
+            })
+            console.log(updatedPost)
+            return res.status(200).json({
+                message: "Success",
+                data: updatedPost,
+            })
+        }
+    )
 }
 
 //Delete

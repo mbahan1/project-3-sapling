@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Post from "../../components/Post";
+import Kudos from "../../components/Kudos"
 //import Welcome from "../../components/Welcome";
 //import NavBar from "../../components/NavBar";
 //import ProfilePage from "../../pages/ProfilePage";
@@ -43,6 +44,7 @@ const MainFeed = () => {
 								/>	
 							);
 						})};
+						<Kudos />
 					</>
 					}
 				></Route>

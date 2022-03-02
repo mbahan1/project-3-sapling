@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 
 
 import '../../index.css';
+import NavBar from '../../components/NavBar';
 
 
 // const fetchFortuneCookieUrl = `http://fortunecookieapi.herokuapp.com/v1/cookie`;
@@ -31,13 +32,16 @@ function Home() {
       // console.log(fortuneCookie)
 
     })
-	}
+	};
 
   return (
-		<div className="main">
+    
+    <div className="main">
+     <NavBar />
      <h3>{fortuneCookie}</h3>
        <button onClick={getNewFortuneCookie}>Fortune Cookie!</button>
      </div>
+
 	);
 
 }

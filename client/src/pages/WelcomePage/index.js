@@ -1,9 +1,9 @@
 // Welcome Page contains
 // LoginForm Component
 // Manifest app description Component
-// Link to RegisterPage
+// Link to SignUp Page
 
-import LoginForm from "../../components/LoginForm"
+import LoginForm from "../../components/LoginForm";
 
 export default function WelcomePage() {
     return (

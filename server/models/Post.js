@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const commentSchema = new Schema({
     body: {type: String, required: true},
     date: {type: Date}, 
+    user: { type: Schema.Types.ObjectId, ref: "User" }
 })
 
 const postSchema = new Schema(
@@ -12,7 +13,8 @@ const postSchema = new Schema(
         body: {type: String, required: true},
         date: {type: Date}, 
         comments: [commentSchema],
-        user: { type: Schema.Types.ObjectId, ref: "User" }
+        user: { type: Schema.Types.ObjectId, ref: "User" },
+        kudos: { type: Number, default: 0}
     }, 
     {
         timestamps: true
@@ -20,4 +22,3 @@ const postSchema = new Schema(
 )
 
 module.exports = mongoose.model("Post", postSchema)
-// module.exports = mongoose.model("Comment", commentSchema);

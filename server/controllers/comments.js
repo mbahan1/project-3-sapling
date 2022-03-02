@@ -22,6 +22,7 @@ const create = (req, res) => {
             message: "Failure",
             error: err
         })
+        // embedded Comment in Post (add comment to comments array in Post)
         const createdComment = foundPost.comments.create(req.body)
         foundPost.comments.push(createdComment)
         foundPost.save((err)=> {
@@ -30,9 +31,18 @@ const create = (req, res) => {
                 error: err
             })
         })
+        // ref User (add comment to comments array in ref User)
+        db.User.findById(createdComment.user._id, (err, foundUser) => {
+            if (err) return res.status(400).json({
+                message: "Failure",
+                error: err
+            })
+            foundUser.comments.push(createdComment);
+            foundUser.save()
+        })
         console.log(createdComment, "Created Comment")
         return res.status(201).json({
-            message: "Created",
+            message: "Comment Created",
             data: createdComment
         })
     })
@@ -40,7 +50,6 @@ const create = (req, res) => {
 
 //Update
 const update =  (req, res) => {
-    console.log(req.body)
     db.Post.findOneAndUpdate(
         {_id: req.params.id, "comments._id": req.params.commentid},
         { 
@@ -55,7 +64,7 @@ const update =  (req, res) => {
             })
             console.log(updatedPost)
             return res.status(200).json({
-                message: "Success",
+                message: "Comment Updated",
                 data: updatedPost,
             })
         }
@@ -69,6 +78,7 @@ const destroy = (req, res) => {
             message: "Failure",
             error: err
         })
+        // embedded Comment in Post (delete the comment from Post comments array)
         const deletedComment = foundPost.comments.id(req.params.id)
         foundPost.comments.remove(deletedComment);
         foundPost.save((err) => {
@@ -77,8 +87,19 @@ const destroy = (req, res) => {
                 error: err
             })
         })
+        // ref User (delete the comment from comments array in ref User)
+        if(deletedComment.user) {
+            db.User.findById(deletedComment.user, (err, foundUser) => {
+                if (err) return res.status(400).json({
+                    message: "Failure",
+                    error: err
+                })
+                foundUser.comments.remove(deletedComment);
+                foundUser.save()
+            })
+        }
         return res.status(200).json({
-            message: "Success",
+            message: "Comment Deleted",
             data: deletedComment,
         })
     })

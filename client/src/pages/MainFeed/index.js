@@ -1,5 +1,5 @@
-import React from "react";
-//import Post from "../../components/Post";
+import { useState, useEffect} from "react";
+import Post from "../../components/Post";
 //import Welcome from "../../components/Welcome";
 //import NavBar from "../../components/NavBar";
 //import ProfilePage from "../../pages/ProfilePage";

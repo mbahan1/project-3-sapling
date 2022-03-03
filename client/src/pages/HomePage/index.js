@@ -8,7 +8,7 @@ import Quote from "../../components/Quote";
 
 // const fetchFortuneCookieUrl = `http://fortunecookieapi.herokuapp.com/v1/cookie`;
 
-function Home() {
+export default function Home() {
 
   return (
     

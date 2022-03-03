@@ -1,0 +1,12 @@
+.signUpFormComponent {
+    width: 500px;
+}
+
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.signUpForm-input {
+    margin: 5px;
+}

@@ -3,15 +3,19 @@ import React, {useState, useEffect} from "react";
 
 import '../../index.css';
 import NavBar from '../../components/NavBar';
-import Advice from "../../components/Advice";
+import Quote from "../../components/Quote";
 
-export default function HomePage(){
+
+// const fetchFortuneCookieUrl = `http://fortunecookieapi.herokuapp.com/v1/cookie`;
+
+function Home() {
+
   return (
-    <div>
-        <div>
-          <NavBar/>
-          <Advice />
-        </div>  
+    
+    <div className="main">
+     <NavBar />
+     <Quote />
+
     </div>
 
 )

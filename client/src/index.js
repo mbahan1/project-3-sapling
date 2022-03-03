@@ -10,10 +10,12 @@ import {BrowserRouter} from "react-router-dom"
 ReactDOM.render(
   <BrowserRouter>
 		<React.StrictMode>
+
       {/* moved <Home /> to App.js
 			<Home /> */}
       <App />
 		</React.StrictMode>
     </BrowserRouter>,
+
 	document.getElementById("root")
 );

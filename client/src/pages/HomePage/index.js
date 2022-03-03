@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from "react";
-// import FortuneCookie from "../components/FortuneCookie";
+import React, {useState, useEffect} from "react";
 
 
 import '../../index.css';
@@ -16,11 +15,12 @@ function Home() {
     <div className="main">
      <NavBar />
      <Quote />
+
     </div>
 
-	);
+)
 
 }
 
-export default Home;
+ 
 

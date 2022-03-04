@@ -1,5 +1,5 @@
 .loginFormComponent {
-    width: 500px;
+    width: 250px;
 }
 
 .loginForm {
@@ -8,5 +8,13 @@
 }
 
 .loginForm-input {
-    margin: 5px;
+    margin: 5px 0px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+}
+
+.linkToSignUp {
+    display: flex;
+    justify-content: space-around;
 }

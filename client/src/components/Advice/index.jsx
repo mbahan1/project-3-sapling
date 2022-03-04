@@ -30,7 +30,7 @@ const Advice = () => {
                 <p>{quotes}</p>
             </div>
             <div>
-                <button onClick={getNewQuote}>Daily Advice</button>
+                <button onClick={getQuote}>Daily Advice</button>
             </div>   
         </div>
 

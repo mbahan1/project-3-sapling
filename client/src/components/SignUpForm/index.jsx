@@ -30,7 +30,7 @@ export default function SignUpForm() {
     return(
         <div className="signUpFormComponent">
             <form className="signUpForm">
-                <label htmlFor="firtName">First Name</label>
+                <label htmlFor="firstName">First Name</label>
                 <input 
                     className="signUpForm-input"
                     onChange={(e)=> setFirstName(e.target.value)}
@@ -68,19 +68,24 @@ export default function SignUpForm() {
                     placeholder="Password"
                 />
 
-                <label htmlFor="zodiacSign">Zodiac Sign</label>
-                <input 
-                    className="signUpForm-input"
-                    onChange={(e)=> setZodiacSign(e.target.value)}
-                    value={zodiacSign}
-                    type="text"
-                    name="zodiacSign"
-                    placeholder="Zodiac Sign"
-                />
-
+                <label htmlFor="zodiacSign">Select Zodiac Sign</label>
                 <select className="signUpForm-input">
-                    <option>Select Zodiac Sign</option>
+                    <option>- - -</option>
+                    <option value="aries">Aries</option>
+                    <option value="taurus">Taurus</option>
+                    <option value="gemini">Gemini</option>
+                    <option value="cancer">Cancer</option>
+                    <option value="leo">Leo</option>
+                    <option value="virgo">Virgo</option>
+                    <option value="libra">Libra</option>
+                    <option value="scorpio">Scorpio</option>
+                    <option value="sagittarius">Sagittarius</option>
+                    <option value="capricorn">Capricorn</option>
+                    <option value="aquarius">Aquarius</option>
+                    <option value="pisces">Pisces</option>
                 </select>
+
+                
                 <button 
                     className="signUpBtn signUpForm-input" 
                     onClick={handleSubmit}

@@ -1,8 +1,9 @@
 import {useState} from "react";
 import {ThemeProvider} from "styled-components";
-import { lightTheme, darkTheme, GlobalStyles } from "./themes.js";
+import { lightTheme, darkTheme, GlobalStyles } from "./themes";
 import './App.css';
-import {Switch} from "antd";
+// import {Switch} from "antd";
+import Toggle from "./components/ToggleButton";
 
 
 
@@ -18,9 +19,9 @@ function ToggleButton() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme }>
       <GlobalStyles />
-      <Switch onClick={() => themeToggler()}/>
+      <Toggle onClick={() => themeToggler()}/>
         Change the Color
-      </ThemeProvider>
+    </ThemeProvider>
   );
 
 }

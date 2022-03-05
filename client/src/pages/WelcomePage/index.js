@@ -10,6 +10,7 @@ export default function WelcomePage() {
         <div>
             <h3>[WELCOME PAGE]</h3>
             <LoginForm />
+           
         </div>
     )
 }

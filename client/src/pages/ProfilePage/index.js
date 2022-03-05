@@ -1,28 +1,26 @@
-import userEvent from "@testing-library/user-event";
 import React, {useState } from "react";
+// import PostForm from "../../components/PostForm";
+import NavBar from "../../components/NavBar";
+// import Post from "../../components/Post";
+import Quote from "../../components/Quote";
 
 
 const ProfilePage = () => {
     const [user, setUser] = useState("");
-    
-    const [comments, setComments] = useState([]);
     const [images, setImages] = useState();
 
+return(
+    <div>
+        <NavBar />
+        <Quote />
 
+        {/* <PostForm/> */}
+    </div>
+)
 }
 
-//    function Profile(){
 
-//             this.state={
-//                 user_id:this.props.user_id,
-//                 username:this.props.username,
-//                 email:this.props.email,
-//                 profileImage:this.props.profileImage,
-//                 msg:this.props.msg,
-//                 uploadedFile:null
-//          }
-    
-        
+
         
         export default ProfilePage;
   

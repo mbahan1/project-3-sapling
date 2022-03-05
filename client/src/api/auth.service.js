@@ -3,7 +3,7 @@ import tellSaplingTo from "./axios.config";
 const auth = "/auth"
 const users = "/users"
 
-const register = (data) => {
+const create = (data) => {
     return tellSaplingTo
         .post(`${auth}/register`, data)
         .then((res)=> {
@@ -40,4 +40,4 @@ const logout = () => {
     localStorage.removeItem("user")
 }
 
-export {register, login, currentUser, getProfile, logout}
+export {create, login, currentUser, getProfile, logout}

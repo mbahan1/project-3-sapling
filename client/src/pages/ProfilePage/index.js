@@ -1,4 +1,15 @@
+import userEvent from "@testing-library/user-event";
+import React, {useState } from "react";
 
+
+const ProfilePage = () => {
+    const [user, setUser] = useState("");
+    
+    const [comments, setComments] = useState([]);
+    const [images, setImages] = useState();
+
+
+}
 
 //    function Profile(){
 
@@ -13,6 +24,6 @@
     
         
         
-//         export default Profile;
+        export default ProfilePage;
   
     

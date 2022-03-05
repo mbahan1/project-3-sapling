@@ -5,6 +5,7 @@ import Quote from "../../components/Quote";
 
 
 
+
 export default function Home() {
 
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <div className="main">
      <NavBar />
      <Quote />
+  
 
     </div>
 

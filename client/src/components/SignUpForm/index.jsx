@@ -12,9 +12,10 @@ export default function SignUpForm() {
     const [zodiacSign, setZodiacSign] = useState("");
     const [successMsg, setSuccessMsg] = useState("");
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         let newUser = {firstName, lastName, email, password, zodiacSign};
-        let res = await authService.create(newUser).then(() => {
+        let res = await authService.register(newUser).then(() => {
             setFirstName("");
             setLastName("");
             setEmail("");

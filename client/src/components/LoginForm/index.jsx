@@ -8,9 +8,9 @@ export default function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        await authService.register(email, password).then(()=> {
+        await authService.login(email, password).then(()=> {
             setEmail("")
             setPassword("")
         })
@@ -49,6 +49,5 @@ export default function LoginForm() {
                 <Link to="signup">Sign up</Link>
             </div>
         </div>
-        )
-    }
+    )
 }

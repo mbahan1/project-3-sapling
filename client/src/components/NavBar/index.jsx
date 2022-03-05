@@ -17,7 +17,10 @@ export default function NavBar() {
                     style={({ isActive }) => 
                     ({ color: isActive ? 'purple' : 'blue' })}
                     >My Profile Page</NavLink>
-        <div className='navbar__item'>Main Feed</div>       
+      <NavLink to="/MainFeed" className='navbar__item'
+                    style={({ isActive }) => 
+                    ({ color: isActive ? 'purple' : 'blue' })}
+                    >Main Feed</NavLink>                    
     </header>
     </>
   );

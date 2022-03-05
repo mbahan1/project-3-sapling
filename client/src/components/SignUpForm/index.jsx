@@ -9,9 +9,11 @@ export default function SignUpForm() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [zodiacSign, setZodiacSign] = useState("")
+    const [zodiacSign, setZodiacSign] = useState("");
+    const [successMsg, setSuccessMsg] = useState("");
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault(e);
         let newUser = {firstName, lastName, email, password, zodiacSign};
         let res = await userService.create(newUser).then(() => {
             setFirstName("");
@@ -20,6 +22,7 @@ export default function SignUpForm() {
             setPassword("");
             setZodiacSign("");
             console.log(newUser);
+            setSuccessMsg(`Welcome ${firstName} :)`)
         })
 
         console.log(res);
@@ -86,6 +89,8 @@ export default function SignUpForm() {
                     onClick={handleSubmit}
                 > Sign Up
                 </button>
+                <h1>{successMsg}</h1>
+
             </form>
 
         </div>

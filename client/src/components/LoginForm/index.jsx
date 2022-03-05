@@ -2,14 +2,20 @@
 
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import "./styles.css"
+import "./styles.css";
+import * as authService from "../../api/auth.service";
 
 export default function LoginForm() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await authService.login(email, password).then(() => {
+            setEmail("")
+            setPassword("")
+        })
 
     }
 

@@ -1,6 +1,7 @@
 import tellSaplingTo from "./axios.config";
 
 const auth = "/auth"
+const users = "/users"
 
 const register = (data) => {
 

@@ -4,7 +4,11 @@ const auth = "/auth"
 const users = "/users"
 
 const register = (data) => {
-
+    return tellSaplingTo
+        .post(`${auth}/register`, data)
+        .then((res)=> {
+            console.log(res)
+        });
 }
 
 const login = async (email, password) => {

@@ -8,12 +8,13 @@ export default function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
-    const handleSubmit = async (e) => {
+    const handleSubmit = async () => {
         e.preventDefault();
-        await authService.login(email, password).then(() => {
+        await authService.register(email, password).then(()=> {
             setEmail("")
             setPassword("")
         })
+    }
 
     return(
         <div className="loginFormComponent component">
@@ -35,7 +36,11 @@ export default function LoginForm() {
                     name="password"
                     placeholder="Password"
                 />
-                <button className="loginBtn loginForm-input" style={{backgroundColor: "blue", color:"white"}}onClick={handleSubmit}> Log In</button>
+                <button 
+                    className="loginBtn loginForm-input" 
+                    style={{backgroundColor: "blue", color:"white"}} 
+                    onClick={handleSubmit}
+                > Log In</button>
             </form>
 
             

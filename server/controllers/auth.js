@@ -29,7 +29,7 @@ const register = async(req, res) => {
     } catch (error){
         return res.status(500).json({
             status: 500,
-            message:
+            message: "try agagin"
         })
 
     }

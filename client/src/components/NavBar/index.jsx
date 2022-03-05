@@ -10,16 +10,16 @@ export default function NavBar() {
     <header className='navbar'>
       <NavLink to="/" className='navbar__home navbar__item'
                     style={({ isActive }) => 
-                    ({ color: isActive ? 'purple' : 'blue' })}
+                    ({ color: isActive ? 'white' : '#946ECA' })}
                     ><a href=" " className='logoHome'><img className="logo" src={saplingLogo} alt =""/></a></NavLink>
         {/* <ToggleButton /> */}
       <NavLink to="/Profile" className='navbar__item'
                     style={({ isActive }) => 
-                    ({ color: isActive ? 'purple' : 'blue' })}
+                    ({ color: isActive ? 'white' : '#946ECA' })}
                     >My Profile Page</NavLink>
       <NavLink to="/MainFeed" className='navbar__item'
                     style={({ isActive }) => 
-                    ({ color: isActive ? 'purple' : 'blue' })}
+                    ({ color: isActive ? 'white' : '#946ECA' })}
                     >Main Feed</NavLink>                    
     </header>
     </>

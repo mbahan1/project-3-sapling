@@ -2,10 +2,6 @@ body {
     margin: 0;
 }
 
-main {
-    margin: 16px;
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -13,11 +9,9 @@ main {
     color: #946ECA;
     font-family: Helvetica;
     font-weight: bolder;
-    text-shadow: 2px 2px 5px 5px 9px #535F2D;
-    color: #fff;
-    font-size: calc(1.125rem * 1);
-    line-height: 1;
     text-transform: uppercase;
+    border-bottom: 5px solid;
+    border-bottom-color: #946ECA;
 }
 
 .navbar__home {
@@ -40,3 +34,9 @@ img {
     border-radius: 10px;
     border-color:#946ECA;
 }
+
+.navbar .navbar__item  {
+    float: left;
+    position: relative;
+}
+

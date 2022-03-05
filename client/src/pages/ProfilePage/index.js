@@ -12,6 +12,9 @@ const ProfilePage = () => {
 return(
     <div>
         <Quote />
+        <div>
+            <h1>First NAme</h1>
+        </div>
 
         {/* <PostForm/> */}
     </div>

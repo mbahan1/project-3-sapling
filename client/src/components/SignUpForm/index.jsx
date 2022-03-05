@@ -1,6 +1,6 @@
 import "./styles.css"
 import {useState} from "react";
-import * as userService from "../../api/user.service";
+import * as authService from "../../api/auth.service";
 
 
 export default function SignUpForm() {
@@ -9,11 +9,12 @@ export default function SignUpForm() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [zodiacSign, setZodiacSign] = useState("")
+    const [zodiacSign, setZodiacSign] = useState("");
+    const [successMsg, setSuccessMsg] = useState("");
 
     const handleSubmit = async () => {
         let newUser = {firstName, lastName, email, password, zodiacSign};
-        let res = await userService.create(newUser).then(() => {
+        let res = await authService.create(newUser).then(() => {
             setFirstName("");
             setLastName("");
             setEmail("");
@@ -87,6 +88,7 @@ export default function SignUpForm() {
                 > Sign Up
                 </button>
             </form>
+            <h1>{successMsg}</h1>
 
         </div>
     )

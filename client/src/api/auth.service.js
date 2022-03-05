@@ -27,8 +27,12 @@ const currentUser = () => {
     return JSON.parse(user)
 }
 
+const getProfile = () => {
+    return tellSaplingTo.get(`${users}/profile`)
+}
+
 const logout = () => {
     localStorage.removeItem("user")
 }
 
-export {register, login, currentUser, logout}
+export {register, login, currentUser, getProfile, logout}

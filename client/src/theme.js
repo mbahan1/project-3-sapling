@@ -10,9 +10,14 @@ export const darkTheme = {
   fontColor: "#A1B182",
 };
 
+
+
 export const GlobalStyles = createGlobalStyle`
 	body {
 		background-color: ${({theme}) => theme.body};
     
 	}
+
 `;
+
+

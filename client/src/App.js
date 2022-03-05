@@ -9,6 +9,33 @@ import MainFeed from './pages/MainFeed';
 import NavBar from './components/NavBar';
 
 function App() {
+
+    // if (isLoggedIn) {
+    //     return (
+    //         <div className="App">
+    //             <NavBar />
+    //             <Routes>
+    //                 <Route path="/home" element={<HomePage/>}/>
+    //                 <Route path="/profile" element={<ProfilePage/>} />
+    //                 <Route path="/profile/edit" element={<ProfileEditPage/>} />
+    //                 <Route path="/posts" element={<MainFeed />}/>
+    //             </Routes>
+    //     </div>
+    //     );
+    // }
+    // else {
+    //     return (
+    //         <div className="App">
+    //             <NavBar />
+    //             <Routes>
+    //                 <Route path="/" element={<WelcomePage />}/>
+    //                 <Route path="/signup" element={<SignUpPage />}/>
+    //             </Routes>
+    //     </div>
+    //     );
+        
+    // }
+
     return (
         <div className="App">
             <NavBar />

@@ -15,27 +15,29 @@ export default function LoginForm() {
 
     return(
         <div className="loginFormComponent component">
-            <h4>[LoginForm Component]</h4>
+                            <h2>Start your manifestation journey here</h2>
             <form className="loginForm">
+                {/* <label htmlFor="email">Email</label> */}
                 <input className="loginForm-input"
-                    onChange={(e)=> e.target.value}
+                    onChange={(e)=> setEmail(e.target.value)}
                     value={email}
                     type="text"
                     name="email"
                     placeholder="email"
                 />
+                {/* <label htmlFor="password">Password</label> */}
                 <input className="loginForm-input"
-                    onChange={(e)=> e.target.value}
+                    onChange={(e)=> setPassword(e.target.value)}
                     value={password}
                     type="text"
                     name="password"
                     placeholder="Password"
                 />
-                <button className="loginBtn loginForm-input" onClick={handleSubmit}> Log In</button>
+                <button className="loginBtn loginForm-input" style={{backgroundColor: "blue", color:"white"}}onClick={handleSubmit}> Log In</button>
             </form>
 
             
-            <div>
+            <div className="linkToSignUp">
                 <span>Don't have an account?</span>
                 <Link to="signup">Sign up</Link>
             </div>

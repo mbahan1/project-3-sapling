@@ -1,0 +1,15 @@
+.welcomePage {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcomePageHeader {
+    background-image: url("https://c.tenor.com/XO0nQRb4xe8AAAAC/meditation-grogu.gif");
+    background-size:cover;
+    height: 500px;
+}
+
+.loginFormComponent {
+    margin-top: 10%;
+    margin-left: 60%;
+}

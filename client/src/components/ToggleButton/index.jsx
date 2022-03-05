@@ -7,7 +7,6 @@ import { lightTheme, darkTheme, GlobalStyles } from "../../theme";
 
 
 
-
 function Toggle() {
     const[theme, setTheme] = useState ('light');
 

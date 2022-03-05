@@ -1,12 +1,11 @@
-// Signup Page contains
-// SignUpForm Component
-
+import "./styles.css"
 import SignUpForm from "../../components/SignUpForm";
+
 
 export default function SignUpPage() {
     return (
-        <div>
-            <h3>[SIGNUP PAGE]</h3>
+        <div className="signUpPage">
+            <h3>Sign Up</h3>
             <SignUpForm />
         </div>
     )

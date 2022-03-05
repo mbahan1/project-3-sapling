@@ -6,12 +6,12 @@ import Toggle from "../../components/ToggleButton";
 
 
 
+
 export default function Home() {
 
   return (
     
     <div className="main">
-     <NavBar />
      <Quote />
      <Toggle />
 

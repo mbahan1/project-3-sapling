@@ -3,13 +3,17 @@
 // Manifest app description Component
 // Link to SignUp Page
 
+import AppDescription from "../../components/AppDescription";
 import LoginForm from "../../components/LoginForm";
+import "./styles.css"
 
 export default function WelcomePage() {
     return (
-        <div>
-            <h3>[WELCOME PAGE]</h3>
-            <LoginForm />
+        <div className="welcomePage">
+            <div className="welcomePageHeader">
+                <LoginForm />
+            </div>
+            <AppDescription />
         </div>
     )
 }

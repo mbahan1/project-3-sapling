@@ -11,6 +11,7 @@ function Profile(props) {
                     <h5>{props.user}</h5>
                     <h5>{props.comments}</h5>
                     <h5>{props.photo}</h5>
+                    
                 </div>
             </div>
         </div>

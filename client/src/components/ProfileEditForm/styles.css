@@ -1,0 +1,15 @@
+.profileEditFormComponent {
+    width: 500px;
+    margin: 100px;
+}
+
+.profileEditForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileEditForm-input {
+    margin: 5px 0px;
+    height: 30px;
+    border-radius: 2px;
+}

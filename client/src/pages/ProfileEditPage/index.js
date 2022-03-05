@@ -1,10 +1,11 @@
-import ProfileEditForm from "../../components/ProfileEditForm"
+import "./styles.css";
+import ProfileEditForm from "../../components/ProfileEditForm";
 
 export default function ProfileEditPage() {
     return(
-        <>
-        <h3>Edit Profile</h3>
-        <ProfileEditForm />
-        </>
+        <div className="profileEditPage">
+            <h3>Edit Profile</h3>
+            <ProfileEditForm />
+        </div>
     )
 }

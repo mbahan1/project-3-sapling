@@ -11,7 +11,6 @@ const ProfilePage = () => {
 
 return(
     <div>
-        <NavBar />
         <Quote />
 
         {/* <PostForm/> */}

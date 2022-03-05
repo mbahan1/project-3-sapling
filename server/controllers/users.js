@@ -18,9 +18,13 @@ const index = (req, res) => {
 
 // Show
 const show = async (req, res) => {
-
+    // req.params.id => req.userId
+    // After login setup, need to change id with(login user id)
+    // maybe same with destory function (delete user)
     try {
-        const foundUser = await db.User.findById(req.params.id).populate("posts")
+        // const foundUser = await db.User.findById(req.params.id).populate("posts")
+        //changing with logged in user
+        const foundUser = await db.User.findById(req.userId).populate("posts")
         return res.status(200).json({
             message: "Success",
             data: foundUser
@@ -44,7 +48,7 @@ const create = async (req, res) => {
         user.password = hash
         const createdUser = await user.save();
 		return res.status(201).json({
-			message: "Created",
+			message: "User Created",
 			data: createdUser
 		})
 	} catch(err) {
@@ -70,7 +74,7 @@ const update = async (req, res) => {
         )
         updatedUser.password = hash
         return res.status(201).json({ 
-            message: "SUCCESS!", 
+            message: "User Updated", 
             data: updatedUser
         })
     } catch(error) {
@@ -88,11 +92,18 @@ const destroy = (req, res) => {
         return res.status(400).json({
             message: "Failure",
             error: err
-        })        
-        return res.status(200).json({
-            message: "Success",
-            data: deletedUser
         })
+        // ref Post (delete all posts of deleted user from ref Post)
+        db.Post.deleteMany({ user: deletedUser._id}, (err, deltedPosts) => {
+            if (err) return res.status(400).json({
+                message: "Failure",
+                error: err
+            })
+        })
+        return res.status(200).json({
+            message: "User Deleted",
+            data: deletedUser
+        })    
     })
 }
 

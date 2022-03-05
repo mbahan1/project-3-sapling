@@ -13,7 +13,7 @@ const userSchema = new Schema({
        required: true,
        unique: true,
    },
-   //email as username?
+   //email as username
    email: {
        type: String,
        required: true,
@@ -22,13 +22,13 @@ const userSchema = new Schema({
    password: {
        type: String, 
        required: true,
-       //specifies default path selection behavior
+       minLength: 5, 
+       // password will not show up on a query search
        select: false
    },
-   //google oauth
-   googleId : {type: String},
    bio: {type: String}, //required?
    age: {type: Number},
+   hobbies : {type: String},
    pronouns: {type: String},
    zodiacSign: {type: String, required: true},
    horoscopeApi: {type: String}, //type depends on what API we choose

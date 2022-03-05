@@ -1,51 +1,21 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+// import Home from "./pages/HomePage";
 import './index.css';
-import Horoscope from "./components/Horoscope";
-import Kudos from "./components/Kudos";
-
-
-
-// horoscope Api
-const fetchHoroscopeUrl = `https://aztro.sameerkumar.website/?sign=aries&day=today`;
-
-
-// state variable
-function App(){
-  const [apiHoroscopeData, setApiHoroscopeData] = useState([]);
-
-  useEffect(() => {
-    getHoroscopeData();
-  },[]);
-
-
-  
-  const getHoroscopeData =() =>{
-    (async()=> {
-      const responseHoroscope = await fetch(fetchHoroscopeUrl);
-      const incomingHoroscopeData = await responseHoroscope.json();
-      setApiHoroscopeData(incomingHoroscopeData);
-    })();
-  }
-
-    return (
-      <div>
-        <Horoscope apiHoroscopeData={apiHoroscopeData} />
-        <button onClick={ getHoroscopeData()}>Daily Horoscope </button>
-        <Kudos />
-      </div>
-    );
-
-  } 
+import App from "./App"
+import {BrowserRouter} from "react-router-dom"
 
 
 
 ReactDOM.render(
+  <BrowserRouter>
 		<React.StrictMode>
-			<App />
-		</React.StrictMode>,
+
+      {/* moved <Home /> to App.js
+			<Home /> */}
+      <App />
+		</React.StrictMode>
+    </BrowserRouter>,
+
 	document.getElementById("root")
 );
-
-  
-  

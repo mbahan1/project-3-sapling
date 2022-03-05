@@ -39,6 +39,7 @@ const create = (req, res) => {
             message: "Failure",
             error: err 
         });
+        // ref User
         db.User.findById(createdPost.user)
             .exec((err, foundUser) => {
                 if (err) return res.status(400).json({
@@ -50,7 +51,7 @@ const create = (req, res) => {
             })
             console.log(createdPost, "Created Post");
             return res.status(201).json({
-                message: "Created",
+                message: "Post Created",
                 data: createdPost
             })
     })
@@ -70,7 +71,7 @@ const update = (req, res) => {
             })
             console.log(updatedPost, "Updated Post")
             return res.status(202).json({
-                message: "Success",
+                message: "Post Updated",
                 data: updatedPost,
             });
         }
@@ -84,13 +85,16 @@ const destroy = (req, res) => {
             message: "Failure",
             error :err
         })
-        db.User.findById(deletedPost.user, (err, foundUser) => {
-            foundUser.posts.remove(deletedPost)
-            foundUser.save()
-        })
+        // ref User (delete post from posts array in ref User)
+        if (deletedPost.user) {
+            db.User.findById(deletedPost.user, (err, foundUser) => {
+                foundUser.posts.remove(deletedPost)
+                foundUser.save()
+            })
+        }
         console.log(deletedPost , "Deleted Post");
         return res.status(200).json({
-            message: "Success",
+            message: "Post Deleted",
             data: deletedPost
         })
     })

@@ -1,0 +1,16 @@
+.signUpFormComponent {
+    width: 500px;
+    margin: 100px;
+}
+
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.signUpForm-input {
+    margin: 5px 0px ;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+}

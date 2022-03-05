@@ -13,5 +13,5 @@ code {
 }
 
 .component {
-  border: 1px solid black;
+  border: 1px dotted black;
 }

@@ -1,6 +1,6 @@
 import "./styles.css"
 import {useState} from "react";
-// import * as userService from "";
+import * as userService from "../../api/user.service";
 
 
 export default function SignUpForm() {
@@ -13,59 +13,71 @@ export default function SignUpForm() {
 
     const handleSubmit = async () => {
         let newUser = {firstName, lastName, email, password, zodiacSign};
-        // let res = await userService.create(newUser).then(() => {
-        //     setFirstName("");
-        //     setLastName("");
-        //     setEmail("");
-        //     setPassword("");
-        //     setZodiacSign("");
-        //     console.log(newUser);
-        // })
+        let res = await userService.create(newUser).then(() => {
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setPassword("");
+            setZodiacSign("");
+            console.log(newUser);
+        })
 
-        // console.log(res);
-        // if (!res === 201) {
-        //     alert(`ERROR code: ${res.status}`)
-        // }
+        console.log(res);
+        if (!res === 201) {
+            alert(`ERROR code: ${res.status}`)
+        }
     }
     return(
-        <div className="signUpFormComponent component">
-            <h4>[SignUp Component]</h4>
+        <div className="signUpFormComponent">
             <form className="signUpForm">
-                <input className="signUpForm-input"
-                    onChange={(e)=> e.target.value}
+                <label htmlFor="firtName">First Name</label>
+                <input 
+                    className="signUpForm-input"
+                    onChange={(e)=> setFirstName(e.target.value)}
                     value={firstName}
                     type="text"
                     name="firstName"
-                    placeholder="First Name"
+                    placeholder="First Name"  
                 />
-                <input className="signUpForm-input"
-                    onChange={(e)=> e.target.value}
+
+                <label htmlFor="lastName">Last Name</label>
+                <input 
+                    className="signUpForm-input"
+                    onChange={(e)=> setLastName(e.target.value)}
                     value={lastName}
                     type="text"
                     name="lastName"
                     placeholder="Last Name"
                 />
+
+                <label htmlFor="email">Email</label>
                 <input className="signUpForm-input"
-                    onChange={(e)=> e.target.value}
+                    onChange={(e)=> setEmail(e.target.value)}
                     value={email}
                     type="text"
                     name="email"
                     placeholder="email"
                 />
+
+                <label htmlFor="password">Password</label>
                 <input className="signUpForm-input"
-                    onChange={(e)=> e.target.value}
+                    onChange={(e)=> setPassword(e.target.value)}
                     value={password}
                     type="text"
                     name="password"
                     placeholder="Password"
                 />
-                <input className="signUpForm-input"
-                    onChange={(e)=> e.target.value}
+
+                <label htmlFor="zodiacSign">Zodiac Sign</label>
+                <input 
+                    className="signUpForm-input"
+                    onChange={(e)=> setZodiacSign(e.target.value)}
                     value={zodiacSign}
                     type="text"
                     name="zodiacSign"
                     placeholder="Zodiac Sign"
                 />
+
                 <select className="signUpForm-input">
                     <option>Select Zodiac Sign</option>
                 </select>

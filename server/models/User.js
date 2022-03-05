@@ -29,6 +29,7 @@ const userSchema = new Schema({
    googleId : {type: String},
    bio: {type: String}, //required?
    age: {type: Number},
+   hobbies : {type: String},
    pronouns: {type: String},
    zodiacSign: {type: String, required: true},
    horoscopeApi: {type: String}, //type depends on what API we choose

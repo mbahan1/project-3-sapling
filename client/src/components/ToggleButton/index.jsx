@@ -1,10 +1,6 @@
 import {useState} from "react";
 import {ThemeProvider} from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "../../theme";
-// import './App.css';
-// import {Switch} from "antd";
-// import { GlobalStyles } from "../../global";
-
 
 
 

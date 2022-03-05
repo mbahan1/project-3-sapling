@@ -21,6 +21,7 @@ export default function SignUpForm() {
             setPassword("");
             setZodiacSign("");
             console.log(newUser);
+            setSuccessMsg(`Welcome ${firstName} :)`);
         })
 
         console.log(res);

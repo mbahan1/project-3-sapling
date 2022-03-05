@@ -44,5 +44,6 @@ export default function LoginForm() {
                 <Link to="signup">Sign up</Link>
             </div>
         </div>
-    )
+        )
+    }
 }

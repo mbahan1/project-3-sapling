@@ -7,7 +7,6 @@ import { GlobalStyles } from "./global";
 
 
 
-
 function ToggleButton() {
     const[theme, setTheme] = useState ('light');
 

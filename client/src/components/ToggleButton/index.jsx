@@ -1,14 +1,14 @@
 import {useState} from "react";
 import {ThemeProvider} from "styled-components";
-import { lightTheme, darkTheme } from "./themes";
-import './App.css';
+import { lightTheme, darkTheme, GlobalStyles } from "../../theme";
+// import './App.css';
 // import {Switch} from "antd";
-import { GlobalStyles } from "./global";
+// import { GlobalStyles } from "../../global";
 
 
 
 
-function ToggleButton() {
+function Toggle() {
     const[theme, setTheme] = useState ('light');
 
     const themeToggler = () => {
@@ -30,4 +30,4 @@ function ToggleButton() {
 
 }
 
-export default ToggleButton;
+export default Toggle;

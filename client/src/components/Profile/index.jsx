@@ -1,27 +1,31 @@
-// import userEvent from "@testing-library/user-event";
-import { string } from "prop-types";
-import { array } from "prop-types";
 import React from "react";
+// import { string } from "prop-types";
+// import { array } from "prop-types";
+// import NavBar from "./components/NavBar";
+import Quote from "./components/Quote";
 
-function Profile(props) {
+
+const Profile = () => {
+    // const [user, setUser] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [Password, setPassword] = useState("");
+    // const [images, setImages] = useState();
     return (
-        <div>
+        
+            <div className="container">
             <div>
                 <div>
-                    <h5>{props.user}</h5>
-                    <h5>{props.comments}</h5>
-                    <h5>{props.photo}</h5>
+                    {/* <p>It's working</p>
+                    <h5>{user.firstName}</h5>
+                    <h5>{user.comments}</h5>
+                    <h5>{user.photo}</h5>
+                    <h5>{Quote}</h5> */}
                     
                 </div>
             </div>
         </div>
+        
     )
-}
-
-Profile.propTypes = {
-    photo: string.isRequired,
-    userName: string.isRequired,
-    comments: array,
 }
 
 

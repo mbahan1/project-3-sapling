@@ -18,8 +18,6 @@ return(
 )
 }
 
-
-
         
         export default ProfilePage;
   

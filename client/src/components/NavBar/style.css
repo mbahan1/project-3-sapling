@@ -9,7 +9,6 @@ main {
 .navbar {
     display: flex;
     align-items: center;
-    
     background: #A1B182;
     color: #946ECA;
     font-family: Helvetica;
@@ -17,14 +16,23 @@ main {
     text-shadow: 2px 2px 5px 5px 9px #535F2D;
 }
 
-.navbar__title {
+.navbar__home {
     margin-right: auto;
-    font-size: 200%;
     padding: 12px 16px;
+    size-adjust: 50px;
+    
 }
 
 .navbar__item {
     padding: 16px 16px;
     cursor: pointer;
     vertical-align: middle;
+    font-size: 200%
+}
+
+img {
+    max-width: 200px;
+    border: 10px solid;
+    border-radius: 10px;
+    border-color:#946ECA;
 }

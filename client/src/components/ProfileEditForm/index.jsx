@@ -25,7 +25,7 @@ export default function ProfileEditForm() {
         }
     }
     return(
-        <div className="profileEditFormComponent component">
+        <div className="profileEditFormComponent">
             <form className="profileEditForm">
                 <label htmlFor="firtName">First Name</label>
                 <input 

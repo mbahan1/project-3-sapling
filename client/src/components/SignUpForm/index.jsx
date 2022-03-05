@@ -28,8 +28,7 @@ export default function SignUpForm() {
         }
     }
     return(
-        <div className="signUpFormComponent component">
-            <h4>[SignUp Component]</h4>
+        <div className="signUpFormComponent">
             <form className="signUpForm">
                 <label htmlFor="firtName">First Name</label>
                 <input 

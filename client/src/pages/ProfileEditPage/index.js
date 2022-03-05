@@ -3,7 +3,7 @@ import ProfileEditForm from "../../components/ProfileEditForm";
 
 export default function ProfileEditPage() {
     return(
-        <div className="profilePage">
+        <div className="profileEditPage">
             <h3>Edit Profile</h3>
             <ProfileEditForm />
         </div>

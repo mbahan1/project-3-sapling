@@ -13,7 +13,9 @@ function Post(props) {
 			<div>
 				<p>{props.body}</p>
                 <p>{props.kudos}</p>
-                <p>{props.comments}</p>
+				<p>{props.comments.map(comment => (
+                        <p>{comment.body}</p>
+                ))}</p>
 			</div>
 			{/* <div>
 				<Kudos />

@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 // const db = require("../models") may need to put what is in database.js in config folder into the models index js
-const db = require("../config/database");
+const db = require("../models");
 
 
 

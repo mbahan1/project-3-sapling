@@ -17,6 +17,13 @@ export const GlobalStyles = createGlobalStyle`
 		background-color: ${({theme}) => theme.body};
     
 	}
+  small {
+    display: block;
+  }
+  button {
+    display: block;
+  }
+
 
 `;
 

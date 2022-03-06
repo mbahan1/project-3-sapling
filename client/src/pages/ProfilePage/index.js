@@ -1,6 +1,7 @@
 import PostForm from "../../components/PostForm";
 import Post from "../../components/Post";
 import Quote from "../../components/Quote";
+import ProfileEditForm from "../../components/ProfileEditForm";
 import {useEffect, useState} from "react";
 import * as authService from "../../api/auth.service";
 import "./styles.css";
@@ -11,6 +12,7 @@ export default function ProfilePage (props) {
     const refreshPosts= () => {
 
     }
+
 
     return(
         <div className="profilePage">
@@ -25,6 +27,32 @@ export default function ProfilePage (props) {
                 <div className="quote-section">
                     <Quote />
                 </div>
+                <div className="editProfile-box">
+                    <button>Edit Profile</button>
+                </div>
+                <div>
+                    <h5>UserName</h5>
+                </div>
+                    <div>
+                        <h4>daily Quote</h4>
+                    </div>
+                    <div>
+                        <h4>List of my Menefistations</h4>
+                    </div> 
+                    <div>
+                        <Quote />
+                    </div>
+                    <div>
+                        <PostForm />
+                    </div>  
+                    <div>
+                        <ProfileEditForm />  
+                    </div> 
+                    <div>
+                   
+                    </div>      
+            </div>
+        </div>
             </div>
                     
             <div className="post-section">
@@ -46,11 +74,8 @@ export default function ProfilePage (props) {
                     }).reverse()}
                 </div>
             </div>
-    
+
     </div>
-
-
-
 
     )
 }

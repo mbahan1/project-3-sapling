@@ -26,16 +26,13 @@ const MainFeed = () => {
 
 	return (
 		<div>
-			{/* <NavBar /> */}
-			<Routes>
-				<Route path="/" 
-					element={
-					<>
+			
 						{/* <PostForm refreshPosts={() =>fetchPosts()}/> */}
 						{posts.map((post) => {
 							return(
 								<Post 
 									title={post.title} 
+									id={post._id}
 									user={post.user} 
 									body={post.body} 
 									// kudos={post.kudos}
@@ -44,11 +41,8 @@ const MainFeed = () => {
 								/>	
 							);
 						})};
-					</>
-					}
-				></Route>
-                {/* <Route path="profile" element={<ProfilePage />}> </Route> */}
-			</Routes>
+				
+					
 		</div>
 	);
 }

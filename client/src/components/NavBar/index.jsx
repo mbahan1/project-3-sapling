@@ -11,9 +11,9 @@ export default function NavBar() {
       <NavLink to="/" className='navbar__home navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
-                    ><a href=" " className='logoHome'><img className="logo" src={saplingLogo} alt =""/></a></NavLink>
+                    ><img className="logo" src={saplingLogo} alt =""/></NavLink>
         {/* <ToggleButton /> */}
-      <NavLink to="/profile" className='navbar__item'
+      <NavLink to="/" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     >My Profile Page</NavLink>

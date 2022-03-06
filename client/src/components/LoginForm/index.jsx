@@ -14,7 +14,7 @@ export default function LoginForm() {
         await authService.login(email, password).then(()=> {
             setEmail("")
             setPassword("")
-            setSuccessMsg(`Hi, ${email}`);
+            setSuccessMsg("Welcome :)")
         })
     }
 

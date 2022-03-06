@@ -1,5 +1,6 @@
 import "./styles.css"
 import {useState} from "react";
+import { Link } from "react-router-dom";
 import * as authService from "../../api/auth.service";
 
 export default function SignUpForm() {
@@ -73,7 +74,7 @@ export default function SignUpForm() {
                 />
 
                 <label htmlFor="zodiacSign">Select Zodiac Sign</label>
-                <select className="signUpForm-input">
+                <select className="signUpForm-input" onChange={(e)=>setZodiacSign(e.target.value)}>
                     <option>- - -</option>
                     <option value="aries">♈ Aries</option>
                     <option value="taurus">♉ Taurus</option>
@@ -96,6 +97,10 @@ export default function SignUpForm() {
                 > Sign Up
                 </button>
             </form>
+            <div className="linkToSignUp">
+                <span>Have an account?</span>
+                <Link to="/">Log In</Link>
+            </div>
             <h1>{successMsg}</h1>
 
         </div>

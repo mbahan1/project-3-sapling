@@ -8,17 +8,19 @@ import "./styles.css";
 
 export default function ProfilePage () {
     
-    const [profile, setProfile] = useState("")
+    const [profile, setProfile] = useState("");
+    const [addPost, setAddPost] = useState(false);
 
     const fetchProfile = async () => {
         await authService.getProfile().then(res => {
             setProfile(res.data.data)
+            setAddPost((current)=> !current)
         })
     }
 
     useEffect(()=> {
         fetchProfile();
-    }, [])
+    }, [addPost])
 
     return(
         <div className="profilePage">
@@ -48,10 +50,10 @@ export default function ProfilePage () {
                                 user={post.user}
                                 comments={post.comments}
                                 kudo={post.kudos}
-                                key={post.id}
+                                key={post._id}
                             />
                         )
-                    })}
+                    }).reverse()}
                 </div>
             </div>
     

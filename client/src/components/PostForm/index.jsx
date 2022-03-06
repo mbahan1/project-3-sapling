@@ -6,7 +6,7 @@ const PostForm = (props) => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
 
-     const handleSubmit = async () => {
+    const handleSubmit = async () => {
         let newPost = { title, body, user:`${props.user}`}
         let res = await postService.create(newPost).then(() => {
             setTitle("");
@@ -14,7 +14,6 @@ const PostForm = (props) => {
             console.log(newPost);
         });
         
-        console.log(res)
         //201 = create error
         if(!res ===201) {
             alert(`ERROR! It was code: ${res.status}`);

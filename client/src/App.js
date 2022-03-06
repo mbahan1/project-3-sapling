@@ -28,31 +28,39 @@ function App() {
 
     // const [state, dispatch] = useReducer(reducer, initialState);
     // const {isLoggedIn} = state;
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [profile, setProfile] = useState("");
 
     const userActive = () => {
         if(authService.currentUser()) {
             // dispatch({type: "isLoggedIn", payload: true})
             setIsLoggedIn(true);
+            fetchProfile()
         } else {
             // dispatch({type: "isLoggedIn", payload: false})
             setIsLoggedIn(false);
         }
     }
 
-    useEffect(()=>{
-        userActive()
-    }, [])
+    const fetchProfile = async () => {
+        await authService.getProfile().then(res => {
+            setProfile(res.data.data)
+        })
+    }
+
+    useEffect(()=> {
+        userActive();
+    },[])
 
     if (isLoggedIn) {
         return (
             <div className="App">
-                <NavBar />
+                <NavBar firstName={profile.firstName}/>
                 <ToggleButton />
                 <Routes>
                     {/* <Route path="/" element={<HomePage/>}/> */}
-                    <Route path="/" element={<ProfilePage/>} />
-                    <Route path="profile/edit" element={<ProfileEditPage/>} />
+                    <Route path="/" element={<ProfilePage profile={profile}/>} />
+                    <Route path="profile/edit" element={<ProfileEditPage profile={profile}/>} />
                     <Route path="posts" element={<MainFeed />}/>
                 </Routes>
     

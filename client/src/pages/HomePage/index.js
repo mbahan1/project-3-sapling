@@ -13,7 +13,7 @@ export default function Home() {
     
     <div className="main">
      <Quote />
-     <ToggleButton />
+     {/* <ToggleButton /> */}
 
     </div>
 

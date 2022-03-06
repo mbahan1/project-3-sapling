@@ -1,6 +1,6 @@
 // Post Component
 import React from "react";
-import Kudos from "../Kudos";
+import Kudos from "../Kudos"
 import { string } from "prop-types";
 import { array } from "prop-types";
 import { number } from "prop-types";
@@ -17,9 +17,9 @@ function Post(props) {
                         <p>{comment.body}</p>
                 ))}</p>
 			</div>
-			{/* <div>
+			<div>
 				<Kudos />
-			</div> */}
+			</div>
 		</>
 	);
 }

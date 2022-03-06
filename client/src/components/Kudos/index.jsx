@@ -22,7 +22,7 @@ class Kudos extends Component {
 		return (
 			<div>
 				<button onClick={this.increaseKudos}>Give Kudos!</button>
-				<span>Kudos Count: {this.state.kudoCount}</span>
+				<span> Kudos Count: {this.state.kudoCount}</span>
 			</div>
 		);
 	}

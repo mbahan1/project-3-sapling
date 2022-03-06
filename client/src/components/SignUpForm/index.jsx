@@ -1,7 +1,7 @@
 import "./styles.css"
 import {useState} from "react";
+import { Link } from "react-router-dom";
 import * as authService from "../../api/auth.service";
-
 
 export default function SignUpForm() {
 
@@ -16,6 +16,7 @@ export default function SignUpForm() {
         e.preventDefault();
         let newUser = {firstName, lastName, email, password, zodiacSign};
         let res = await authService.register(newUser).then(() => {
+
             setFirstName("");
             setLastName("");
             setEmail("");
@@ -33,6 +34,7 @@ export default function SignUpForm() {
     return(
         <div className="signUpFormComponent">
             <form className="signUpForm">
+               
                 <label htmlFor="firstName">First Name</label>
                 <input 
                     className="signUpForm-input"
@@ -72,20 +74,20 @@ export default function SignUpForm() {
                 />
 
                 <label htmlFor="zodiacSign">Select Zodiac Sign</label>
-                <select className="signUpForm-input">
+                <select className="signUpForm-input" onChange={(e)=>setZodiacSign(e.target.value)}>
                     <option>- - -</option>
-                    <option value="aries">Aries</option>
-                    <option value="taurus">Taurus</option>
-                    <option value="gemini">Gemini</option>
-                    <option value="cancer">Cancer</option>
-                    <option value="leo">Leo</option>
-                    <option value="virgo">Virgo</option>
-                    <option value="libra">Libra</option>
-                    <option value="scorpio">Scorpio</option>
-                    <option value="sagittarius">Sagittarius</option>
-                    <option value="capricorn">Capricorn</option>
-                    <option value="aquarius">Aquarius</option>
-                    <option value="pisces">Pisces</option>
+                    <option value="aries">♈ Aries</option>
+                    <option value="taurus">♉ Taurus</option>
+                    <option value="gemini">♊ gemini</option>
+                    <option value="cancer">♋ Cancer</option>
+                    <option value="leo">♌ Leo</option>
+                    <option value="virgo">♍ Virgo</option>
+                    <option value="libra">♎ Libra</option>
+                    <option value="scorpio">♏ Scorpio</option>
+                    <option value="sagittarius">♏ Sagittarius</option>
+                    <option value="capricorn">♑ Capricorn</option>
+                    <option value="aquarius">♒ Aquarius</option>
+                    <option value="pisces">♓ Pisces</option>
                 </select>
 
                 
@@ -95,6 +97,10 @@ export default function SignUpForm() {
                 > Sign Up
                 </button>
             </form>
+            <div className="linkToSignUp">
+                <span>Have an account?</span>
+                <Link to="/">Log In</Link>
+            </div>
             <h1>{successMsg}</h1>
 
         </div>

@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {Link} from "react-router-dom";
+import {Link} from "react-router-dom"
 import * as authService from "../../api/auth.service";
 import "./styles.css";
 
@@ -7,12 +7,14 @@ export default function LoginForm() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [sucessMsg, setSuccessMsg] =useState("");
     
     const handleSubmit = async (e) => {
         e.preventDefault();
         await authService.login(email, password).then(()=> {
             setEmail("")
             setPassword("")
+            setSuccessMsg("Welcome :)")
         })
     }
 
@@ -48,6 +50,7 @@ export default function LoginForm() {
                 <span>Don't have an account?</span>
                 <Link to="signup">Sign up</Link>
             </div>
+            <h3>{sucessMsg}</h3>
         </div>
     )
 }

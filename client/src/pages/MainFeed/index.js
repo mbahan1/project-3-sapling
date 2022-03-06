@@ -3,13 +3,14 @@ import Post from "../../components/Post";
 //import Welcome from "../../components/Welcome";
 //import NavBar from "../../components/NavBar";
 //import ProfilePage from "../../pages/ProfilePage";
+import Kudos from "../../components/Kudos";
 import {Routes, Route} from 'react-router-dom';
 import * as postService from "../../api/post.service";
 
 
 const MainFeed = () => {
 
-	//use state and useeffect for our posts
+	// use state and useeffect for our posts
 	const [posts, setPosts] = useState([]);
 
 	const fetchPosts = async () => {
@@ -25,29 +26,23 @@ const MainFeed = () => {
 
 	return (
 		<div>
-			{/* <NavBar /> */}
-			<Routes>
-				<Route path="/" 
-					element={
-					<>
+			
 						{/* <PostForm refreshPosts={() =>fetchPosts()}/> */}
 						{posts.map((post) => {
 							return(
 								<Post 
 									title={post.title} 
+									id={post._id}
 									user={post.user} 
 									body={post.body} 
-									kudos={post.kudos} 
+									// kudos={post.kudos}
 									comments={post.comments}
 									key={post._id}
 								/>	
 							);
 						})};
-					</>
-					}
-				></Route>
-                {/* <Route path="profile" element={<ProfilePage />}> </Route> */}
-			</Routes>
+				
+					
 		</div>
 	);
 }

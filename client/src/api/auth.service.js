@@ -19,6 +19,7 @@ const login = async (email, password) => {
             console.log(res)
             if(res.data.token) {
                 localStorage.setItem("user", JSON.stringify(res.data.token))
+                localStorage.setItem("userId", res.data.userId)
             }
             return res.data.token
         })
@@ -33,7 +34,8 @@ const currentUser = () => {
 }
 
 const getProfile = () => {
-    return tellSaplingTo.get(`${users}/profile`)
+    let userId = localStorage.getItem("userId")
+    return tellSaplingTo.get(`${users}/${userId}`)
 }
 
 const logout = () => {

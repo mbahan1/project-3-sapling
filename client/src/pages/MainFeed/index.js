@@ -10,7 +10,7 @@ import * as postService from "../../api/post.service";
 
 const MainFeed = () => {
 
-	//use state and useeffect for our posts
+	// use state and useeffect for our posts
 	const [posts, setPosts] = useState([]);
 
 	const fetchPosts = async () => {

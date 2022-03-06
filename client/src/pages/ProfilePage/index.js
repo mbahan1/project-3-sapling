@@ -6,30 +6,20 @@ import * as authService from "../../api/auth.service";
 import "./styles.css";
 
 
-export default function ProfilePage () {
+export default function ProfilePage (props) {
     
-    const [profile, setProfile] = useState("");
-    const [addPost, setAddPost] = useState(false);
+    const refreshPosts= () => {
 
-    const fetchProfile = async () => {
-        await authService.getProfile().then(res => {
-            setProfile(res.data.data)
-            setAddPost((current)=> !current)
-        })
     }
-
-    useEffect(()=> {
-        fetchProfile();
-    }, [addPost])
 
     return(
         <div className="profilePage">
             <div className="profile-section">
                 <div className="profile">
                     <img style={{width:"100px", height:"100px", borderRadius:"40px"}} src="https://media.istockphoto.com/vectors/zodiac-signs-set-isolated-on-black-background-vector-id1072359684?k=20&m=1072359684&s=612x612&w=0&h=VzwNG9jsi2ovv5b7xKALnV-7FOjCnOKaf27qVl8GUrg="/>
-                    <h1>{profile.firstName} {profile.lastName}</h1>
-                    <p>{profile.email}</p>
-                    <p>{profile.zodiacSign}</p>
+                    <h1>{props.profile.firstName} {props.profile.lastName}</h1>
+                    <p>{props.profile.email}</p>
+                    <p>{props.profile.zodiacSign}</p>
                 </div>
                 
                 <div className="quote-section">
@@ -38,10 +28,10 @@ export default function ProfilePage () {
             </div>
                     
             <div className="post-section">
-                <PostForm user={profile._id}/>
+                <PostForm user={props.profile._id}/>
                 <div>
                     <h2>List of my Menefistations</h2>
-                    {profile.posts?.map((post) => {
+                    {props.profile.posts?.map((post) => {
                         return(
                             <Post 
                                 title={post.title}

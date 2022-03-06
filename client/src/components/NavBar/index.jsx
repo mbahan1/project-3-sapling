@@ -1,10 +1,10 @@
-import {NavLink, Link} from 'react-router-dom';
-// import {NavLink, Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import saplingLogo from '../../assets/saplingLogo.png';
 import '../NavBar/style.css';
 // import ToggleButton from "./components/ToggleButton";
 
-export default function NavBar() {
+export default function NavBar(props) {
+
     return(
     <>
     <header className='navbar'>
@@ -20,8 +20,10 @@ export default function NavBar() {
       <NavLink to="/posts" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
-                    >Main Feed</NavLink>                    
+                    >Main Feed</NavLink>    
+      {props.firstName? <h2>Hi, {props.firstName} </h2> : null}  
     </header>
+  
     </>
   );
 };

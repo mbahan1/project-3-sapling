@@ -4,7 +4,7 @@ import WelcomePage from './pages/WelcomePage';
 import SignUpPage from './pages/SignUpPage';
 import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
-import ProfileEditPage from './pages/ProfileEditPage';
+import ProfileEditForm from './components/ProfileEditForm';
 import MainFeed from './pages/MainFeed';
 import NavBar from './components/NavBar';
 
@@ -17,7 +17,7 @@ function App() {
                 <Route path="/signup" element={<SignUpPage />}/>
                 <Route path="/home" element={<HomePage/>}/>
                 <Route path="/profile" element={<ProfilePage/>} />
-                <Route path="/profile/edit" element={<ProfileEditPage/>} />
+                <Route path="/editProfile" element={<ProfileEditForm/>} />
                 <Route path="/posts" element={<MainFeed />}/>
             </Routes>
 

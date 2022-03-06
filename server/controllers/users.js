@@ -21,10 +21,10 @@ const show = async (req, res) => {
     // req.params.id => req.userId
     // After login setup, need to change id with(login user id)
     // maybe same with destory function (delete user)
+    // can't figure out how to get the profile with req.userId
+    // so use req.param.id
     try {
-        // const foundUser = await db.User.findById(req.params.id).populate("posts")
-        //changing with logged in user
-        const foundUser = await db.User.findById(req.userId).populate("posts")
+        const foundUser = await db.User.findById(req.params.id).populate("posts")
         return res.status(200).json({
             message: "Success",
             data: foundUser

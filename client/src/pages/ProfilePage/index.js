@@ -52,8 +52,7 @@ export default function ProfilePage (props) {
                    
                     </div>      
             </div>
-        </div>
-            </div>
+        
                     
             <div className="post-section">
                 <PostForm user={props.profile._id}/>
@@ -74,8 +73,7 @@ export default function ProfilePage (props) {
                     }).reverse()}
                 </div>
             </div>
-
-    </div>
+</div>
 
     )
 }

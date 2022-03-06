@@ -50,10 +50,10 @@ function App() {
                 <NavBar />
                 <ToggleButton />
                 <Routes>
-                    <Route path="/" element={<HomePage/>}/>
-                    <Route path="/profile" element={<ProfilePage/>} />
-                    <Route path="/profile/edit" element={<ProfileEditPage/>} />
-                    <Route path="/posts" element={<MainFeed />}/>
+                    {/* <Route path="/" element={<HomePage/>}/> */}
+                    <Route path="/" element={<ProfilePage/>} />
+                    <Route path="profile/edit" element={<ProfileEditPage/>} />
+                    <Route path="posts" element={<MainFeed />}/>
                 </Routes>
     
         </div>
@@ -62,7 +62,7 @@ function App() {
     } else {
         return (
             <div className="App">
-                <NavBar />
+                {/* <NavBar /> */}
                 <Routes>
                     <Route path="/" element={<WelcomePage />}/>
                     <Route path="/signup" element={<SignUpPage />}/>

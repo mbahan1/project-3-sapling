@@ -12,7 +12,6 @@ export default function ProfilePage () {
 
     const fetchProfile = async () => {
         await authService.getProfile().then(res => {
-            console.log(res.data.data);
             setProfile(res.data.data)
         })
     }
@@ -38,18 +37,22 @@ export default function ProfilePage () {
                     
             <div className="post-section">
                 <PostForm user={profile._id}/>
-                <h3>List of my Menefistations</h3>
-                {profile.posts?.map((post) => {
-                    return(
-                        <Post 
-                            title={post.title}
-                            body={post.body}
-                            comments={post.comments}
-                            kudo = {post.kudos}
-                            key={post._id}
-                        />
-                    )
-                })}
+                <div>
+                    <h2>List of my Menefistations</h2>
+                    {profile.posts?.map((post) => {
+                        return(
+                            <Post 
+                                title={post.title}
+                                body={post.body}
+                                id={post._id}
+                                user={post.user}
+                                comments={post.comments}
+                                kudo={post.kudos}
+                                key={post.id}
+                            />
+                        )
+                    })}
+                </div>
             </div>
     
     </div>

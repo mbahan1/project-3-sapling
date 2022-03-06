@@ -23,25 +23,24 @@ const PostForm = (props) => {
 
     return (
         <div className="container">
-            <form>
-                <label>
-                    Post Title:
-                    <input
-                        className = "text"
+            <form className="postForm">
+                <label>Post Title</label>
+                    <input 
+                        className="postForm-input"
                         onChange={(e) => setTitle(e.target.value)}
                         value={title}
                         type="text"
                         name="title"
                         placeholder="input title value target"
                     />
-                </label>
-                <label>
-                    What do you want to manifest today?
+
+                <label>What do you want to manifest today?</label>
                     <textarea 
+                        className="postForm-textarea"
                         onChange={(e) => setBody(e.target.value)}
                         value={body}
                         type="text" name= "body" placeholder="input body value target, homie" />                
-                </label>
+
             </form>
             <button onClick={handleSubmit}> Send it out to the world! </button>
         </div>

@@ -1,21 +1,35 @@
 // Post Component
-import React from "react";
-import Kudos from "../Kudos"
+import Kudos from "../Kudos";
 import { string } from "prop-types";
 import { array } from "prop-types";
 import { number } from "prop-types";
+import {useEffect, useState} from "react";
+import * as postService from "../../api/post.service";
 
 function Post(props) {
+
+	const [firstName, setFirstName] = useState("");
+
+	const getAuthor = async () => {
+		await postService.getOne(`${props.id}`).then((res) => {
+			setFirstName(res.data.data.user.firstName)
+		})
+	}
+
+	useEffect(()=> {
+		getAuthor()
+	}, [])
+
 	return (
 		<>
 			<h1>Title: {props.title}</h1>
-			<p>By: {props.user}</p>
+			<p>By: {firstName}</p>
 			<div>
 				<p>{props.body}</p>
                 <p>{props.kudos}</p>
-				<p>{props.comments.map(comment => (
-                        <p>{comment.body}</p>
-                ))}</p>
+				{props.comments.map(comment => (
+					<p key={comment._id}>{comment.body}</p>
+                ))}
 			</div>
 			<div>
 				<Kudos />
@@ -31,7 +45,7 @@ Post.propTypes = {
     // user: { type: Schema.Types.ObjectId, ref: "User" },
 	body: string.isRequired,
     comments: array,
-    kudos: number.isRequired,
+    kudos: number
 };
 
 export default Post;

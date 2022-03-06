@@ -17,7 +17,7 @@ export default function NavBar() {
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     >My Profile Page</NavLink>
-      <NavLink to="/MainFeed" className='navbar__item'
+      <NavLink to="/Posts" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     >Main Feed</NavLink>                    

@@ -2,15 +2,16 @@ import { useState } from "react";
 import { func } from "prop-types";
 import * as postService from "../../api/post.service";
 
-const PostForm = () => {
+const PostForm = (props) => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
 
      const handleSubmit = async () => {
-        let newPost = { title, body }
+        let newPost = { title, body, user:`${props.user}`}
         let res = await postService.create(newPost).then(() => {
             setTitle("");
-            setBody("");console.log(newPost);
+            setBody("");
+            console.log(newPost);
         });
         
         console.log(res)

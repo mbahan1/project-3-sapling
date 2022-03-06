@@ -1,0 +1,26 @@
+.profilePage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    border: 1px dotted black;
+}
+
+.quote-section {
+    max-width: 250px;
+    background-color: white;
+}
+
+.post-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}

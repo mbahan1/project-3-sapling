@@ -13,11 +13,11 @@ export default function NavBar() {
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     ><a href=" " className='logoHome'><img className="logo" src={saplingLogo} alt =""/></a></NavLink>
         {/* <ToggleButton /> */}
-      <NavLink to="/Profile" className='navbar__item'
+      <NavLink to="/profile" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     >My Profile Page</NavLink>
-      <NavLink to="/MainFeed" className='navbar__item'
+      <NavLink to="/posts" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     >Main Feed</NavLink>                    

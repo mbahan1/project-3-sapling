@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, {useEffect, useState } from "react";
 // import PostForm from "../../components/PostForm";
 import NavBar from "../../components/NavBar";
 // import Post from "../../components/Post";

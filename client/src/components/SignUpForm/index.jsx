@@ -2,9 +2,9 @@ import "./styles.css"
 import {useState} from "react";
 import * as authService from "../../api/auth.service";
 
-
 export default function SignUpForm() {
 
+    const [avatar, setAvatar] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -14,8 +14,9 @@ export default function SignUpForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let newUser = {firstName, lastName, email, password, zodiacSign};
+        let newUser = {avatar, firstName, lastName, email, password, zodiacSign};
         let res = await authService.register(newUser).then(() => {
+            setAvatar("");
             setFirstName("");
             setLastName("");
             setEmail("");
@@ -33,6 +34,25 @@ export default function SignUpForm() {
     return(
         <div className="signUpFormComponent">
             <form className="signUpForm">
+               <label htmlFor="avatar">Select an Avatar</label>
+               <select className="signUpForm-input">
+                    <option>- - -</option>
+                    <option value="aries">♈ Aries</option>
+                    <option value="taurus">♉ Taurus</option>
+                    <option value="gemini">♊ gemini</option>
+                    <option value="cancer">♋ Cancer</option>
+                    <option value="leo">♌ Leo</option>
+                    <option value="virgo">♍ Virgo</option>
+                    <option value="libra">♎ Libra</option>
+                    <option value="scorpio">♏ Scorpio</option>
+                    <option value="sagittarius">♏ Sagittarius</option>
+                    <option value="capricorn">♑ Capricorn</option>
+                    <option value="aquarius">♒ Aquarius</option>
+                    <option value="pisces">♓ Pisces</option>
+                </select>    
+
+     
+
                 <label htmlFor="firstName">First Name</label>
                 <input 
                     className="signUpForm-input"

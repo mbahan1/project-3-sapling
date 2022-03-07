@@ -1,5 +1,4 @@
 import {useState} from "react";
-import {Link } from "react-router-dom";
 import * as userService from "../../api/user.service";
 import "./styles.css";
 
@@ -9,20 +8,15 @@ export default function ProfileEditForm(props) {
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    // const [pronouns, SetPronouns] = useState("");
-    // const [age, setAge] = useState("");
-    // const [bio, setBio] = useState("");
-    // const [hobbies, setHobbies] = useState("");
+    const [pronouns, SetPronouns] = useState("");
+    const [age, setAge] = useState("");
+    const [bio, setBio] = useState("");
+    const [hobbies, setHobbies] = useState("");
     const [zodiacSign, setZodiacSign] = useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let updatedUser = {
-            firstName, 
-            lastName, 
-            // pronouns, 
-            // hobbies, 
-            zodiacSign};
+        let updatedUser = {firstName, lastName, pronouns, age, bio, hobbies, zodiacSign};
         let res = await userService.update(`${props.profile._id}`,updatedUser).then(() => {
             console.log(updatedUser);
             document.location = "/"
@@ -36,7 +30,7 @@ export default function ProfileEditForm(props) {
     return(
         <div className="profileEditFormComponent">
             <div> 
-                <h3>Edit Your Profile, {props.profile.firstName} </h3>
+                <h2>Edit Your Profile, {props.profile.firstName} </h2>
             </div>
             <form className="profileEditForm">
                 <label htmlFor="firtName">First Name</label>
@@ -59,45 +53,45 @@ export default function ProfileEditForm(props) {
                     placeholder="Last Name"
                 />
 
-                {/* <label htmlFor="email">Pronouns</label>
+                <label htmlFor="pronouns">Pronouns</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> SetPronouns(e.target.value)}
                     value={pronouns}
                     type="text"
-                    name="email"
-                    placeholder="email"
-                /> */}
+                    name="pronouns"
+                    placeholder="Pronouns"
+                />
 
-                {/* <label htmlFor="age">Age</label>
+                <label htmlFor="age">Age</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> setAge(e.target.value)}
                     value={age}
                     type="text"
-                    name="email"
-                    placeholder="email"
-                /> */}
+                    name="age"
+                    placeholder="Age"
+                />
 
-                {/* <label htmlFor="bio">Bio</label>
+                <label htmlFor="bio">Bio</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> setBio(e.target.value)}
                     value={bio}
                     type="text"
-                    name="email"
-                    placeholder="email"
-                /> */}
+                    name="bio"
+                    placeholder="Bio"
+                />
 
-                {/* <label htmlFor="hobbies">Hobbies</label>
+                <label htmlFor="hobbies">Hobbies</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> setHobbies(e.target.value)}
                     value={hobbies}
                     type="text"
-                    name="password"
-                    placeholder="Password"
-                /> */}
+                    name="hobbies"
+                    placeholder="Hobbies"
+                />
 
                 <label htmlFor="zodiacSign">Select Zodiac Sign</label>
                 <select className="signUpForm-input" onChange={(e)=>setZodiacSign(e.target.value)}>
@@ -115,7 +109,7 @@ export default function ProfileEditForm(props) {
                     <option value="aquarius">♒ Aquarius</option>
                     <option value="pisces">♓ Pisces</option>
                 </select>
-                <button 
+                <button className="profileEdit-submit"
                     onClick={handleSubmit}
                 > Update
                 </button>

@@ -1,6 +1,7 @@
 import { useState, useEffect} from "react";
 import Post from "../../components/Post";
 import * as postService from "../../api/post.service";
+import "./styles.css"
 
 const MainFeed = (props) => {
 
@@ -17,7 +18,7 @@ const MainFeed = (props) => {
 	},[]);
 
 	return (
-		<div>
+		<div className="mainfeed-page">
 
 			{posts.map((post) => {
 				return(

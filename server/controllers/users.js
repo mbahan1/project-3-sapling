@@ -63,8 +63,8 @@ const create = async (req, res) => {
 const update = async (req, res) => {
 
     try {
-        const salt = await bcrypt.genSalt(10);
-        const hash = await bcrypt.hash(req.body.password, salt)
+        // const salt = await bcrypt.genSalt(10);
+        // const hash = await bcrypt.hash(req.body.password, salt)
 
         const foundUser = await db.User.findById(req.params.id)
         const updatedUser = await db.User.findByIdAndUpdate(
@@ -72,7 +72,7 @@ const update = async (req, res) => {
             req.body,
             { new: true }
         )
-        updatedUser.password = hash
+        // updatedUser.password = hash
         return res.status(201).json({ 
             message: "User Updated", 
             data: updatedUser

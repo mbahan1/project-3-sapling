@@ -5,6 +5,7 @@
     border-radius: 5px;
     background-color: rgb(190, 186, 186);
     padding: 20px;
+    text-align: center;
   }
  
   .postForm-input {
@@ -14,6 +15,16 @@
       display: inline-block;
       box-sizing: border-box;
   }
+
+  .postForm-textarea {
+    width: 100%;
+    height: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
   .post-btn {
     width: 50%;
     background-color: #86b388;

@@ -1,7 +1,9 @@
-import {NavLink} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import saplingLogo from '../../assets/saplingLogo.png';
 import '../NavBar/style.css';
 // import ToggleButton from "./components/ToggleButton";
+import Logout from '../Logout';
+import ProfileEditForm from '../ProfileEditForm';
 
 export default function NavBar(props) {
 
@@ -20,8 +22,17 @@ export default function NavBar(props) {
       <NavLink to="/posts" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
-                    >Main Feed</NavLink>    
-      {props.firstName? <h2>Hi, {props.firstName} </h2> : null}  
+                    >Main Feed</NavLink> 
+      <div className="dropdown">
+        <div className='loginUserName dropBtn'>
+            <span>{props.firstName}</span> 
+            <span>{props.lastName}</span>
+        </div>
+        <div className="dropdown-content">
+          <Link to="profile/edit">Profile Edit</Link>
+          <Logout /> 
+        </div>
+      </div>
     </header>
   
     </>

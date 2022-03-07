@@ -40,6 +40,7 @@ const getProfile = () => {
 
 const logout = () => {
     localStorage.removeItem("user")
+    localStorage.removeItem("userId")
 }
 
 export {register, login, currentUser, getProfile, logout} 

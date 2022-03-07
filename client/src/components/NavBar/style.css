@@ -12,7 +12,6 @@ main {
     background: #A1B182;
     color: #946ECA;
     font-family: Helvetica;
-    font-weight: bolder;
     text-shadow: 2px 2px 5px 5px 9px #535F2D;
 }
 
@@ -20,6 +19,7 @@ main {
     margin-right: auto;
     padding: 12px 16px;
     size-adjust: 50px;
+    font-weight: bolder;
     
 }
 
@@ -27,12 +27,61 @@ main {
     padding: 16px 16px;
     cursor: pointer;
     vertical-align: middle;
-    font-size: 200%
+    font-size: 200%;
+    font-weight: bolder;
 }
 
 img {
-    max-width: 200px;
-    border: 10px solid;
-    border-radius: 10px;
+    max-width: 250px;
+    border: 8px solid;
+    border-radius: 8px;
     border-color:#946ECA;
+}
+
+.dropBtn {
+    padding: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    min-height: 60px;
+    box-shadow: 0px 1px 1px 0px gray;
+    border-radius: 2px;
+    z-index: 1;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0px;
+    text-decoration: none;
+    line-height: 200%;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {color: white; background-color: white;}
+
+.logoutBtn {
+    border: none;
+    font-size: 120%;
+    cursor: pointer;
+    background-color: white;
+    margin: auto auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 120%;
 }

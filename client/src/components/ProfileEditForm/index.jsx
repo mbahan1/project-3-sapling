@@ -1,5 +1,4 @@
 import {useState} from "react";
-import {Link } from "react-router-dom";
 import * as userService from "../../api/user.service";
 import "./styles.css";
 
@@ -54,7 +53,7 @@ export default function ProfileEditForm(props) {
                     placeholder="Last Name"
                 />
 
-                <label htmlFor="email">Pronouns</label>
+                <label htmlFor="pronouns">Pronouns</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> SetPronouns(e.target.value)}
@@ -112,7 +111,7 @@ export default function ProfileEditForm(props) {
                 </select>
                 <button className="profileEdit-submit"
                     onClick={handleSubmit}
-                > Submit
+                > Update
                 </button>
             </form>
 

@@ -18,6 +18,7 @@ export default function ProfilePage (props) {
     return(
         <div className="profilePage">
             <div className="profile-section">
+
                 <div className="profile">
                     <img alt={props.profile.zodiacSign} style={{width:"150px", height: "auto", borderRadius:"40px"}} 
                         src={`/signs/${props.profile.zodiacSign}.webp`}/>
@@ -28,7 +29,8 @@ export default function ProfilePage (props) {
                     <p>{props.profile.bio}</p>
                     <p>{props.profile.zodiacSign}</p>
                 </div>
-                <div className="editProfile-box">
+
+                <div>
                     <Link to="/profile/edit" style={{backgroundColor: "white"}}>Edit Profile</Link>
                 </div>
                 

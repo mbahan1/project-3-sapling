@@ -17,9 +17,14 @@ export default function Quote() {
 
     return (
     <div>
+        <div>
         <h3>Daily Quote</h3>
         <p>{quote}</p>
+        </div>
+        <div>
         <button onClick={getQuote}>Get New Quote</button>
+
+        </div>
     </div>
     )
        

@@ -21,8 +21,8 @@ const CommentForm = (props) => {
     };
 
     return (
-        <div className="container">
-            <form className="commentForm">
+        <div className="comment-container">
+            <form className="commentForm-input">
                 <label>Leave a comment</label>
                     <input 
                         className="commentForm-input"
@@ -33,7 +33,7 @@ const CommentForm = (props) => {
                         placeholder="Leave a comment"
                     />
             </form>
-            <button onClick={handleSubmit}>Post</button>
+            <button className="comment-btn" onClick={handleSubmit}>Post</button>
         </div>
     );
 };

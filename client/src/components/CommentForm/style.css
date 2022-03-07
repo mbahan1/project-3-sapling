@@ -1,5 +1,5 @@
 
- .post-container {
+.comment-container {
     display: flex;
     margin: 50px;
     border-radius: 5px;
@@ -14,7 +14,7 @@
       display: inline-block;
       box-sizing: border-box;
   }
-  .post-btn {
+  .comment-btn {
     width: 50%;
     background-color: #86b388;
     color: white;
@@ -30,4 +30,4 @@
     background-color: #86b388;
     color: white;
 
-  }
+  }  

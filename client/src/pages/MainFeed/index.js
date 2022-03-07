@@ -1,6 +1,7 @@
 import { useState, useEffect} from "react";
 import Post from "../../components/Post";
 import * as postService from "../../api/post.service";
+import "./style.css";
 
 const MainFeed = (props) => {
 
@@ -21,6 +22,7 @@ const MainFeed = (props) => {
 
 			{posts.map((post) => {
 				return(
+					<div>
 					<Post 
 						title={post.title} 
 						id={post._id}
@@ -32,6 +34,7 @@ const MainFeed = (props) => {
 						user={props.profile._id}
 						refreshPosts={() => fetchPosts()}
 					/>
+					</div>
 				);
 			})};
 

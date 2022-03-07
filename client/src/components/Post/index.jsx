@@ -23,7 +23,8 @@ function Post(props) {
 
 	return (
 		<>
-			<h1>Title: {props.title}</h1>
+		<div className="user-menifestation-lst">
+		<h1>Title: {props.title}</h1>
 			{firstName? <p>By: {firstName}</p>: null}
 			{/* <p>By: {firstName}</p> */}
 			<div>
@@ -33,6 +34,8 @@ function Post(props) {
                 ))}
                 {/* <p>{props.kudos}</p> */}
 			</div>
+
+		</div>
 			<div>
 				<Kudos kudos={props.kudos}/>
 			</div>

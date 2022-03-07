@@ -1,7 +1,7 @@
 import{createGlobalStyle}from"styled-components";
 
 export const lightTheme={
-  body: '#A1B182',
+  body: '#D9C4B3',
   fontColor: '#D9C4B3',
 };
 
@@ -27,17 +27,33 @@ export const GlobalStyles=createGlobalStyle`
     background-color: #D9C4B3;
 
   }
-  small {
-    display: block;
-  }
-  button {
-    display: block;
-    padding: 5px 5px;
-    border-radius: 15px;
-    cursor: pointer;
+
+
+  // small {
+  //   display: block;
+  // }
+  // button {
+  //   font-size: 10px;
+  //   letter-spacing: 2px;
+  //   font-weight: 200 !important;
+  //   background-color: #e63946ff;
+  //   color: #fff;
+  //   padding: 10px 15px;
+  //   margin: auto;
+  //   text-align: center;
+  //   display: inline-block !important;
+  //   text-decoration: none;
+  //   border: 0px;
+  //   width: max-content;
+  //   cursor: pointer;
+  //   transition: all 0.3s 0s ease-in-out;
   
 
+  // }
 
+  button:hover {
+    background-color: #4CAF50; 
+    color: white;
   }
 
 

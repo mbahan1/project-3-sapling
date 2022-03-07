@@ -13,7 +13,6 @@ import * as authService from "./api/auth.service";
 import ThemeButton from './components/ThemeButton';
 
 
-
 // const reducer = (prevState, action) => {
 //     switch(action.type) {
 //         case "setIsLoggedIn" :
@@ -58,6 +57,7 @@ function App() {
     if (isLoggedIn) {
         return (
             <div className="App">
+
                 <NavBar firstName={profile.firstName}/>
                 {/* <ToggleButton /> */}
                 <ThemeButton />

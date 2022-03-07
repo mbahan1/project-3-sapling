@@ -32,9 +32,13 @@ export default function ProfilePage (props) {
                 <div className="quote-section">
                     <Quote />
                 </div>
-                <div>
+                {/* <div className="editProfile-box">
+                    <button>Edit Profile</button>
+                </div> */}
+                {/* <div>
+
                     <h5>UserName</h5>
-                </div>
+                </div> */}
         </div>
           
                     

@@ -11,10 +11,12 @@ import "./styles.css"
 function Post(props) {
 
 	const [author, setAuthor] = useState("");
+	const [zodiacSign, setZodiacSign] = useState("");
 
 	const getAuthor = async () => {
 		await postService.getOne(`${props.id}`).then((res) => {
 			setAuthor(res.data.data.user.firstName)
+			setZodiacSign(res.data.data.user.zodiacSign)
 		})
 	}
 
@@ -24,6 +26,8 @@ function Post(props) {
 
 	return (
 		<div className="post-feed">
+    			<img alt={zodiacSign} style={{width:"75px", height: "auto", borderRadius:"30px"}} 
+                        src={`/signs/${zodiacSign}.webp`}/>
 		{(author&& (props.currentUser !== props.user ))? <h2>{author}</h2>: null}
 			<div className="post-content">
 				<h3 className="title">{props.title}</h3>
@@ -47,7 +51,6 @@ function Post(props) {
 					post={props.id} 
 					refreshPosts={() => {props.refreshPosts()} }
 				/>
-				
 			</div>
 		</div>
 	);

@@ -98,7 +98,7 @@ export default function ProfileEditForm(props) {
                     <option>- - -</option>
                     <option value="aries">♈ Aries</option>
                     <option value="taurus">♉ Taurus</option>
-                    <option value="gemini">♊ gemini</option>
+                    <option value="gemini">♊ Gemini</option>
                     <option value="cancer">♋ Cancer</option>
                     <option value="leo">♌ Leo</option>
                     <option value="virgo">♍ Virgo</option>

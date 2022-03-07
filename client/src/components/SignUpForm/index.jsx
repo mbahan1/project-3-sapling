@@ -38,7 +38,7 @@ export default function SignUpForm() {
         <div className="signUpFormComponent">
             
             <form className="signUpForm">
-            <h3>Sign Up</h3>
+            <h3 className='signUpHeader'>Sign up and start manifesting</h3>
                 <label htmlFor="firstName">First Name</label>
                 <input 
                     className="signUpForm-input"

@@ -9,7 +9,10 @@ import ProfileEditForm from './components/ProfileEditForm';
 import MainFeed from './pages/MainFeed';
 import NavBar from './components/NavBar';
 import * as authService from "./api/auth.service";
-import ToggleButton from './components/ToggleButton';
+// import ToggleButton from './components/ToggleButton';
+import ThemeButton from './components/ThemeButton';
+
+
 
 // const reducer = (prevState, action) => {
 //     switch(action.type) {
@@ -56,7 +59,8 @@ function App() {
         return (
             <div className="App">
                 <NavBar firstName={profile.firstName}/>
-                <ToggleButton />
+                {/* <ToggleButton /> */}
+                <ThemeButton />
                 <Routes>
                     {/* <Route path="/" element={<HomePage/>}/> */}
                     <Route path="/" element={<ProfilePage profile={profile}/>} />

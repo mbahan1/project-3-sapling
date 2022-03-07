@@ -21,7 +21,7 @@ export default function LoginForm() {
 
     return(
         <div className="loginFormComponent component">
-                            <h2>Start your manifestation journey here</h2>
+                            <h2 className="logInManifest">Start your manifestation journey here</h2>
             <form className="loginForm">
                 {/* <label htmlFor="email">Email</label> */}
                 <input className="loginForm-input"

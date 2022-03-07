@@ -3,6 +3,9 @@ import {useState} from "react";
 import { Link } from "react-router-dom";
 import * as authService from "../../api/auth.service";
 
+
+
+
 export default function SignUpForm() {
 
     const [firstName, setFirstName] = useState("");
@@ -34,8 +37,9 @@ export default function SignUpForm() {
     }
     return(
         <div className="signUpFormComponent">
+            
             <form className="signUpForm">
-               
+            <h3 className='signUpHeader'>Sign up and start manifesting</h3>
                 <label htmlFor="firstName">First Name</label>
                 <input 
                     className="signUpForm-input"
@@ -100,10 +104,12 @@ export default function SignUpForm() {
             </form>
             <div className="linkToSignUp">
                 <span>Have an account?</span>
+            <div className="logInLink">    
                 <Link to="/">Log In</Link>
+                </div>
             </div>
             <h1>{successMsg}</h1>
 
         </div>
     )
-}
+    }

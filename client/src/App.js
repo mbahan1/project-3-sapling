@@ -60,8 +60,10 @@ function App() {
                 <Routes>
                     {/* <Route path="/" element={<HomePage/>}/> */}
                     <Route path="/" element={<ProfilePage profile={profile}/>} />
-                    <Route path="/editProfile" element={<ProfileEditForm/>} />
-                    <Route path="posts" element={<MainFeed />}/>
+                    <Route path="profile/edit" element={<ProfileEditPage profile={profile}/>} />
+                    <Route path="posts" element={<MainFeed profile={profile}/>}/>
+//                     <Route path="/editProfile" element={<ProfileEditForm/>} />
+//                     <Route path="posts" element={<MainFeed />}/>
                 </Routes>
     
         </div>

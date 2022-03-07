@@ -12,6 +12,7 @@ const PostForm = (props) => {
             setTitle("");
             setBody("");
             console.log(newPost);
+            document.location = "/posts"
         });
         
         //201 = create error

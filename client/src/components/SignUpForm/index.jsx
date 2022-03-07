@@ -27,6 +27,7 @@ export default function SignUpForm() {
             setZodiacSign("");
             console.log(newUser);
             setSuccessMsg(`Welcome ${firstName} :)`);
+            document.location = "/"
         })
 
         console.log(res);

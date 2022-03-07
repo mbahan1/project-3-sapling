@@ -5,6 +5,11 @@ import '../NavBar/style.css';
 
 export default function NavBar(props) {
 
+    function logOut() {
+      localStorage.clear();
+      document.location = "/"
+    }
+
     return(
     <>
     <header className='navbar'>
@@ -23,7 +28,9 @@ export default function NavBar(props) {
                     >Main Feed</NavLink>    
       {props.firstName? <h2>Hi, {props.firstName} </h2> : null}  
     </header>
-  
+    <div>
+      <button onClick={logOut}>Log Out</button>
+    </div>
     </>
   );
 };

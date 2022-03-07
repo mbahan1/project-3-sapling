@@ -26,9 +26,13 @@ function Post(props) {
 
 	return (
 		<div className="post-feed">
-    			<img alt={zodiacSign} style={{width:"75px", height: "auto", borderRadius:"30px"}} 
+			{(author&& (props.currentUser !== props.user ))? (
+			<div className="post-author">
+			<img alt={zodiacSign} style={{width:"75px", height: "auto", borderRadius:"30px"}} 
                         src={`/signs/${zodiacSign}.webp`}/>
-		{(author&& (props.currentUser !== props.user ))? <h2>{author}</h2>: null}
+			<h2>{author}</h2>
+			</div>
+			): null}
 			<div className="post-content">
 				<h3 className="title">{props.title}</h3>
 				<p>{props.body}</p>	
@@ -47,7 +51,7 @@ function Post(props) {
 				</div>
 					<CommentForm 
 					className="commentForm"
-					user={props.currentUser} 
+					currentUser={props.currentUser} 
 					post={props.id} 
 					refreshPosts={() => {props.refreshPosts()} }
 				/>

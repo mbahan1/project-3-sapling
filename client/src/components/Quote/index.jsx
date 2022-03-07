@@ -19,7 +19,7 @@ export default function Quote() {
     <div>
         <h3>Daily Quote</h3>
         <p>{quote}</p>
-        <button onClick={getQuote}>Get New Quote</button>
+        <button onClick={getQuote} style={{"margin": "10px auto"}}>Get New Quote</button>
     </div>
     )
        

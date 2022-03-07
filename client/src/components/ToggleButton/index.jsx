@@ -19,6 +19,8 @@ return (
         <>
             <GlobalStyles />
             <button onClick={themeToggler}>Toggle Theme</button>
+
+		
         </>
       </ThemeProvider>
   );

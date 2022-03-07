@@ -112,7 +112,7 @@ export default function ProfileEditForm(props) {
                 </select>
                 <button 
                     onClick={handleSubmit}
-                > Submit
+                > Update
                 </button>
             </form>
 

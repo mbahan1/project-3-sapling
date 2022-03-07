@@ -25,10 +25,6 @@ export default function ProfilePage (props) {
                     <p>{props.profile.email}</p>
                     <p>{props.profile.zodiacSign}</p>
                 </div>
-                <div className="editProfile-box">
-                    <button>Edit Profile</button>
-                </div>
-                
                 <div className="quote-section">
                     <Quote />
                 </div>

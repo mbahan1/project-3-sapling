@@ -10,7 +10,7 @@ import MainFeed from './pages/MainFeed';
 import NavBar from './components/NavBar';
 import * as authService from "./api/auth.service";
 // import ToggleButton from './components/ToggleButton';
-import ThemeButton from './components/ThemeButton';
+// import ThemeButton from './components/ThemeButton';
 
 
 // const reducer = (prevState, action) => {
@@ -60,7 +60,7 @@ function App() {
 
                 <NavBar firstName={profile.firstName}/>
                 {/* <ToggleButton /> */}
-                <ThemeButton />
+                {/* <ThemeButton /> */}
                 <Routes>
                     {/* <Route path="/" element={<HomePage/>}/> */}
                     <Route path="/" element={<ProfilePage profile={profile}/>} />

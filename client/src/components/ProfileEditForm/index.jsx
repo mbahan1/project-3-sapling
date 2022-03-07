@@ -9,15 +9,20 @@ export default function ProfileEditForm(props) {
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [pronouns, SetPronouns] = useState("");
-    const [age, setAge] = useState("");
-    const [bio, setBio] = useState("");
-    const [hobbies, setHobbies] = useState("");
+    // const [pronouns, SetPronouns] = useState("");
+    // const [age, setAge] = useState("");
+    // const [bio, setBio] = useState("");
+    // const [hobbies, setHobbies] = useState("");
     const [zodiacSign, setZodiacSign] = useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let updatedUser = {firstName, lastName, pronouns, hobbies, zodiacSign};
+        let updatedUser = {
+            firstName, 
+            lastName, 
+            // pronouns, 
+            // hobbies, 
+            zodiacSign};
         let res = await userService.update(`${props.profile._id}`,updatedUser).then(() => {
             console.log(updatedUser);
             document.location = "/"
@@ -99,7 +104,7 @@ export default function ProfileEditForm(props) {
                     <option>- - -</option>
                     <option value="aries">♈ Aries</option>
                     <option value="taurus">♉ Taurus</option>
-                    <option value="gemini">♊ gemini</option>
+                    <option value="gemini">♊ Gemini</option>
                     <option value="cancer">♋ Cancer</option>
                     <option value="leo">♌ Leo</option>
                     <option value="virgo">♍ Virgo</option>

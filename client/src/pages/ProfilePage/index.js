@@ -19,24 +19,22 @@ export default function ProfilePage (props) {
         <div className="profilePage">
             <div className="profile-section">
 
-                <div className="profile">
-                    <img alt={props.profile.zodiacSign} style={{width:"150px", height: "auto", borderRadius:"40px"}} 
+            <img alt={props.profile.zodiacSign} style={{width:"150px", height: "auto", borderRadius:"40px"}} 
                         src={`/signs/${props.profile.zodiacSign}.webp`}/>
-                    <h1>{props.profile.firstName} {props.profile.lastName}</h1>
-                    <p>{props.profile.pronouns}</p>
-                    <p>{props.profile.age}</p>
-                    <p>{props.profile.hobbies}</p>
-                    <p>{props.profile.bio}</p>
-                    <p>{props.profile.zodiacSign}</p>
-                </div>
-
-                <div>
-                    <Link to="/profile/edit" style={{backgroundColor: "white"}}>Edit Profile</Link>
-                </div>
-                
-                <div className="quote-section">
-                    <Quote />
-                </div>
+            <h1>{props.profile.firstName} {props.profile.lastName}</h1>
+            <div className="profile">
+                <span>{props.profile.pronouns} </span>
+                <span>{props.profile.age}</span>
+                <p>{props.profile.zodiacSign}</p>
+                <p>{props.profile.hobbies}</p>
+                <p>{props.profile.bio}</p>
+            </div>
+            <div>
+                <Link to="/profile/edit"><button style={{"margin": "10px auto"}}>Edit Profile</button></Link>
+            </div>    
+            <div className="quote-section">
+                <Quote />
+            </div>
         </div>
           
                     

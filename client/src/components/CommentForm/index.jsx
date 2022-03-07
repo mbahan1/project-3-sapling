@@ -7,7 +7,7 @@ const CommentForm = (props) => {
     const [body, setBody] = useState("");
 
     const handleSubmit = async () => {
-        let newComment = { body, user:`${props.user}`}
+        let newComment = { body, user:`${props.currentUser}`}
         let res = await postService.createComment(`${props.post}`, newComment).then(() => {
             setBody("");
             props.refreshPosts();

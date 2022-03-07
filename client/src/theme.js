@@ -7,7 +7,8 @@ export const lightTheme={
 
 export const darkTheme={
   body: '#4B2E75',
-  fontColor: "#A1B182",
+  textColor: "#A1B182",
+  
 };
 
 
@@ -15,13 +16,28 @@ export const darkTheme={
 export const GlobalStyles=createGlobalStyle`
 	body {
 		background-color: ${({theme})=>theme.body};
+    text-color: ${({theme})=>theme.textColor};
     
 	}
+  .toggle-btn {
+    display: block;
+    padding: 5px 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #D9C4B3;
+
+  }
   small {
     display: block;
   }
   button {
     display: block;
+    padding: 5px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+  
+
+
   }
 
 

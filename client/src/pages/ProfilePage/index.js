@@ -34,7 +34,7 @@ export default function ProfilePage (props) {
                     <h5>UserName</h5>
                 </div>
         </div>
-           
+          
                     
             <div className="post-section">
                 <PostForm user={props.profile._id}/>
@@ -56,8 +56,6 @@ export default function ProfilePage (props) {
                 </div>
             </div>
         </div>
-
-
 
     )
 }

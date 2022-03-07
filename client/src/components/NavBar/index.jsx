@@ -1,7 +1,7 @@
 import {NavLink} from 'react-router-dom';
 import saplingLogo from '../../assets/saplingLogo.png';
 import '../NavBar/style.css';
-// import ToggleButton from "./components/ToggleButton";
+
 
 export default function NavBar(props) {
 
@@ -12,7 +12,7 @@ export default function NavBar(props) {
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     ><img className="logo" src={saplingLogo} alt =""/></NavLink>
-        {/* <ToggleButton /> */}
+        
       <NavLink to="/" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}

@@ -15,6 +15,7 @@ export default function LoginForm() {
             setEmail("")
             setPassword("")
             setSuccessMsg("Welcome :)")
+            document.location = "/"
         })
     }
 

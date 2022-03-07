@@ -14,13 +14,17 @@ const create = (data) => {
     return tellSaplingTo.post(`${posts}`, data)
 };
 
-const update = (id) => {
-    return tellSaplingTo.delete(`${posts}/${id}`)
+const update = (id, data) => {
+    return tellSaplingTo.put(`${posts}/${id}`, data)
 };
 
 const destory = (id) => {
     return tellSaplingTo.delete(`${posts}/${id}`)
 };
 
-export {getAll, getOne, create, update, destory}
+const createComment = (id, data) => {
+    return tellSaplingTo.post(`${posts}/${id}/comments`, data)
+}
+
+export {getAll, getOne, create, update, destory, createComment}
 

@@ -61,7 +61,7 @@ function App() {
                     {/* <Route path="/" element={<HomePage/>}/> */}
                     <Route path="/" element={<ProfilePage profile={profile}/>} />
                     <Route path="profile/edit" element={<ProfileEditPage profile={profile}/>} />
-                    <Route path="posts" element={<MainFeed />}/>
+                    <Route path="posts" element={<MainFeed profile={profile}/>}/>
                 </Routes>
     
         </div>

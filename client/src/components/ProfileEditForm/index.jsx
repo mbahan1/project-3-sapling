@@ -54,7 +54,7 @@ export default function ProfileEditForm(props) {
                     placeholder="Last Name"
                 />
 
-                <label htmlFor="email">Pronouns</label>
+                {/* <label htmlFor="email">Pronouns</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> SetPronouns(e.target.value)}
@@ -62,9 +62,9 @@ export default function ProfileEditForm(props) {
                     type="text"
                     name="email"
                     placeholder="email"
-                />
+                /> */}
 
-                <label htmlFor="age">Age</label>
+                {/* <label htmlFor="age">Age</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> setAge(e.target.value)}
@@ -72,9 +72,9 @@ export default function ProfileEditForm(props) {
                     type="text"
                     name="email"
                     placeholder="email"
-                />
+                /> */}
 
-                <label htmlFor="bio">Bio</label>
+                {/* <label htmlFor="bio">Bio</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> setBio(e.target.value)}
@@ -82,9 +82,9 @@ export default function ProfileEditForm(props) {
                     type="text"
                     name="email"
                     placeholder="email"
-                />
+                /> */}
 
-                <label htmlFor="hobbies">Hobbies</label>
+                {/* <label htmlFor="hobbies">Hobbies</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> setHobbies(e.target.value)}
@@ -92,7 +92,7 @@ export default function ProfileEditForm(props) {
                     type="text"
                     name="password"
                     placeholder="Password"
-                />
+                /> */}
 
                 <label htmlFor="zodiacSign">Select Zodiac Sign</label>
                 <select className="signUpForm-input" onChange={(e)=>setZodiacSign(e.target.value)}>

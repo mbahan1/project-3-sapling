@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Link } from "react-router-dom";
 import * as userService from "../../api/user.service";
 import "./styles.css";
 
@@ -27,6 +28,9 @@ export default function ProfileEditForm() {
     }
     return(
         <div className="profileEditFormComponent">
+            <div> 
+                <h3>Edit Your Profile </h3>
+            </div>
             <form className="profileEditForm">
                 <label htmlFor="firtName">First Name</label>
                 <input 
@@ -106,6 +110,11 @@ export default function ProfileEditForm() {
                 > Submit
                 </button>
             </form>
+
+            <div className="linkToEditForm">
+                <span>Edit Your Profile</span>
+                <Link to="editProfile">Edit Your Profile</Link>
+                </div>
 
         </div>
     )

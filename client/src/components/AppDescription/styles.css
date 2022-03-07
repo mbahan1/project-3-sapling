@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;900&family=Prata&family=Ubuntu&display=swap');
+ 
+.appDescriptionComponent {
+    /* background-color: #D9C4B3; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    
+
+}
+.manifestHeader {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top: 20px;
+
+    
+}
+.prounounce{
+    padding-left: 20px;
+}
+p {
+    padding-left: 20px;
+}
+.manifestation {
+    background-color: #ecdacb;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+    width: 50%;
+    border-radius: 2%;  
+    color: #2d3318;
+
+
+}
+
+.howTo {
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+    width: 50%;
+    /* height: 75%; */
+    border-radius: 2%;  
+    padding: 0px 0px 0px 10px;
+
+}
+
+.saplingFlower {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 45px;
+    border: none;
+    float: left;
+   
+
+    
+   
+}
+.energy {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
+    color: #946ECA;
+    padding-top: 20px;
+    /* float: right; */
+}
+.bottomText {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
+    color: #535F2D;
+    padding-top: 25px;
+
+    
+
+}
+
+
+
+

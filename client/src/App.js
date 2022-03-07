@@ -5,7 +5,7 @@ import WelcomePage from './pages/WelcomePage';
 import SignUpPage from './pages/SignUpPage';
 import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
-import ProfileEditPage from './pages/ProfileEditPage';
+import ProfileEditForm from './components/ProfileEditForm';
 import MainFeed from './pages/MainFeed';
 import NavBar from './components/NavBar';
 import * as authService from "./api/auth.service";
@@ -62,6 +62,8 @@ function App() {
                     <Route path="/" element={<ProfilePage profile={profile}/>} />
                     <Route path="profile/edit" element={<ProfileEditPage profile={profile}/>} />
                     <Route path="posts" element={<MainFeed profile={profile}/>}/>
+//                     <Route path="/editProfile" element={<ProfileEditForm/>} />
+//                     <Route path="posts" element={<MainFeed />}/>
                 </Routes>
     
         </div>
@@ -79,7 +81,6 @@ function App() {
             </div>
         );
     }
-    
 }
 
 export default App;

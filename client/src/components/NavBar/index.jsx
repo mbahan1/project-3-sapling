@@ -4,6 +4,7 @@ import '../NavBar/style.css';
 // import ToggleButton from "./components/ToggleButton";
 import Logout from '../Logout';
 import ProfileEditForm from '../ProfileEditForm';
+import ThemeButton from '../ThemeButton';
 
 
 export default function NavBar(props) {
@@ -15,7 +16,7 @@ export default function NavBar(props) {
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     ><img className="logo" src={saplingLogo} alt =""/></NavLink>
-        
+      <ThemeButton />
       <NavLink to="/" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}

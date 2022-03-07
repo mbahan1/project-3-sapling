@@ -12,8 +12,8 @@
 }
 
 .quote-section {
+    margin: 20px auto;
     max-width: 250px;
-    background-color: white;
 }
 
 .post-section {
@@ -22,5 +22,5 @@
     justify-content: space-evenly;
     text-align: center;
     width: 60%;
-    max-width: 600px;
+    max-width: 800px;
 }

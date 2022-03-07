@@ -6,14 +6,15 @@ import { number } from "prop-types";
 import {useEffect, useState} from "react";
 import * as postService from "../../api/post.service";
 import CommentForm from "../CommentForm";
+import "./styles.css"
 
 function Post(props) {
 
-	const [firstName, setFirstName] = useState("");
+	const [author, setAuthor] = useState("");
 
 	const getAuthor = async () => {
 		await postService.getOne(`${props.id}`).then((res) => {
-			setFirstName(res.data.data.user.firstName)
+			setAuthor(res.data.data.user.firstName)
 		})
 	}
 
@@ -22,26 +23,37 @@ function Post(props) {
 	}, [])
 
 	return (
-		<>
-			<h1>Title: {props.title}</h1>
-			{firstName? <p>By: {firstName}</p>: null}
-			{/* <p>By: {firstName}</p> */}
-			<div>
-				<p>{props.body}</p>
-				{props.comments.map(comment => (
-					<p key={comment._id}>{comment.body}</p>
-                ))}
-                {/* <p>{props.kudos}</p> */}
-			</div>
-			<div>
-				<Kudos kudos={props.kudos}/>
-			</div>
-				<CommentForm 
+		<div className="post-feed">
+		{(author&&props.comments)? <h2>{author}</h2>: null}
+			<div className="post-content">
+				<h3 className="title">Title: {props.title}</h3>
+				<p>{props.body}</p>	
+				<div>
+					<Kudos kudos={props.kudos}/>
+				</div>		
+
+				{/* <p>{props.kudos}</p> */}
+				<hr />
+				<div className="comments">
+					{props.comments? <h3 className="title">Comments</h3>: null }
+					{props.comments? (props.comments.map(comment => (
+						<>
+						<p key={comment._id}>{comment.body}</p>
+						</>
+					
+                ))):null}
+				</div>
+				{props.comments? (
+					<CommentForm 
+					className="commentForm"
 					user={props.user} 
 					post={props.id} 
 					refreshPosts={() => {props.refreshPosts()} }
-				/>
-		</>
+				/>) : null 
+				}
+				
+			</div>
+		</div>
 	);
 }
 

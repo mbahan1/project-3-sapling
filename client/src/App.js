@@ -60,7 +60,7 @@ function App() {
 
                 <NavBar firstName={profile.firstName}/>
                 {/* <ToggleButton /> */}
-                <ThemeButton />
+                {/* <ThemeButton /> */}
                 <Routes>
                     {/* <Route path="/" element={<HomePage/>}/> */}
                     <Route path="/" element={<ProfilePage profile={profile}/>} />

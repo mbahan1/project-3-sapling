@@ -22,6 +22,10 @@ const destory = (id) => {
     return tellSaplingTo.delete(`${posts}/${id}`)
 };
 
+// const getComment = (id) => {
+//     return tellSaplingTo.get(`${posts}/${id}/comments/`, data)
+// }
+
 const createComment = (id, data) => {
     return tellSaplingTo.post(`${posts}/${id}/comments`, data)
 }

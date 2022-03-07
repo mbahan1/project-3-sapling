@@ -25,9 +25,10 @@ const themes = {
 
 function ToggleButton() {
   const [theme, setTheme] = useState("light")
+  
   return (
     <ThemeProvider theme={themes[theme]}>
-      <Switch theme={theme} setTheme={setTheme} />
+        <Switch theme={theme} setTheme={setTheme} />
     </ThemeProvider>
   );
 }

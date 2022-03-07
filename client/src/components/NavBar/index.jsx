@@ -5,6 +5,7 @@ import '../NavBar/style.css';
 import Logout from '../Logout';
 import ProfileEditForm from '../ProfileEditForm';
 
+
 export default function NavBar(props) {
 
     return(
@@ -14,7 +15,7 @@ export default function NavBar(props) {
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     ><img className="logo" src={saplingLogo} alt =""/></NavLink>
-        {/* <ToggleButton /> */}
+        
       <NavLink to="/" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}

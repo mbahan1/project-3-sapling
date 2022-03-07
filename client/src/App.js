@@ -9,7 +9,10 @@ import ProfileEditForm from './components/ProfileEditForm';
 import MainFeed from './pages/MainFeed';
 import NavBar from './components/NavBar';
 import * as authService from "./api/auth.service";
-import ToggleButton from './components/ToggleButton';
+// import ToggleButton from './components/ToggleButton';
+import ThemeButton from './components/ThemeButton';
+
+
 // const reducer = (prevState, action) => {
 //     switch(action.type) {
 //         case "setIsLoggedIn" :
@@ -54,8 +57,10 @@ function App() {
     if (isLoggedIn) {
         return (
             <div className="App">
-                <NavBar firstName={profile.firstName} lastName={profile.lastName}/>
+
+                <NavBar firstName={profile.firstName}/>
                 {/* <ToggleButton /> */}
+                <ThemeButton />
                 <Routes>
                     {/* <Route path="/" element={<HomePage/>}/> */}
                     <Route path="/" element={<ProfilePage profile={profile}/>} />

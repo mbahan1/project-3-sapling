@@ -12,13 +12,15 @@ export default function ProfilePage (props) {
     const refreshPosts= () => {
 
     }
-
+    const sign = props.profile.zodiacSign;
+    const signUrl = `"client/src/assets/"+"${sign}"+".webp"`
 
     return(
         <div className="profilePage">
             <div className="profile-section">
                 <div className="profile">
-                    <img style={{width:"100px", height:"100px", borderRadius:"40px"}} src="https://media.istockphoto.com/vectors/zodiac-signs-set-isolated-on-black-background-vector-id1072359684?k=20&m=1072359684&s=612x612&w=0&h=VzwNG9jsi2ovv5b7xKALnV-7FOjCnOKaf27qVl8GUrg="/>
+                    <img alt={props.profile.zodiacSign} style={{width:"150px", height: "auto", borderRadius:"40px"}} 
+                        src={`/signs/${props.profile.zodiacSign}.webp`}/>
                     <h1>{props.profile.firstName} {props.profile.lastName}</h1>
                     <p>{props.profile.email}</p>
                     <p>{props.profile.zodiacSign}</p>
@@ -34,6 +36,7 @@ export default function ProfilePage (props) {
                     <button>Edit Profile</button>
                 </div> */}
                 {/* <div>
+
                     <h5>UserName</h5>
                 </div> */}
         </div>
@@ -42,7 +45,7 @@ export default function ProfilePage (props) {
             <div className="post-section">
                 <PostForm user={props.profile._id}/>
                 <div>
-                    <h2>List of my Menefistations</h2>
+                    <h2>List of my Manifestations</h2>
                     {props.profile.posts?.map((post) => {
                         return(
                             <Post 

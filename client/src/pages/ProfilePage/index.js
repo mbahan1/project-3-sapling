@@ -33,26 +33,8 @@ export default function ProfilePage (props) {
                 <div>
                     <h5>UserName</h5>
                 </div>
-                    <div>
-                        <h4>daily Quote</h4>
-                    </div>
-                    <div>
-                        <h4>List of my Menefistations</h4>
-                    </div> 
-                    <div>
-                        <Quote />
-                    </div>
-                    <div>
-                        <PostForm />
-                    </div>  
-                    <div>
-                        <ProfileEditForm />  
-                    </div> 
-                    <div>
-                   
-                    </div>      
-            </div>
-        
+        </div>
+          
                     
             <div className="post-section">
                 <PostForm user={props.profile._id}/>
@@ -73,7 +55,7 @@ export default function ProfilePage (props) {
                     }).reverse()}
                 </div>
             </div>
-</div>
+        </div>
 
     )
 }

@@ -5,6 +5,7 @@ import { array } from "prop-types";
 import { number } from "prop-types";
 import {useEffect, useState} from "react";
 import * as postService from "../../api/post.service";
+import CommentForm from "../CommentForm";
 
 function Post(props) {
 
@@ -23,17 +24,23 @@ function Post(props) {
 	return (
 		<>
 			<h1>Title: {props.title}</h1>
-			<p>By: {firstName}</p>
+			{firstName? <p>By: {firstName}</p>: null}
+			{/* <p>By: {firstName}</p> */}
 			<div>
 				<p>{props.body}</p>
-                <p>{props.kudos}</p>
 				{props.comments.map(comment => (
 					<p key={comment._id}>{comment.body}</p>
                 ))}
+                {/* <p>{props.kudos}</p> */}
 			</div>
 			<div>
-				<Kudos />
+				<Kudos kudos={props.kudos}/>
 			</div>
+				<CommentForm 
+					user={props.user} 
+					post={props.id} 
+					refreshPosts={() => {props.refreshPosts()} }
+				/>
 		</>
 	);
 }

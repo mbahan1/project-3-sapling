@@ -10,10 +10,12 @@ import CommentForm from "../CommentForm";
 function Post(props) {
 
 	const [firstName, setFirstName] = useState("");
+	const [zodiacSign, setZodiacSign] = useState("");
 
 	const getAuthor = async () => {
 		await postService.getOne(`${props.id}`).then((res) => {
 			setFirstName(res.data.data.user.firstName)
+			setZodiacSign(res.data.data.user.zodiacSign)
 		})
 	}
 
@@ -24,8 +26,11 @@ function Post(props) {
 	return (
 		<>
 			<h1>Title: {props.title}</h1>
-			{firstName? <p>By: {firstName}</p>: null}
+			<div>{firstName? <p>By: {firstName}</p>: null}
 			{/* <p>By: {firstName}</p> */}
+			<img alt={zodiacSign} style={{width:"75px", height: "auto", borderRadius:"30px"}} 
+                        src={`/signs/${zodiacSign}.webp`}/>
+			</div>
 			<div>
 				<p>{props.body}</p>
 				{props.comments.map(comment => (

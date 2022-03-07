@@ -1,6 +1,8 @@
 import { useState } from "react";
 import * as postService from "../../api/post.service";
 import { func } from "prop-types";
+import "./style.css";
+
 
 const CommentForm = (props) => {
 
@@ -22,7 +24,7 @@ const CommentForm = (props) => {
 
     return (
         <div className="comment-container">
-            <form className="commentForm-input">
+            <form className="commentForm">
                 <label>Leave a comment</label>
                     <input 
                         className="commentForm-input"

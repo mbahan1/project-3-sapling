@@ -7,27 +7,34 @@
     padding: 20px;
   }
  
-  .postForm-input {
+  /* .commentForm-input {
       width: 100%;
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
       box-sizing: border-box;
-  }
+  } */
   .comment-btn {
-    width: 50%;
-    background-color: #86b388;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 200 !important;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
     cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
 
   }
 
-  .post-btn:hover {
-    background-color: #86b388;
+  .comment-btn:hover {
+    background-color: #616e34; 
     color: white;
 
   }  

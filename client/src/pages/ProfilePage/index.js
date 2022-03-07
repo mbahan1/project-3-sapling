@@ -5,7 +5,7 @@ import ProfileEditForm from "../../components/ProfileEditForm";
 import {useEffect, useState} from "react";
 import * as authService from "../../api/auth.service";
 import "./styles.css";
-import ToggleButton from "../../components/ToggleButton";
+// import ToggleButton from "../../components/ToggleButton";
 
 
 export default function ProfilePage (props) {
@@ -38,7 +38,7 @@ export default function ProfilePage (props) {
                 </div> */}
         </div>
         <div>
-            <ToggleButton />
+            {/* <ToggleButton /> */}
         </div>
           
                     

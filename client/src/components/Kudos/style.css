@@ -1,13 +1,10 @@
-/* .quote-section {
-    display: flex;
+.kudo-section {
+    display: absolute;
     margin: 50px;
     border-radius: 5px;
-    background-color: rgb(190, 186, 186);
-    padding: 20px;
+  }
 
-} */
-
-.quote-btn {
+.kudo-btn {
     font-size: 10px;
     letter-spacing: 2px;
     font-weight: 200 !important;
@@ -26,7 +23,7 @@
   
 
   }
-  .quote-btn:hover {
+  .kudo-btn:hover {
     background-color: #616e34; 
     color: white;
     }

@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import "./style.css";
 
 export default function Quote() {
 
@@ -22,7 +23,7 @@ export default function Quote() {
         <p>{quote}</p>
         </div>
         <div>
-        <button onClick={getQuote}>Get New Quote</button>
+        <button className="quote-btn" onClick={getQuote}>Get New Quote</button>
 
         </div>
     </div>

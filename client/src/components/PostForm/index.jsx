@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { func } from "prop-types";
 import * as postService from "../../api/post.service";
+import "./style.css";
 
 const PostForm = (props) => {
     const [title, setTitle] = useState("");
@@ -21,7 +22,7 @@ const PostForm = (props) => {
     };
 
     return (
-        <div className="container">
+        <div className="post-container">
             <form className="postForm">
                 <label>Post Title</label>
                     <input 
@@ -41,7 +42,7 @@ const PostForm = (props) => {
                         type="text" name= "body" placeholder="input body value target, homie" />                
 
             </form>
-            <button onClick={handleSubmit}> Send it out to the world! </button>
+            <button className="post-btn" onClick={handleSubmit}> Send it out to the world! </button>
         </div>
     );
 };

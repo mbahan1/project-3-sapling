@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
 
+
 const Toggle = styled.button`
     cursor: pointer;
     height: 50px;
@@ -47,7 +48,7 @@ function Switch(props) {
         <Page>
             <Container>
                 <Toggle onClick={changeTheme}>
-                    {icon}
+                   {icon}
                 </Toggle>
                 <p>Change Color</p>
             </Container>

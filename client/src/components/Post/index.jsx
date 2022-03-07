@@ -24,33 +24,29 @@ function Post(props) {
 
 	return (
 		<div className="post-feed">
-		{(author&&props.comments)? <h2>{author}</h2>: null}
+		{(author&& (props.currentUser !== props.user ))? <h2>{author}</h2>: null}
 			<div className="post-content">
-				<h3 className="title">Title: {props.title}</h3>
+				<h3 className="title">{props.title}</h3>
 				<p>{props.body}</p>	
 				<div>
 					<Kudos kudos={props.kudos}/>
 				</div>		
-
 				{/* <p>{props.kudos}</p> */}
 				<hr />
 				<div className="comments">
-					{props.comments? <h3 className="title">Comments</h3>: null }
+					<h4 className="title">Comments</h4>
 					{props.comments? (props.comments.map(comment => (
 						<>
 						<p key={comment._id}>{comment.body}</p>
 						</>
-					
-                ))):null}
+					))):null}
 				</div>
-				{props.comments? (
 					<CommentForm 
 					className="commentForm"
-					user={props.user} 
+					user={props.currentUser} 
 					post={props.id} 
 					refreshPosts={() => {props.refreshPosts()} }
-				/>) : null 
-				}
+				/>
 				
 			</div>
 		</div>

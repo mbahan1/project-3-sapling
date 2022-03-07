@@ -50,9 +50,10 @@ export default function ProfilePage (props) {
                                 body={post.body}
                                 id={post._id}
                                 user={post.user}
-                                // comments={post.comments}
-                                kudo={post.kudos}
+                                comments={post.comments}
+                                kudos={post.kudos}
                                 key={post._id}
+                                currentUser={props.profile._id}
                             />
                             </div>
                         )

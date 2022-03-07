@@ -13,13 +13,13 @@
     background-color: rgb(190, 186, 186);
     padding: 5px 5px 5px 5px
 }
-.post-title {
-    margin: 5px 0 0 5px;
+.title {
+    margin: 10px 0 0 10px;
 }
 
 .comments {
     border-radius: 5px;
-    line-height: 80%;
+    line-height: 60%;
 }
 
 .commentForm {

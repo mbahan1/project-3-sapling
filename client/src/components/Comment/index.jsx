@@ -37,8 +37,16 @@ const Comment = (props) => {
     if(editComment) {
         return(
             <>
-            <CommentEdit postId={props.postId} commentId={props.commentId} body={props.body}/>
-            <button onClick={cancelClick}>Cancel</button>
+            <CommentEdit 
+                postId={props.postId} 
+                commentId={props.commentId} 
+                body={props.body}
+            />
+            <button 
+                className="edit-comment-btn"
+                onClick={cancelClick}
+            >Cancel
+            </button>
             </>
             
             
@@ -49,13 +57,17 @@ const Comment = (props) => {
         <div>
         <span>{author} : {props.body}</span>
             {(props.user === props.currentUser)? (
-                <div>
-                    <div className="delete-btn-section">
-                         <button className="delete-comment-btn"onClick={deleteComment}>Delete</button>
-                    </div>
-                    <div className="edit-btn-section">
-                        <button className="edit-comment-btn"onClick={editCommentClcik}>Edit</button>
-                    </div>
+                <div className="delete-edit-btn-section">
+                        <button 
+                            className="delete-comment-btn"
+                            onClick={deleteComment}
+                            >Delete
+                        </button>
+                        <button 
+                            className="edit-comment-btn"
+                            onClick={editCommentClcik}
+                        >Edit
+                        </button>
                 </div>
             ):null}          
         </div>

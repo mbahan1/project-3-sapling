@@ -1,10 +1,9 @@
-import {NavLink, Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import saplingLogoSomeWhite from '../../assets/saplingLogoSomeWhite.png';
 import '../NavBar/style.css';
 import Logout from '../Logout';
 import ThemeButton from '../ThemeButton';
 import PlaySound from '../PlaySound';
-import ProfileEditForm from '../ProfileEditForm';
 
 
 
@@ -16,7 +15,7 @@ export default function NavBar(props) {
       <NavLink to="/" className='navbar__home navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
-                    ><img className="logo" src={saplingLogoSomeWhite} alt =""/></NavLink>
+                    ><img className="logo" src={saplingLogoSomeWhite} alt ="saplingLogo"/></NavLink>
 
       <PlaySound />          
 

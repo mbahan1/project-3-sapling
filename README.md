@@ -1,5 +1,5 @@
 # Sapling Social Media Site  
-![Alt text](https://pbs.twimg.com/media/ENCzqPIX0AADcxF?format=jpg&name=medium)
+![Alt text](https://pbs.twimg.com/media/ENCzqPIX0AADcxF?format=jpg&name=medium)  
 ## GA 1026 Project 3 
 by  
 Nesh Masood - [github](https://github.com/neshmasood), [LinkedIn](https://www.linkedin.com/in/neshmasood/)  

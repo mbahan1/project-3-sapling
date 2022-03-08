@@ -7,7 +7,6 @@ import "./styles.css";
 export default function PostEdit(props) {
 
     const {id} =useParams();
-    // console.log(id)
 
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
@@ -33,6 +32,10 @@ export default function PostEdit(props) {
         await postService.destory(id).then(()=> {
             document.location="/posts";
         })
+    }
+
+    const cancelClick = () => {
+        window.location ="/"
     }
 
     useEffect(()=> {
@@ -65,18 +68,15 @@ export default function PostEdit(props) {
                     name="body"
                     placeholder={body}
                 />
-                <button className="submitButtonUpdate"
-                    onClick={handleSubmit}
-                > Update
-                </button>
+
                 
             </form>
-            <button className="deleteButtonPost"
-                    onClick={deleteSubmit}
-                > Delete
-            </button>
-        
+            <div className="upd-delete-cancel-btn-section">
+                <button className="submitButtonUpdate" onClick={handleSubmit}> Update</button>
+                <button className="deleteButtonPost" onClick={deleteSubmit}> Delete</button>
+                <button className="cancelPostBtn" onClick={cancelClick}>Cancel</button>
 
+            </div>
         </div>
     )
 }

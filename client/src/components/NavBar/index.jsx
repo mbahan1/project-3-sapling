@@ -24,20 +24,25 @@ export default function NavBar(props) {
       <NavLink to="/" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
-                    >My Profile Page</NavLink>
+                    >Profile Page</NavLink>
       <NavLink to="/posts" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     >Main Feed</NavLink> 
       <div className="dropdown">
-        <div className='loginUserName dropBtn'>
+      <div className='loginUserName dropBtn'>
             <span>Namaste, {props.firstName}</span> 
             <span>{props.lastName}</span>
+
+        <div className='loginUserName dropBtn'> 
+          <img alt={props.zodiacSign} style={{width:"50px", height: "auto", borderRadius:"30px", margin: "0 5px 0 0"}}
+                        src={`/signs/${props.zodiacSign}.webp`}/>
+          <span>{props.firstName}</span>
         </div>
         <div className="dropdown-content">
-          <Link to="profile/edit">Profile Edit</Link>
           <Logout /> 
         </div>
+      </div>
       </div>
     </header>
   

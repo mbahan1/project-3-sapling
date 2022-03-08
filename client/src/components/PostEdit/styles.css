@@ -11,15 +11,19 @@
     
 }
 
+.postEdit-input{
+    background-color: beige;
+}
+
 .postEditComponent {
 
 
     margin: 100px auto; 
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
-    width: 25%;
-    height: 75%;
+    width: 60%;
+    height: 100%;
     border-radius: 2%;  
-    padding: 10px 0px 30px 10px;
+    padding: 10px 0px 50px 10px;
     font-family: 'Montserrat', sans-serif;  
     font-weight: 600;
     color: #d3baf5;
@@ -35,6 +39,11 @@
 .postEdit{
     display: flex;
     flex-direction: column;
+}
+
+.upd-delete-cancel-btn-section{
+    margin: 30px auto;
+
 }
 
 .submitButtonUpdate{

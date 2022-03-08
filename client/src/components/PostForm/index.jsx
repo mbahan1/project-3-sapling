@@ -36,16 +36,16 @@ const PostForm = (props) => {
                         placeholder=""
                     /> <br></br>
 
-                <label>What do you want to manifest today?</label>
-                    <textarea 
-                        className="postForm-textarea"
-                        onChange={(e) => setBody(e.target.value)}
-                        value={body}
-                        type="text" name= "body" placeholder="" />                
-            </form>
-            <div >
-                <button className="post-Btn" onClick={handleSubmit}> Send it out to the world! </button>
-            </div>
+                    <label>What do you want to manifest today?</label>
+                        <textarea 
+                            className="postForm-textarea"
+                            onChange={(e) => setBody(e.target.value)}
+                            value={body}
+                            type="text" name= "body" placeholder="" />                
+                </form>
+                <div >
+                    <button className="post-Btn" onClick={handleSubmit}> Send it out to the world! </button>
+                </div>
             </div>
         </div>
     );

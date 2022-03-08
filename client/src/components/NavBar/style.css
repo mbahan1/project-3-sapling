@@ -45,6 +45,10 @@ img {
 .dropBtn {
     font-family: 'Montserrat', sans-serif; 
     font-weight: 200;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: 16px 16px;
     cursor: pointer;
     vertical-align: middle;
@@ -64,7 +68,6 @@ img {
     display: none;
     position: absolute;
     min-width: 180px;
-    min-height: 60px;
     box-shadow: 0px 1px 1px 0px gray;
     border-radius: 2px;
     z-index: 1;
@@ -73,7 +76,6 @@ img {
     vertical-align: middle;
     padding: 10px 0px;
     text-decoration: none;
-    line-height: 200%;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -81,7 +83,6 @@ img {
 .dropdown:hover .dropbtn {
     color: white; 
     background-color: white;
-    
     
 }
 

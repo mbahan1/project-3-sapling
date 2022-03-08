@@ -1,0 +1,26 @@
+.logoutBtn {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: beige;
+    color:#7F5D53;
+    padding: 1px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    border: 0px;
+    
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out
+
+
+
+
+}
+
+.profile-logout-section{
+    background-color: beige;
+
+
+}

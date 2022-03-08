@@ -47,9 +47,13 @@ function Post(props) {
 					<h4 className="title">Comments</h4>
 					{props.comments? (props.comments.map(comment => (
 						<>
-						<Comment />
-						<p key={comment._id}>{comment.body}</p>
-						<button>Delete</button>
+						<Comment 
+						commentId={comment._id}
+						body={comment.body}
+						user={comment.user}
+						postId={props.id}
+						currentUser={props.currentUser}
+						/>
 						</>
 					))):null}
 				</div>
@@ -57,11 +61,12 @@ function Post(props) {
 					className="commentForm"
 					currentUser={props.currentUser} 
 					post={props.id} 
+					body={props.body}
 					refreshPosts={() => {props.refreshPosts()} }
 				/>
 				{props.currentUser===props.user? (
 					<div className="editPost-link">
-                    <Link to={`/posts/${props.id}`}><button>Edit / Delete</button></Link>
+                    <Link to={`/posts/${props.id}`}><button className="edit-delete-btn">Edit Post/ Delete</button></Link>
                 </div>
 				): null}
 				

@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import * as userService from "../../api/user.service";
 import * as postService from "../../api/post.service";
 import CommentEdit from "../CommentEdit";
+import "./style.css";
 
 
 const Comment = (props) => {
@@ -51,8 +52,12 @@ const Comment = (props) => {
             <p>{author} : {props.body}</p>
             {(props.user === props.currentUser)? (
                 <div>
-            <button onClick={deleteComment}>Delete</button>
-            <button onClick={editCommentClcik}>Edit</button>
+                    <div className="delete-btn-section">
+                         <button className="delete-comment-btn"onClick={deleteComment}>Delete</button>
+                    </div>
+                    <div className="edit-btn-section">
+                        <button className="edit-comment-btn"onClick={editCommentClcik}>Edit</button>
+                    </div>
                 </div>
             ):null}
             

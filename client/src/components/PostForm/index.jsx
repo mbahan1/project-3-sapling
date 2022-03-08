@@ -32,7 +32,7 @@ const PostForm = (props) => {
                         value={title}
                         type="text"
                         name="title"
-                        placeholder="input title value target"
+                        placeholder=""
                     />
 
                 <label>What do you want to manifest today?</label>
@@ -40,7 +40,7 @@ const PostForm = (props) => {
                         className="postForm-textarea"
                         onChange={(e) => setBody(e.target.value)}
                         value={body}
-                        type="text" name= "body" placeholder="input body value target, homie" />                
+                        type="text" name= "body" placeholder="" />                
 
             </form>
             <button className="post-btn" onClick={handleSubmit}> Send it out to the world! </button>

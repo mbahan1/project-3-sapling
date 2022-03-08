@@ -1,5 +1,7 @@
 import { useState, useEffect} from "react";
+import {Routes, Route, Link} from "react-router-dom";
 import Post from "../../components/Post";
+import PostEdit from "../../components/PostEdit";
 import * as postService from "../../api/post.service";
 import "./styles.css"
 
@@ -18,10 +20,13 @@ const MainFeed = (props) => {
 	},[]);
 
 	return (
+
+ 
 		<div className="mainfeed-page">
 
 			{posts.map((post) => {
 				return(
+					<>
 					<Post 
 						title={post.title} 
 						id={post._id}
@@ -33,6 +38,8 @@ const MainFeed = (props) => {
 						currentUser={props.profile._id}
 						refreshPosts={() => fetchPosts()}
 					/>
+
+					</>
 				);
 			})};
 

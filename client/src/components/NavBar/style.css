@@ -11,7 +11,8 @@ main {
     align-items: center;
     background: #A1B182;
     color: #946ECA;
-    font-family: Helvetica;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 200;
     text-shadow: 2px 2px 5px 5px 9px #535F2D;
 }
 
@@ -30,6 +31,9 @@ main {
     font-size: 200%;
     font-weight: bolder;
 }
+.navbar__item:hover {
+   color: #616e34;
+}
 
 img {
     max-width: 250px;
@@ -39,6 +43,8 @@ img {
 }
 
 .dropBtn {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 200;
     padding: 16px 16px;
     cursor: pointer;
     vertical-align: middle;
@@ -53,6 +59,8 @@ img {
 }
 
 .dropdown-content {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400;
     display: none;
     position: absolute;
     min-width: 180px;
@@ -70,9 +78,16 @@ img {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {color: white; background-color: white;}
+.dropdown:hover .dropbtn {
+    color: white; 
+    background-color: white;
+    
+    
+}
 
 .logoutBtn {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400;
     border: none;
     font-size: 120%;
     cursor: pointer;
@@ -84,4 +99,8 @@ a {
     text-decoration: none;
     color: black;
     font-size: 120%;
+}
+a:hover {
+    color: #616e34;
+    
 }

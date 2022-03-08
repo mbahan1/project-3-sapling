@@ -1,5 +1,5 @@
 import {NavLink, Link} from 'react-router-dom';
-import saplingLogo from '../../assets/saplingLogo.png';
+import saplingLogoSomeWhite from '../../assets/saplingLogoSomeWhite.png';
 import '../NavBar/style.css';
 import Logout from '../Logout';
 import ThemeButton from '../ThemeButton';
@@ -15,7 +15,7 @@ export default function NavBar(props) {
       <NavLink to="/" className='navbar__home navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
-                    ><img className="logo" src={saplingLogo} alt =""/></NavLink>
+                    ><img className="logo" src={saplingLogoSomeWhite} alt =""/></NavLink>
 
       <PlaySound />          
 
@@ -31,7 +31,7 @@ export default function NavBar(props) {
                     >Main Feed</NavLink> 
       <div className="dropdown">
         <div className='loginUserName dropBtn'>
-            <span>{props.firstName}</span> 
+            <span>Namaste, {props.firstName}</span> 
             <span>{props.lastName}</span>
         </div>
         <div className="dropdown-content">

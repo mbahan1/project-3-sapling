@@ -54,29 +54,28 @@
 
   }  
   .profileEdit-delete {
-    font-family: 'Montserrat', sans-serif;  
-    font-weight: 600;
-    font-size: 10px;
-    letter-spacing: 2px;
-    /* font-weight: 200 !important; */
-    background-color: #535F2D;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 3%;
-    margin: auto;
-    text-align: center;
-    display: inline-block !important;
-    text-decoration: none;
-    border: 0px;
-    width: max-content;
-    cursor: pointer;
-    transition: all 0.3s 0s ease-in-out;
+
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 200 !important;
+      background-color: #535F2D;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 3%;
+      margin: auto;
+      text-align: center;
+      display: inline-block !important;
+      text-decoration: none;
+      border: 0px;
+      width: max-content;
+      cursor: pointer;
+      transition: all 0.3s 0s ease-in-out;
+  }
     
 
-  }
 
   .profileEdit-delete:hover {
-    background-color: #616e34; 
+    background-color: #523875; 
     color: white;
 
   } 

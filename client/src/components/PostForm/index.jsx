@@ -26,7 +26,7 @@ const PostForm = (props) => {
         <div >
             <div className="post-container">
             <form className="postForm">
-                <label>Post Title</label>
+                <label>Title</label>
                     <input 
                         className="postForm-input"
                         onChange={(e) => setTitle(e.target.value)}
@@ -34,7 +34,7 @@ const PostForm = (props) => {
                         type="text"
                         name="title"
                         placeholder=""
-                    />
+                    /> <br></br>
 
                 <label>What do you want to manifest today?</label>
                     <textarea 

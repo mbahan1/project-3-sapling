@@ -40,28 +40,45 @@
 .submitButtonUpdate{
     
     background-color: #535F2D;
-    color: #f5e8dd;
-    font-family: 'Montserrat', sans-serif;  
-    font-weight: 600;
-    width: 15%;
-    border-radius: 25%;
-    
-   
-    
-   
-    
-
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
 }
 
-.deleteButtonPost{
-    background-color: #4B2E75;
-    color: #f5e8dd;
-    font-family: 'Montserrat', sans-serif;  
-    font-weight: 600;
-    width: 100;
-    border-radius: 25%;
-    float: left;
-    margin: 0 0 20px 0;
+.submitButtonUpdate:hover {
+    background-color: #616e34; 
+    color: white;
+}
     
-   
+
+
+
+.deleteButtonPost:hover{
+    background-color: #523875; 
+    color: white;
+}
+
+.deleteButtonPost {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 200 !important;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
 }

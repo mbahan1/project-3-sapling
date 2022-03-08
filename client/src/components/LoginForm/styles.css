@@ -16,6 +16,9 @@
     
 }
 
+.loginBtn {
+    background-color:#535F2D;
+}
 .loginForm-input {
     margin: 5px 0px;
     height: 30px;

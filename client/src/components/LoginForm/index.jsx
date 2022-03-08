@@ -41,7 +41,6 @@ export default function LoginForm() {
                 />
                 <button 
                     className="loginBtn loginForm-input" 
-                    style={{backgroundColor: "blue", color:"white"}} 
                     onClick={handleSubmit}
                 > Log In</button>
             </form>

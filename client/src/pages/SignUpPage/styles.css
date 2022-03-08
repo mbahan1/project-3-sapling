@@ -2,3 +2,9 @@
     display: flex;
     justify-content: center;
 }
+
+
+.toggleButtonSignUp{
+    width:2%;
+    height: 2%;
+}

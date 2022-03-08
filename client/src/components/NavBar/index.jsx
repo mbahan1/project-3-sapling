@@ -3,6 +3,7 @@ import saplingLogo from '../../assets/saplingLogo.png';
 import '../NavBar/style.css';
 import Logout from '../Logout';
 import ThemeButton from '../ThemeButton';
+import PlaySound from '../PlaySound';
 
 
 
@@ -15,6 +16,8 @@ export default function NavBar(props) {
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     ><img className="logo" src={saplingLogo} alt =""/></NavLink>
+
+      <PlaySound />          
 
       <ThemeButton/>
         

@@ -121,7 +121,8 @@ export default function ProfileEditForm(props) {
                     placeholder="Hobbies"
                 /> */}
 
-                <button className="profileEdit-submit"
+                <button className="profileUpd-btn"
+
                     onClick={handleSubmit}
                 > Update
                 </button>

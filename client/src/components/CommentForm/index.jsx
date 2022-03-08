@@ -12,7 +12,7 @@ const CommentForm = (props) => {
         let newComment = { body, user:`${props.currentUser}`}
         let res = await postService.createComment(`${props.post}`, newComment).then(() => {
             setBody("");
-            props.refreshPosts();
+            window.location = "/posts"
             console.log(newComment);
         });
 
@@ -33,7 +33,7 @@ const CommentForm = (props) => {
                         name="body"
                         placeholder="Leave a comment"
                     />
-                    <button onClick={handleSubmit} className="comment-btn">Post</button>
+                    {/* <button onClick={handleSubmit} className="comment-btn">Post</button> */}
             </form>
             <button className="comment-btn" onClick={handleSubmit}>Post</button>
         </div>

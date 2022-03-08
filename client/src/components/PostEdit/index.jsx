@@ -31,7 +31,7 @@ export default function PostEdit(props) {
 
     const deleteSubmit = async () => {
         await postService.destory(id).then(()=> {
-            document.location="/";
+            document.location="/posts";
         })
     }
 

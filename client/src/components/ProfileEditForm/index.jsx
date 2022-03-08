@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {Link } from "react-router-dom";
 import * as userService from "../../api/user.service";
-import "./styles.css";
+import "./style.css";
 
 
 
@@ -110,7 +110,7 @@ export default function ProfileEditForm(props) {
                     <option value="aquarius">♒ Aquarius</option>
                     <option value="pisces">♓ Pisces</option>
                 </select>
-                <button 
+                <button className="profileuUpd-btn"
                     onClick={handleSubmit}
                 > Update
                 </button>

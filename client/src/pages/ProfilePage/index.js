@@ -1,9 +1,9 @@
 import PostForm from "../../components/PostForm";
 import Post from "../../components/Post";
 import Quote from "../../components/Quote";
-import ProfileEditForm from "../../components/ProfileEditForm";
+import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
-import * as authService from "../../api/auth.service";
+
 import "./styles.css";
 // import ToggleButton from "../../components/ToggleButton";
 
@@ -32,36 +32,30 @@ export default function ProfilePage (props) {
                 {/* <div className="editProfile-box">
                     <button>Edit Profile</button>
                 </div> */}
-                {/* <div>
-
-                    <h5>UserName</h5>
-                </div> */}
-        </div>
-        <div>
-            {/* <ToggleButton /> */}
-        </div>
-          
-                    
+                  
             <div className="posts-section">
                 <div>
-                <PostForm user={props.profile._id}/>
+                  <PostForm user={props.profile._id}/>
                 </div>
                 <div className="manifest-title">
-                    <h2>List of my Manifestations</h2>
-                    </div>
+                  <h2>List of my Manifestations</h2>
+                </div>
                 <div className="manifest-lst">
                     <div>
-                    {props.profile.posts?.map((post) => {
+                      {props.profile.posts?.map((post) => {
                         return(
+                            <div>
                             <Post 
                                 title={post.title}
                                 body={post.body}
                                 id={post._id}
                                 user={post.user}
                                 comments={post.comments}
-                                kudo={post.kudos}
+                                kudos={post.kudos}
                                 key={post._id}
+                                currentUser={props.profile._id}
                             />
+                            </div>
                         )
                     }).reverse()}
 

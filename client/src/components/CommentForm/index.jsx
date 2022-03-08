@@ -9,7 +9,7 @@ const CommentForm = (props) => {
     const [body, setBody] = useState("");
 
     const handleSubmit = async () => {
-        let newComment = { body, user:`${props.user}`}
+        let newComment = { body, user:`${props.currentUser}`}
         let res = await postService.createComment(`${props.post}`, newComment).then(() => {
             setBody("");
             props.refreshPosts();
@@ -25,7 +25,6 @@ const CommentForm = (props) => {
     return (
         <div className="comment-container">
             <form className="commentForm">
-                <label>Leave a comment</label>
                     <input 
                         className="commentForm-input"
                         onChange={(e) => setBody(e.target.value)}
@@ -34,6 +33,7 @@ const CommentForm = (props) => {
                         name="body"
                         placeholder="Leave a comment"
                     />
+                    <button onClick={handleSubmit} className="comment-btn">Post</button>
             </form>
             <button className="comment-btn" onClick={handleSubmit}>Post</button>
         </div>

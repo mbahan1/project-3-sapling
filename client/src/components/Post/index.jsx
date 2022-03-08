@@ -10,11 +10,13 @@ import "./style.css";
 
 function Post(props) {
 
-	const [firstName, setFirstName] = useState("");
+	const [author, setAuthor] = useState("");
+	const [zodiacSign, setZodiacSign] = useState("");
 
 	const getAuthor = async () => {
 		await postService.getOne(`${props.id}`).then((res) => {
-			setFirstName(res.data.data.user.firstName)
+			setAuthor(res.data.data.user.firstName)
+			setZodiacSign(res.data.data.user.zodiacSign)
 		})
 	}
 
@@ -23,29 +25,38 @@ function Post(props) {
 	}, [])
 
 	return (
-		<>
-		<div className="user-menifestation-lst">
-		<h1>Title: {props.title}</h1>
-			{firstName? <p>By: {firstName}</p>: null}
-			{/* <p>By: {firstName}</p> */}
-			<div>
-				<p>{props.body}</p>
-				{props.comments.map(comment => (
-					<p key={comment._id}>{comment.body}</p>
-                ))}
-                {/* <p>{props.kudos}</p> */}
+		<div className="post-feed">
+			{(author&& (props.currentUser !== props.user ))? (
+			<div className="post-author">
+			<img alt={zodiacSign} style={{width:"75px", height: "auto", borderRadius:"30px"}} 
+                        src={`/signs/${zodiacSign}.webp`}/>
+			<h2>{author}</h2>
 			</div>
-
-		</div>
-			<div>
-				<Kudos kudos={props.kudos}/>
-			</div>
-				<CommentForm 
-					user={props.user} 
+			): null}
+			<div className="post-content">
+				<h3 className="title">{props.title}</h3>
+				<p>{props.body}</p>	
+				<div>
+					<Kudos kudos={props.kudos}/>
+				</div>		
+				{/* <p>{props.kudos}</p> */}
+				<hr />
+				<div className="comments">
+					<h4 className="title">Comments</h4>
+					{props.comments? (props.comments.map(comment => (
+						<>
+						<p key={comment._id}>{comment.body}</p>
+						</>
+					))):null}
+				</div>
+					<CommentForm 
+					className="commentForm"
+					currentUser={props.currentUser} 
 					post={props.id} 
 					refreshPosts={() => {props.refreshPosts()} }
 				/>
-		</>
+			</div>
+		</div>
 	);
 }
 

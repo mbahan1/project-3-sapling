@@ -1,0 +1,42 @@
+.mainfeed-page {
+    width: 60%;
+    margin: auto;
+}
+
+.post-feed {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.post-content {
+    border-radius: 5px;
+    background-color: #D9C4B3;
+    padding: 5px 5px 5px 5px;
+}
+.title {
+    margin: 10px 0 0 10px;
+}
+
+.comments {
+    border-radius: 5px;
+    line-height: 60%;
+}
+
+.commentForm {
+    padding: 5px;
+}
+
+.commentForm-input {
+    width: 90%;
+}
+
+.comment-btn {
+    display: inline;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    border-radius: 5px;
+}

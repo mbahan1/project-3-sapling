@@ -1,10 +1,9 @@
 import {NavLink, Link} from 'react-router-dom';
 import saplingLogo from '../../assets/saplingLogo.png';
 import '../NavBar/style.css';
-// import ToggleButton from "./components/ToggleButton";
 import Logout from '../Logout';
-import ProfileEditForm from '../ProfileEditForm';
-import ThemeButton from '../../components/ThemeButton';
+import ThemeButton from '../ThemeButton';
+
 
 
 export default function NavBar(props) {

@@ -1,6 +1,6 @@
 .profileEditFormComponent {
     width: 500px;
-    margin: 100px;
+    margin: 100px auto;
 }
 
 .profileEditForm {
@@ -13,4 +13,15 @@
     height: 30px;
     border: 1px solid black;
     border-radius: 3px;
+}
+
+.profileEdit-submit {
+    margin: 30px auto;
+    padding: 10px;
+    width : 300px;
+    border-radius : 5px;
+}
+
+.profile {
+    background-color: #535F2D;
 }

@@ -109,7 +109,7 @@ export default function ProfileEditForm(props) {
                     <option value="aquarius">♒ Aquarius</option>
                     <option value="pisces">♓ Pisces</option>
                 </select>
-                <button className="profileEdit-submit"
+                <button className="profileUpd-btn"
                     onClick={handleSubmit}
                 > Update
                 </button>

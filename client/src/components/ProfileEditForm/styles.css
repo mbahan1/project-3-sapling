@@ -2,7 +2,7 @@
 .profileEditFormComponent {
     display: flex;
     width: 500px;
-    margin: 100px;
+    margin: 100px auto;
     border-radius: 5px;
     background-color:#afc08e;
     padding: 20px;
@@ -15,7 +15,7 @@
       display: inline-block;
       box-sizing: border-box;
   } */
-  .profileuUpd-btn {
+  .profileUpd-btn {
     font-size: 10px;
     letter-spacing: 2px;
     font-weight: 200 !important;
@@ -34,7 +34,7 @@
 
   }
 
-  .comment-btn:hover {
+  .profileUpd-btn:hover {
     background-color: #616e34; 
     color: white;
 

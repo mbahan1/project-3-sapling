@@ -3,7 +3,7 @@ import {Routes, Route, Link} from "react-router-dom";
 import Post from "../../components/Post";
 import PostEdit from "../../components/PostEdit";
 import * as postService from "../../api/post.service";
-import "./styles.css"
+import "./style.css";
 
 const MainFeed = (props) => {
 
@@ -38,7 +38,6 @@ const MainFeed = (props) => {
 						currentUser={props.profile._id}
 						refreshPosts={() => fetchPosts()}
 					/>
-
 					</>
 				);
 			})};

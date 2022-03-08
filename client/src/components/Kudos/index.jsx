@@ -1,4 +1,5 @@
 // Kudos Component
+import "./style.css";
 import { useEffect, useState, Component } from "react";
 
 class Kudos extends Component {
@@ -20,9 +21,9 @@ class Kudos extends Component {
 
 	render() {
 		return (
-			<div>
-				<button onClick={this.increaseKudos}>Give Kudos! {this.state.kudoCount}</button>
-				{/* <span> Kudos Count: {this.state.kudoCount}</span> */}
+			<div className="kudo-section">
+				<button className="kudo-btn" onClick={this.increaseKudos}>Give Kudos!</button>
+				<span> Kudos Count: {this.state.kudoCount}</span>
 			</div>
 		);
 	}

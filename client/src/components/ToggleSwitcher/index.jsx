@@ -52,7 +52,7 @@ function Switch(props) {
                 </Toggle>
                 <p>Change Color</p>
             </Container>
-        </Page>
+         </Page>
     );
 };
 

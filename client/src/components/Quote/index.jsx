@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import "./style.css";
 
 export default function Quote() {
 
@@ -17,9 +18,14 @@ export default function Quote() {
 
     return (
     <div>
+        <div>
         <h3>Daily Quote</h3>
         <p>{quote}</p>
-        <button onClick={getQuote} style={{"margin": "10px auto"}}>Get New Quote</button>
+        </div>
+        <div>
+        <button className="quote-btn" onClick={getQuote}>Get New Quote</button>
+
+        </div>
     </div>
     )
        

@@ -4,6 +4,7 @@ import Quote from "../../components/Quote";
 import {Link} from "react-router-dom";
 
 import "./styles.css";
+// import ToggleButton from "../../components/ToggleButton";
 
 
 export default function ProfilePage (props) {
@@ -58,6 +59,9 @@ export default function ProfilePage (props) {
                             </div>
                         )
                     }).reverse()}
+
+                    </div>
+
                 </div>
             </div>
         </div>

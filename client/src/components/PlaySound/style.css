@@ -1,4 +1,4 @@
-button {
+.music-button, .toggle-btn {
     display: flex;
     margin: 50px;
     border-radius: 5px;

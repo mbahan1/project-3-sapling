@@ -1,52 +1,62 @@
-import {useState} from "react";
-import {Link } from "react-router-dom";
+import {useEffect, useState} from "react";
+import { useParams } from "react-router-dom";
 import * as postService from "../../api/post.service";
-import "./styles.css";
-
+// import "./styles.css";
 
 
 export default function PostEdit(props) {
 
+    const {id} =useParams();
+    // console.log(id)
+
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
+    const [updatedTitle, setUpdatedTitle] = useState("");
+    const [updatedBody, setUpdatedBody] = useState("");
+
+    const fetchPost = async () => {
+        let res = await postService.getOne(id);
+        setTitle(res.data.data.title);
+        setBody(res.data.data.body)
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let updatedPost = {title, body};
-        let res = await postService.update(`${props.post._id}`,updatedPost).then(() => {
+        let updatedPost = { title: updatedTitle, body: updatedBody};
+        await postService.update(id, updatedPost).then(() => {
             console.log(updatedPost);
-            document.location = "/"
+            document.location = "/";
         })
-
-        console.log(res);
-        if (!res === 201) {
-            alert(`ERROR code: ${res.status}`)
-        }
     }
+
+    useEffect(()=> {
+        fetchPost()
+    }, [])
+
     return(
         <div className="postEditComponent">
             <div> 
-                <h3>Update Your Post, {props.post.title} </h3>
+                <h3>Update Your Post </h3>
             </div>
             <form className="postEdit">
-                <label>Post Title</label>
+                <label>Post Title </label>
                 <input 
                     className="postEdit-input"
-                    onChange={(e)=> setTitle(e.target.value)}
-                    value={title}
+                    onChange={(e)=> setUpdatedTitle(e.target.value)}
+                    value={updatedTitle}
                     type="text"
                     name="title"
-                    placeholder="input title value target" 
+                    placeholder={title}
                 />
 
                 <label>What do you want to manifest today?</label>
                 <input 
                     className="postEdit-input"
-                    onChange={(e)=> setBody(e.target.value)}
-                    value={body}
+                    onChange={(e)=> setUpdatedBody(e.target.value)}
+                    value={updatedBody}
                     type="text"
                     name="body"
-                    placeholder="input body value target, homie"
+                    placeholder={body}
                 />
 
                 <button 

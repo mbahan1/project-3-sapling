@@ -8,6 +8,7 @@ import ProfilePage from "./pages/ProfilePage";
 import ProfileEditForm from './components/ProfileEditForm';
 import MainFeed from './pages/MainFeed';
 import NavBar from './components/NavBar';
+import PostEdit from "./components/PostEdit";
 import * as authService from "./api/auth.service";
 // import ToggleButton from './components/ToggleButton';
 // import ThemeButton from './components/ThemeButton';
@@ -66,8 +67,7 @@ function App() {
                     <Route path="/" element={<ProfilePage profile={profile}/>} />
                     <Route path="profile/edit" element={<ProfileEditForm profile={profile}/>} />
                     <Route path="posts" element={<MainFeed profile={profile}/>}/>
-                     {/* <Route path="/editProfile" element={<ProfileEditForm/>} />
-                     <Route path="posts" element={<MainFeed />}/> */}
+                    <Route path="posts/:id" element={<PostEdit profile={profile}/>}/>
                 </Routes>
     
         </div>

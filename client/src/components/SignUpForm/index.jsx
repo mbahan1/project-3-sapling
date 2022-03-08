@@ -105,7 +105,7 @@ export default function SignUpForm() {
             <div className="linkToSignUp">
                 <span>Have an account?</span>
             <div className="logInLink">    
-                <Link to="/">Log In</Link>
+                <Link to="/"><button className="signUp-login-btn">Log In</button></Link>
                 </div>
             </div>
             <h1>{successMsg}</h1>

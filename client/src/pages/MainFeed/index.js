@@ -3,7 +3,7 @@ import {Routes, Route, Link} from "react-router-dom";
 import Post from "../../components/Post";
 import PostEdit from "../../components/PostEdit";
 import * as postService from "../../api/post.service";
-import "./style.css";
+import "./styles.css";
 
 const MainFeed = (props) => {
 

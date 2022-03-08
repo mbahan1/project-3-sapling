@@ -6,10 +6,15 @@
 .welcomePageHeader {
     background-image: url("https://c.tenor.com/XO0nQRb4xe8AAAAC/meditation-grogu.gif");
     background-size:cover;
-    height: 500px;
+    background-position: center;
+    height: 700px;
+    position: relative;
 }
 
 .loginFormComponent {
-    margin-top: 5%;
-    margin-left: 65%;
+    /* margin-top: 5%;
+    margin-left: 65%; */
+    position: absolute;
+    top: 10%;
+    right: 10%;
 }

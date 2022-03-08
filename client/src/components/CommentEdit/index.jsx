@@ -23,7 +23,9 @@ const CommentEdit = (props) =>{
         type="text"
         placeholder={props.body}
         />
-        <button onClick={updateComment}>Edit Comment</button>
+        <button 
+            className="edit-comment-btn"
+            onClick={updateComment}>Edit Comment</button>
     </form>
     </>
 

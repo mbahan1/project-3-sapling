@@ -21,7 +21,7 @@ export default function LoginForm() {
 
     return(
         <div className="loginFormComponent component">
-                            <h2 className="logInManifest">Start your manifestation journey here</h2>
+            <h2 className="logInManifest">Start your manifestation journey here</h2>
             <form className="loginForm">
                 {/* <label htmlFor="email">Email</label> */}
                 <input className="loginForm-input"
@@ -29,7 +29,7 @@ export default function LoginForm() {
                     value={email}
                     type="text"
                     name="email"
-                    placeholder="email"
+                    placeholder="you@example.com"
                 />
                 {/* <label htmlFor="password">Password</label> */}
                 <input className="loginForm-input"
@@ -45,7 +45,6 @@ export default function LoginForm() {
                 > Log In</button>
             </form>
 
-            
             <div className="linkToSignUp">
                 <span>Don't have an account?</span>
                 <Link to="signup"><button className="home-page-signUp-btn">Sign up</button></Link>

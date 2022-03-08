@@ -1,5 +1,6 @@
 import {useState} from "react";
 import * as userService from "../../api/user.service";
+import * as authService from "../../api/auth.service";
 import "./styles.css";
 
 
@@ -27,6 +28,15 @@ export default function ProfileEditForm(props) {
             alert(`ERROR code: ${res.status}`)
         }
     }
+
+
+    // Delete User not working. still in the database.
+    const deleteSubmit = () => {
+        userService.destroy(`${props.profile._id}`);
+        authService.logout();
+        window.location = "/"
+    }
+
     return(
         <div className="profileEditFormComponent">
             <div> 
@@ -114,6 +124,11 @@ export default function ProfileEditForm(props) {
                 > Update
                 </button>
             </form>
+
+            <button className="profileEdit-submit"
+                    onClick={deleteSubmit}
+                > Delete Account
+                </button>
 
         </div>
     )

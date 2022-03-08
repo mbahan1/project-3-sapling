@@ -5,6 +5,13 @@
     margin-top: 30px;
 }
 
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2d3318;
+}
+
 .profile-img {
     display: center;
     width: 100px; 
@@ -54,7 +61,7 @@
 
 }
 
-.manifest-title{
+.manifest-title {
     display: center;
     font-family: 'Montserrat', sans-serif;  
     font-weight: 200; 
@@ -63,3 +70,27 @@
 
 }
 
+
+.edit-profile-btn {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 200 !important;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+  
+
+  }
+  .edit-profile-btn:hover {
+    background-color: #616e34; 
+    color: white;
+    }

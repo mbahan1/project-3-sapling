@@ -95,12 +95,12 @@ export default function SignUpForm() {
                     <option value="pisces">♓ Pisces (February 19 - March 20)</option>
                 </select>
 
-                
-                <button 
+                {/* Added a link to log in page after sign up. */}
+                <Link to="/"><button 
                     className="signUpBtn signUpForm-input" 
                     onClick={handleSubmit}
                 > Sign Up
-                </button>
+                </button></Link>
             </form>
             <div className="linkToSignUp">
                 <span>Have an account?</span>

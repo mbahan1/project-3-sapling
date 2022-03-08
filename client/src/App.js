@@ -3,7 +3,6 @@ import {Routes, Route} from "react-router-dom";
 import { useState, useEffect} from 'react';
 import WelcomePage from './pages/WelcomePage';
 import SignUpPage from './pages/SignUpPage';
-import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage";
 import ProfileEditForm from './components/ProfileEditForm';
 import MainFeed from './pages/MainFeed';
@@ -67,7 +66,6 @@ function App() {
                 {/* <ToggleButton /> */}
                 {/* <ThemeButton /> */}
                 <Routes>
-                    {/* <Route path="/" element={<HomePage/>}/> */}
                     <Route path="/" element={<ProfilePage profile={profile}/>} />
                     <Route path="profile/edit" element={<ProfileEditForm profile={profile}/>} />
                     <Route path="posts" element={<MainFeed profile={profile}/>}/>

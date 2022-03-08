@@ -15,7 +15,7 @@ export default function NavBar(props) {
       <NavLink to="/" className='navbar__home navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
-                    ><img className="logo" src={saplingLogo} alt =""/></NavLink>
+                    ><img className="logo" src={saplingLogo} alt ="saplingLogo"/></NavLink>
 
       <PlaySound />          
 
@@ -31,7 +31,7 @@ export default function NavBar(props) {
                     >Main Feed</NavLink> 
       <div className="dropdown">
         <div className='loginUserName dropBtn'> 
-          <img alt={props.zodiacSign} style={{width:"50px", height: "auto", borderRadius:"30px", margin: "0 5px 0 0"}}
+          <img alt="Zodiac Sign" style={{width:"50px", height: "auto", borderRadius:"30px", margin: "0 5px 0 0"}}
                         src={`/signs/${props.zodiacSign}.webp`}/>
           <span>{props.firstName}</span>
         </div>

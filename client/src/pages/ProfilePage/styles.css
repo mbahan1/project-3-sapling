@@ -48,9 +48,9 @@
 .editPost-link {
     display: flex;
     justify-content: end;
-    margin-top: 10px
+    margin-right: 6%;
 }
-.editDeleteCommentBtn {
+.editDeletePostBtn {
     font-family: 'Montserrat', sans-serif;  
     font-weight: 400;
     letter-spacing: 1px;

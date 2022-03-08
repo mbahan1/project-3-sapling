@@ -50,6 +50,7 @@
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+    margin: 20px 0 0 0;
 }
 
 
@@ -62,4 +63,9 @@
 
 .signUp{
     color:#4B2E75
+}
+
+.loginLabel {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
 }

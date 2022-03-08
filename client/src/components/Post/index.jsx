@@ -47,7 +47,8 @@ function Post(props) {
 					<h4 className="title">Comments</h4>
 					{props.comments? (props.comments.map(comment => (
 						<>
-						<Comment 
+						<Comment
+						key={comment._id} 
 						commentId={comment._id}
 						body={comment.body}
 						user={comment.user}

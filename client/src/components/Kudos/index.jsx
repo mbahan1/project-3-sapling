@@ -1,4 +1,3 @@
-import { number } from "prop-types";
 import {useState,} from "react";
 import * as postService from "../../api/post.service";
 import "./style.css";

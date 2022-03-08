@@ -45,20 +45,20 @@ const Comment = (props) => {
     }
 
     return (
-
-        <>
-
-            <p>{author} : {props.body}</p>
+        <div>
+        <span>{author} : {props.body}</span>
             {(props.user === props.currentUser)? (
-                <div>
-            <button onClick={deleteComment}>Delete</button>
-            <button onClick={editCommentClcik}>Edit</button>
+                <div className="commentBox">
+                    <button className="editDeleteCommentBtn"
+                        onClick={deleteComment} 
+                    >Delete</button>
+                    <button 
+                        className="editDeleteCommentBtn"
+                        onClick={editCommentClcik}
+                    >Edit</button>
                 </div>
-            ):null}
-            
-        </>
-
-
+            ):null}          
+        </div>
     )
 }
 

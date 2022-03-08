@@ -9,11 +9,8 @@ import "./styles.css";
 
 export default function ProfilePage (props) {
     
-    const refreshPosts= () => {
-
-    }
-    const sign = props.profile.zodiacSign;
-    const signUrl = `"client/src/assets/"+"${sign}"+".webp"`
+    // const sign = props.profile.zodiacSign;
+    // const signUrl = `"client/src/assets/"+"${sign}"+".webp"`
 
     return(
         <div className="profilePage">
@@ -55,7 +52,7 @@ export default function ProfilePage (props) {
                                     currentUser={props.profile._id}
                                 />
                                 <div className="editPost-link">
-                                    <Link to={`/posts/${post._id}`}><button className="editDeleteCommentBtn">Edit / Delete</button></Link>
+                                    <Link to={`/posts/${post._id}`}><button className="editDeletePostBtn">Edit / Delete</button></Link>
                                 </div>
                             </div>
                         )

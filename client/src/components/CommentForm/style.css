@@ -42,3 +42,27 @@
     color: white;
 
   }  
+
+  .editDeleteCommentBtn {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 1px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    /* display: inline-block !important; */
+    text-decoration: none;
+    border: 0px;
+    
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+    margin: 0 5px;
+}
+
+.commentBox {
+  margin: 0 0 0 20px;
+  display: inline;
+}

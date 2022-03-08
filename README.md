@@ -48,9 +48,10 @@ Site logo[]()
 
 Zodiac sign avatars [https://nypost.com/article/zodiac-signs-dates-personality-traits/](https://nypost.com/article/zodiac-signs-dates-personality-traits/)  
 
-Zodiac sign chart[]()
 
 ## Credits
+Thanks to our awesome instructors: Teri London, Nicole Hamilton, Avisa Poshtkouhi, and Gabriel 'Documentation' Gangoso. And of course everyone that took our user research survey.
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

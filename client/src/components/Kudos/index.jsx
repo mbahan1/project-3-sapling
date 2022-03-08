@@ -20,7 +20,7 @@ const Kudos = (props) => {
     return (
          <div>
             <button onClick={updateKudos}>Kudos!</button>
-            <span> Kudos Count: {kudos}</span>
+            <span> 🌺 {kudos}</span>
         </div>
     )
 }

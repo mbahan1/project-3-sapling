@@ -47,7 +47,7 @@ export default function ProfilePage (props) {
                                     title={post.title}
                                     body={post.body}
                                     id={post._id}
-                                    user={post.user}
+                                    // user={post.user}
                                     comments={post.comments}
                                     kudos={post.kudos}
                                     key={post._id}

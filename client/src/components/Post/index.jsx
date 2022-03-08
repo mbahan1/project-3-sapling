@@ -4,6 +4,7 @@ import { string } from "prop-types";
 import { array } from "prop-types";
 import { number } from "prop-types";
 import {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
 import * as postService from "../../api/post.service";
 import CommentForm from "../CommentForm";
 import "./style.css";
@@ -26,7 +27,7 @@ function Post(props) {
 
 	return (
 		<div className="post-feed">
-			{(author&& (props.currentUser !== props.user ))? (
+			{(author && props.user)? (
 			<div className="post-author">
 			<img alt={zodiacSign} style={{width:"75px", height: "auto", borderRadius:"30px"}} 
                         src={`/signs/${zodiacSign}.webp`}/>
@@ -55,6 +56,12 @@ function Post(props) {
 					post={props.id} 
 					refreshPosts={() => {props.refreshPosts()} }
 				/>
+				{props.currentUser===props.user? (
+					<div className="editPost-link">
+                    <Link to={`/posts/${props.id}`}><button>Edit / Delete</button></Link>
+                </div>
+				): null}
+				
 			</div>
 		</div>
 	);

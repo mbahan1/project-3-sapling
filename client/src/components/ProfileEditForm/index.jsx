@@ -77,18 +77,18 @@ export default function ProfileEditForm(props) {
                 <label htmlFor="zodiacSign">Select Zodiac Sign</label>
                 <select className="signUpForm-input" onChange={(e)=>setZodiacSign(e.target.value)}>
                     <option>- - -</option>
-                    <option value="aries">♈ Aries</option>
-                    <option value="taurus">♉ Taurus</option>
-                    <option value="gemini">♊ Gemini</option>
-                    <option value="cancer">♋ Cancer</option>
-                    <option value="leo">♌ Leo</option>
-                    <option value="virgo">♍ Virgo</option>
-                    <option value="libra">♎ Libra</option>
-                    <option value="scorpio">♏ Scorpio</option>
-                    <option value="sagittarius">♏ Sagittarius</option>
-                    <option value="capricorn">♑ Capricorn</option>
-                    <option value="aquarius">♒ Aquarius</option>
-                    <option value="pisces">♓ Pisces</option>
+                    <option value="aries">♈ Aries (March 21 - April 19)</option>
+                    <option value="taurus">♉ Taurus (April 20 - May 20)</option>
+                    <option value="gemini">♊ Gemini (May 21 - June 20)</option>
+                    <option value="cancer">♋ Cancer (June 21 - July 22)</option>
+                    <option value="leo">♌ Leo (July 23 - August 22)</option>
+                    <option value="virgo">♍ Virgo (August 23 - September 22)</option>
+                    <option value="libra">♎ Libra (September 23 - October 22)</option>
+                    <option value="scorpio">♏ Scorpio (October 23 - November 21)</option>
+                    <option value="sagittarius">♏ Sagittarius (November 22 - December 21)</option>
+                    <option value="capricorn">♑ Capricorn (December 22 - January 19)</option>
+                    <option value="aquarius">♒ Aquarius (January 20 - February 18)</option>
+                    <option value="pisces">♓ Pisces (February 19 - March 20)</option>
                 </select>
 
                 {/* <label htmlFor="pronouns">Pronouns</label>

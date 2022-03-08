@@ -7,7 +7,6 @@ import * as postService from "../../api/post.service";
 export default function PostEdit(props) {
 
     const {id} =useParams();
-    // console.log(id)
 
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");

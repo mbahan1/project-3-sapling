@@ -8,7 +8,7 @@ import ProfilePage from "./pages/ProfilePage";
 import ProfileEditForm from './components/ProfileEditForm';
 import MainFeed from './pages/MainFeed';
 import NavBar from './components/NavBar';
-import PostEdit from "./components/PostEdit";
+import PostEdit from "./components/PostEdit"
 import * as authService from "./api/auth.service";
 import Users from "./components/Users"
 // import ToggleButton from './components/ToggleButton';

@@ -35,7 +35,7 @@ export default function LoginForm() {
                 <input className="loginForm-input"
                     onChange={(e)=> setPassword(e.target.value)}
                     value={password}
-                    type="text"
+                    type="password"
                     name="password"
                     placeholder="Password"
                 />

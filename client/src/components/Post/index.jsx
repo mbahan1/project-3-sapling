@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import * as postService from "../../api/post.service";
 import CommentForm from "../CommentForm";
+import Comment from "../Comment";
 import "./style.css";
 
 function Post(props) {
@@ -38,7 +39,7 @@ function Post(props) {
 				<h3 className="title">{props.title}</h3>
 				<p>{props.body}</p>	
 				<div>
-					<Kudos kudos={props.kudos}/>
+					<Kudos kudos={props.kudos} post={props.id}/>
 				</div>		
 				{/* <p>{props.kudos}</p> */}
 				<hr />
@@ -46,7 +47,9 @@ function Post(props) {
 					<h4 className="title">Comments</h4>
 					{props.comments? (props.comments.map(comment => (
 						<>
+						<Comment />
 						<p key={comment._id}>{comment.body}</p>
+						<button>Delete</button>
 						</>
 					))):null}
 				</div>

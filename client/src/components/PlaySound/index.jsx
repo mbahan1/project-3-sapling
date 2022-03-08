@@ -13,7 +13,7 @@ const PlaySound = (
 
     return (
         <div>
-            <button className="music-button" onClick={() => setIsPlaying(!isPlaying)}>{!isPlaying ? 'Play the Music of Your Aura' : 'STOP SOUND NOW!!!'}</button>
+            <button className="music-button" onClick={() => setIsPlaying(!isPlaying)}>{!isPlaying ? ' Cleanse your ~AURUL~AURA~ ' : 'STOP SOUND NOW!!!'}</button>
             <Sound
                 url={Music}
                 playStatus={

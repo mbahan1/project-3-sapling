@@ -4,6 +4,7 @@ import '../NavBar/style.css';
 import Logout from '../Logout';
 import ThemeButton from '../ThemeButton';
 import PlaySound from '../PlaySound';
+import ProfileEditForm from '../ProfileEditForm';
 
 
 
@@ -34,11 +35,11 @@ export default function NavBar(props) {
             <span>Namaste, {props.firstName}</span> 
             <span>{props.lastName}</span>
 
-        <div className='loginUserName dropBtn'> 
+        {/* <div className='loginUserName dropBtn'> 
           <img alt={props.zodiacSign} style={{width:"50px", height: "auto", borderRadius:"30px", margin: "0 5px 0 0"}}
                         src={`/signs/${props.zodiacSign}.webp`}/>
           <span>{props.firstName}</span>
-        </div>
+        </div> */}
         <div className="dropdown-content">
           <Logout /> 
         </div>

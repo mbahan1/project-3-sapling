@@ -5,7 +5,7 @@ body {
 main {
     margin: 16px;
 }
-
+.loginUserName {}
 .navbar {
     display: flex;
     align-items: center;
@@ -25,6 +25,8 @@ main {
 }
 
 .navbar__item {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 200;
     padding: 16px 16px;
     cursor: pointer;
     vertical-align: middle;

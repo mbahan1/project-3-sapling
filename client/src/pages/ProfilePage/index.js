@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 import "./styles.css";
+// import ToggleButton from "../../components/ToggleButton";
 
 
 export default function ProfilePage (props) {
@@ -18,31 +19,30 @@ export default function ProfilePage (props) {
     return(
         <div className="profilePage">
             <div className="profile-section">
-
-            <img alt={props.profile.zodiacSign} style={{width:"150px", height: "auto", borderRadius:"40px"}} 
+                <div className="profile-image">
+                    <img className="profile-img" alt={props.profile.zodiacSign}  
                         src={`/signs/${props.profile.zodiacSign}.webp`}/>
-            <h1>{props.profile.firstName} {props.profile.lastName}</h1>
-            <div className="profile">
-                <span>{props.profile.pronouns} </span>
-                <span>{props.profile.age}</span>
-                <p>{props.profile.zodiacSign}</p>
-                <p>{props.profile.hobbies}</p>
-                <p>{props.profile.bio}</p>
-            </div>
-            <div>
-                <Link to="/profile/edit"><button style={{"margin": "10px auto"}}>Edit Profile</button></Link>
-            </div>    
-            <div className="quote-section">
-                <Quote />
-            </div>
-        </div>
-          
-                    
-            <div className="post-section">
-                <PostForm user={props.profile._id}/>
-                <div className="postfeed-profilePage">
-                    <h3>List of my Manifestations</h3>
-                    {props.profile.posts?.map((post) => {
+                    <h1>{props.profile.firstName} {props.profile.lastName}</h1>
+                    <p>{props.profile.email}</p>
+                    <p>{props.profile.zodiacSign}</p>
+                </div>
+                <div className="quote-section">
+                    <Quote />
+                </div>
+                {/* <div className="editProfile-box">
+                    <button>Edit Profile</button>
+                </div> */}
+                  
+            <div className="posts-section">
+                <div>
+                  <PostForm user={props.profile._id}/>
+                </div>
+                <div className="manifest-title">
+                  <h2>List of my Manifestations</h2>
+                </div>
+                <div className="manifest-lst">
+                    <div>
+                      {props.profile.posts?.map((post) => {
                         return(
                             <div>
                             <Post 
@@ -58,6 +58,9 @@ export default function ProfilePage (props) {
                             </div>
                         )
                     }).reverse()}
+
+                    </div>
+
                 </div>
             </div>
         </div>

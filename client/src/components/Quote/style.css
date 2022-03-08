@@ -1,0 +1,32 @@
+/* .quote-section {
+    display: flex;
+    margin: 50px;
+    border-radius: 5px;
+    background-color: rgb(190, 186, 186);
+    padding: 20px;
+
+} */
+
+.quote-btn {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 200 !important;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+  
+
+  }
+  .quote-btn:hover {
+    background-color: #616e34; 
+    color: white;
+    }

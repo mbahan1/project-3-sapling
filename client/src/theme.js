@@ -1,7 +1,7 @@
 import{createGlobalStyle}from"styled-components";
 
 export const lightTheme={
-  body: '#A1B182',
+  body: '#D9C4B3',
   fontColor: '#D9C4B3',
 };
 
@@ -24,21 +24,15 @@ export const GlobalStyles=createGlobalStyle`
     padding: 5px 5px;
     border-radius: 30px;
     cursor: pointer;
-    background-color: #D9C4B3;
+    background-color: #f5e8dd;
 
   }
-  small {
-    display: block;
-  }
-  button {
-    display: block;
-    padding: 5px 5px;
-    border-radius: 15px;
-    cursor: pointer;
-  
 
 
-  }
+  // small {
+  //   display: block;
+  // }
+ 
 
 
 `;

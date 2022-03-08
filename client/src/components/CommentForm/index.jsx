@@ -1,6 +1,8 @@
 import { useState } from "react";
 import * as postService from "../../api/post.service";
 import { func } from "prop-types";
+import "./style.css";
+
 
 const CommentForm = (props) => {
 
@@ -21,7 +23,7 @@ const CommentForm = (props) => {
     };
 
     return (
-        <div className="container">
+        <div className="comment-container">
             <form className="commentForm">
                     <input 
                         className="commentForm-input"
@@ -33,7 +35,7 @@ const CommentForm = (props) => {
                     />
                     <button onClick={handleSubmit} className="comment-btn">Post</button>
             </form>
-            
+            <button className="comment-btn" onClick={handleSubmit}>Post</button>
         </div>
     );
 };

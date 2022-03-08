@@ -6,7 +6,7 @@ import { number } from "prop-types";
 import {useEffect, useState} from "react";
 import * as postService from "../../api/post.service";
 import CommentForm from "../CommentForm";
-import "./styles.css"
+import "./style.css";
 
 function Post(props) {
 

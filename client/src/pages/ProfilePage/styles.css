@@ -5,7 +5,19 @@
     margin-top: 30px;
 }
 
+.profile-img {
+    display: center;
+    width: 100px; 
+    height: 80px; 
+    
+}
 .profile-section {
+
+    display: flex;
+    margin: 50px;
+    border-radius: 3px;
+    background-color: #A1B182;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -14,13 +26,33 @@
 .quote-section {
     margin: 20px auto;
     max-width: 250px;
-    background-color: #D9C4B3;
+    background-color: #afc08e;
+    
 }
 
-.post-section {
+.posts-section {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 60%;
-    max-width: 800px;
+    max-width: 600px;
+}
+
+.manifest-lst {
+    display: flex;
+    margin: 50px;
+    border-radius: 3px;
+    background-color:#afc08e;
+    padding: 50px;
+    text-align: center;
+
+}
+
+.manifest-title{
+    display: center;
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 200; 
+    color:#7F5D53;
+    text-align: center;
+
 }

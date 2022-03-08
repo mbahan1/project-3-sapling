@@ -1,5 +1,5 @@
-Sapling Social Media Site
-GA 1026 Project 3 
+# Sapling Social Media Site
+## GA 1026 Project 3 
 by 
 [Nesh Masood](https://github.com/neshmasood), 
 [Helena Markus](https://github.com/helenamarkus14), 

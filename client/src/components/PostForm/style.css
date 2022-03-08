@@ -1,6 +1,7 @@
 
  .post-container {
     display: flex;
+    flex-direction: column ;
     margin: 50px;
     border-radius: 5px;
     background: linear-gradient(
@@ -14,16 +15,24 @@
   }
  
   .postForm-input {
-      width: 100%;
+
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
+      width: 50%;
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
       box-sizing: border-box;
       background-color: beige;
-      color: #2d3318;
+      color: #4B2E75;
   }
-
+textArea.postForm-textarea {
+  font-family: 'Montserrat', sans-serif;  
+  font-weight: 600;
+  height: 100px;
+}
   .postForm-textarea{
+    width: 50%;
     color: #535F2D;
     background-color: beige;
   }
@@ -52,4 +61,10 @@
   .post-Btn:hover {
     background-color: #616e34; 
     color: white;
+    }
+    
+
+    form.postForm {
+      font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
     }

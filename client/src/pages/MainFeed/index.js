@@ -30,13 +30,12 @@ const MainFeed = (props) => {
 					<Post 
 						title={post.title} 
 						id={post._id}
-						// user={post.user} 
+						user={post.user} 
 						body={post.body} 
 						kudos={post.kudos}
 						comments={post.comments}
 						key={post._id}
 						currentUser={props.profile._id}
-						refreshPosts={() => fetchPosts()}
 					/>
 					</>
 				);

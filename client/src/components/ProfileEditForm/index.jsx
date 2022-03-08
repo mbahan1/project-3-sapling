@@ -8,15 +8,26 @@ export default function ProfileEditForm(props) {
 
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [pronouns, SetPronouns] = useState("");
-    const [age, setAge] = useState("");
-    const [bio, setBio] = useState("");
-    const [hobbies, setHobbies] = useState("");
-    const [zodiacSign, setZodiacSign] = useState("")
+    const [zodiacSign, setZodiacSign] = useState("");
+    //Other unused profile fields, commented out incase we want to add later
+    // const [pronouns, SetPronouns] = useState("");
+    // const [age, setAge] = useState("");
+    // const [bio, setBio] = useState("");
+    // const [hobbies, setHobbies] = useState("");
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let updatedUser = {firstName, lastName, pronouns, age, bio, hobbies, zodiacSign};
+        let updatedUser = {
+            firstName, 
+            lastName, 
+            zodiacSign,
+            // Otherunused profile fields, commented out incase we want to add later
+            // pronouns, 
+            // age, 
+            // bio, 
+            // hobbies, 
+            };
         let res = await userService.update(`${props.profile._id}`,updatedUser).then(() => {
             console.log(updatedUser);
             document.location = "/"
@@ -53,7 +64,24 @@ export default function ProfileEditForm(props) {
                     placeholder="Last Name"
                 />
 
-                <label htmlFor="pronouns">Pronouns</label>
+                <label htmlFor="zodiacSign">Select Zodiac Sign</label>
+                <select className="signUpForm-input" onChange={(e)=>setZodiacSign(e.target.value)}>
+                    <option>- - -</option>
+                    <option value="aries">♈ Aries</option>
+                    <option value="taurus">♉ Taurus</option>
+                    <option value="gemini">♊ Gemini</option>
+                    <option value="cancer">♋ Cancer</option>
+                    <option value="leo">♌ Leo</option>
+                    <option value="virgo">♍ Virgo</option>
+                    <option value="libra">♎ Libra</option>
+                    <option value="scorpio">♏ Scorpio</option>
+                    <option value="sagittarius">♏ Sagittarius</option>
+                    <option value="capricorn">♑ Capricorn</option>
+                    <option value="aquarius">♒ Aquarius</option>
+                    <option value="pisces">♓ Pisces</option>
+                </select>
+
+                {/* <label htmlFor="pronouns">Pronouns</label>
                 <input
                     className="profileEditForm-input"
                     onChange={(e)=> SetPronouns(e.target.value)}
@@ -91,25 +119,10 @@ export default function ProfileEditForm(props) {
                     type="text"
                     name="hobbies"
                     placeholder="Hobbies"
-                />
+                /> */}
 
-                <label htmlFor="zodiacSign">Select Zodiac Sign</label>
-                <select className="signUpForm-input" onChange={(e)=>setZodiacSign(e.target.value)}>
-                    <option>- - -</option>
-                    <option value="aries">♈ Aries</option>
-                    <option value="taurus">♉ Taurus</option>
-                    <option value="gemini">♊ Gemini</option>
-                    <option value="cancer">♋ Cancer</option>
-                    <option value="leo">♌ Leo</option>
-                    <option value="virgo">♍ Virgo</option>
-                    <option value="libra">♎ Libra</option>
-                    <option value="scorpio">♏ Scorpio</option>
-                    <option value="sagittarius">♏ Sagittarius</option>
-                    <option value="capricorn">♑ Capricorn</option>
-                    <option value="aquarius">♒ Aquarius</option>
-                    <option value="pisces">♓ Pisces</option>
-                </select>
                 <button className="profileUpd-btn"
+
                     onClick={handleSubmit}
                 > Update
                 </button>

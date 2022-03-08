@@ -29,6 +29,12 @@ export default function PostEdit(props) {
         })
     }
 
+    const deleteSubmit = async () => {
+        await postService.destory(id).then(()=> {
+            document.location="/posts";
+        })
+    }
+
     useEffect(()=> {
         fetchPost()
     }, [])
@@ -64,6 +70,11 @@ export default function PostEdit(props) {
                 > Update Post
                 </button>
             </form>
+
+            <button 
+                    onClick={deleteSubmit}
+                > Delete Post
+            </button>
 
         </div>
     )

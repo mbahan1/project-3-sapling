@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import * as postService from "../../api/post.service";
-// import "./styles.css";
+import "./styles.css";
 
 
 export default function PostEdit(props) {
@@ -41,10 +41,11 @@ export default function PostEdit(props) {
     return(
         <div className="postEditComponent">
             <div> 
-                <h3>Update Your Post </h3>
+                <h3 className="headerManifestUpdate">Change Your Manifestation, but do it wisely</h3>
             </div>
+            
             <form className="postEdit">
-                <label>Post Title </label>
+                <label className="postTitleHeader">Title </label>
                 <input 
                     className="postEdit-input"
                     onChange={(e)=> setUpdatedTitle(e.target.value)}
@@ -54,7 +55,7 @@ export default function PostEdit(props) {
                     placeholder={title}
                 />
 
-                <label>What do you want to manifest today?</label>
+                <label className="changeManifest">Manifestation to change:</label>
                 <input 
                     className="postEdit-input"
                     onChange={(e)=> setUpdatedBody(e.target.value)}
@@ -63,17 +64,17 @@ export default function PostEdit(props) {
                     name="body"
                     placeholder={body}
                 />
-
-                <button 
+                <button className="submitButtonUpdate"
                     onClick={handleSubmit}
-                > Update Post
+                > Update
                 </button>
+                
             </form>
-
-            <button 
+            <button className="deleteButtonPost"
                     onClick={deleteSubmit}
-                > Delete Post
+                > Delete
             </button>
+        
 
         </div>
     )

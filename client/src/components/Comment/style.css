@@ -1,0 +1,47 @@
+.editPost-btns {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 200 !important;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+  
+
+  }
+  .editPost-btns {
+    background-color: #616e34; 
+    color: white;
+}
+
+.deletePost-btns {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 200 !important;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+  
+
+  }
+  .deletePost-btns {
+    background-color: #616e34; 
+    color: white;
+}

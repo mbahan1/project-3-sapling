@@ -1,7 +1,7 @@
 const User = (props) => {
 
     return (
-        <div >
+        <div className="user-details">
             <img alt={props.user.zodiacSign} style={{width:"150px", height: "auto", borderRadius:"40px"}} 
                         src={`/signs/${props.user.zodiacSign}.webp`}/>
             <h1>{props.user.firstName} {props.user.lastName}</h1>

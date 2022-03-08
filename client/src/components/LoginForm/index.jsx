@@ -35,13 +35,12 @@ export default function LoginForm() {
                 <input className="loginForm-input"
                     onChange={(e)=> setPassword(e.target.value)}
                     value={password}
-                    type="text"
+                    type="password"
                     name="password"
                     placeholder="Password"
                 />
                 <button 
                     className="loginBtn loginForm-input" 
-                    style={{backgroundColor: "blue", color:"white"}} 
                     onClick={handleSubmit}
                 > Log In</button>
             </form>

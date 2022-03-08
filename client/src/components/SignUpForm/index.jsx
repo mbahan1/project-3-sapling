@@ -73,7 +73,7 @@ export default function SignUpForm() {
                 <input className="signUpForm-input"
                     onChange={(e)=> setPassword(e.target.value)}
                     value={password}
-                    type="text"
+                    type="password"
                     name="password"
                     placeholder="Password"
                 />

@@ -5,15 +5,19 @@
     border-radius: 5px;
     background-color:#afc08e;
     padding: 20px;
+    color: #2d3318;
+  
   }
  
-  /* .commentForm-input {
+  .commentForm-input {
       width: 100%;
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
       box-sizing: border-box;
-  } */
+      background-color: beige;
+      color: #2d3318;
+  }
   .comment-btn {
     font-size: 10px;
     letter-spacing: 2px;

@@ -1,6 +1,7 @@
 import { number } from "prop-types";
 import {useState,} from "react";
 import * as postService from "../../api/post.service";
+import "./style.css";
 
 const Kudos = (props) => {
 
@@ -19,8 +20,8 @@ const Kudos = (props) => {
         
     return (
          <div>
-            <button onClick={updateKudos}>Kudos!</button>
-            <span> Kudos Count: {kudos}</span>
+            <button className="kudo-btn" onClick={updateKudos}>Kudos!</button>
+            <span> 🌺  {kudos}</span>
         </div>
     )
 }

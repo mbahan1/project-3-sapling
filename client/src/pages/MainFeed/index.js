@@ -1,7 +1,7 @@
 import { useState, useEffect} from "react";
 import Post from "../../components/Post";
 import * as postService from "../../api/post.service";
-import "./style.css";
+import "./styles.css";
 
 const MainFeed = (props) => {
 
@@ -21,10 +21,10 @@ const MainFeed = (props) => {
 
  
 		<div className="mainfeed-page">
-
+			<h3>Manifestations and Good Vibes Only</h3>
 			{posts.map((post) => {
 				return(
-					<>
+					<div className="individualPosts">
 					<Post 
 						title={post.title} 
 						id={post._id}
@@ -35,7 +35,7 @@ const MainFeed = (props) => {
 						key={post._id}
 						currentUser={props.profile._id}
 					/>
-					</>
+					</div>
 				);
 			})};
 

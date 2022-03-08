@@ -1,0 +1,67 @@
+
+
+.headerManifestUpdate {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
+}
+
+.postTitleHeader {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
+    
+}
+
+.postEditComponent {
+
+
+    margin: 100px auto; 
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+    width: 25%;
+    height: 75%;
+    border-radius: 2%;  
+    padding: 10px 0px 30px 10px;
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
+    color: #d3baf5;
+    background: linear-gradient(
+        to right,
+        #A1B182,
+        #4B2E75
+        
+    ); 
+    
+}
+
+.postEdit{
+    display: flex;
+    flex-direction: column;
+}
+
+.submitButtonUpdate{
+    
+    background-color: #535F2D;
+    color: #f5e8dd;
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
+    width: 15%;
+    border-radius: 25%;
+    
+   
+    
+   
+    
+
+}
+
+.deleteButtonPost{
+    background-color: #4B2E75;
+    color: #f5e8dd;
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
+    width: 100;
+    border-radius: 25%;
+    float: left;
+    margin: 0 0 20px 0;
+    
+   
+}

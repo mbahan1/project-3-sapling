@@ -1,0 +1,14 @@
+button {
+    display: flex;
+    margin: 50px;
+    border-radius: 5px;
+    /* background-color:#afc08e; */
+    background: linear-gradient(
+      to right,
+      #A1B182,
+      #4B2E75
+      
+  ); 
+    padding: 20px;
+    text-align: center;
+  }

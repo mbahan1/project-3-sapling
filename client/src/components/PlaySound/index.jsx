@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Sound from 'react-sound'; 
 import Music from '../../assets/soft-daydream.mp3';
+import './style.css';
+
 
 const PlaySound = (
     handleSongLoading,
@@ -11,7 +13,7 @@ const PlaySound = (
 
     return (
         <div>
-            <button onClick={() => setIsPlaying(!isPlaying)}>{!isPlaying ? 'Play' : 'Stop'}</button>
+            <button onClick={() => setIsPlaying(!isPlaying)}>{!isPlaying ? 'Play the Music of Your Aura' : 'STOP SOUND NOW!!!'}</button>
             <Sound
                 url={Music}
                 playStatus={

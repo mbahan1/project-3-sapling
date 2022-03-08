@@ -138,7 +138,7 @@ export default function ProfileEditForm(props) {
                 </button>
             </form>
 
-            <button className="profileEdit-submit"
+            <button className="profileEdit-delete"
                     onClick={deleteSubmit}
                 > Delete Account
                 </button>

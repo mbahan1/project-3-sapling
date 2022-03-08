@@ -1,11 +1,12 @@
-/* .quote-section {
+.quote-section {
     display: flex;
     margin: 50px;
     border-radius: 5px;
     background-color: rgb(190, 186, 186);
     padding: 20px;
+    color: #2d3318;
 
-} */
+}
 
 .quote-btn {
     font-size: 10px;

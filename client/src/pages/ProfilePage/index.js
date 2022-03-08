@@ -20,8 +20,9 @@ export default function ProfilePage (props) {
             <div className="profile-section">
                 <img alt={props.profile.zodiacSign}  
                         src={`/signs/${props.profile.zodiacSign}.webp`}/>
-                <h1>{props.profile.firstName} {props.profile.lastName}</h1>
+                
                 <div className="profile">
+                <h2>{props.profile.firstName} {props.profile.lastName}</h2>
                     <span>{props.profile.pronouns} </span>
                     <span>{props.profile.age}</span>
                     <p>{props.profile.zodiacSign}</p>
@@ -29,7 +30,7 @@ export default function ProfilePage (props) {
                     <p>{props.profile.bio}</p>
                 </div>
                 <div>
-                    <Link to="/profile/edit"><button style={{"margin": "10px auto"}}>Edit Profile</button></Link>
+                    <Link to="/profile/edit"><button className="edit-profile-btn">Edit Profile</button></Link>
                 </div>    
                 <div className="quote-section">
                     <Quote />

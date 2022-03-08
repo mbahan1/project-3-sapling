@@ -1,49 +1,64 @@
-
+.headerEditProfile{
+  font-family: 'Montserrat', sans-serif;  
+  font-weight: 600;
+}
 .profileEditFormComponent {
-    display: flex;
-    width: 500px;
-    margin: 100px auto;
-    border-radius: 5px;
-    background-color:#afc08e;
-    padding: 20px;
-    color: #2d3318;
+
+  margin: 100px auto; 
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+  width: 25%;
+  height: 75%;
+  border-radius: 2%;  
+  padding: 10px 0px 30px 10px;
+  font-family: 'Montserrat', sans-serif;  
+  font-weight: 600;
+  color: #d3baf5;
+  background: linear-gradient(
+      to right,
+      #A1B182,
+      #4B2E75
+      
+  ); 
+}
+  .profileEdit-delete{
+    /* float: right; */
+    display: inline-block;
+    align-content: center;
   }
  
-  /* .commentForm-input {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      box-sizing: border-box;
-  } */
+ 
   .profileUpd-btn {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
     font-size: 10px;
     letter-spacing: 2px;
-    font-weight: 200 !important;
     background-color: #535F2D;
     color: #fff;
     padding: 10px 15px;
     border-radius: 3%;
     margin: auto;
     text-align: center;
-    display: inline-block !important;
+    /* display: inline-block !important; */
     text-decoration: none;
     border: 0px;
     width: max-content;
     cursor: pointer;
     transition: all 0.3s 0s ease-in-out;
-
+    
   }
 
   .profileUpd-btn:hover {
+    
     background-color: #616e34; 
     color: white;
 
   }  
   .profileEdit-delete {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 600;
     font-size: 10px;
     letter-spacing: 2px;
-    font-weight: 200 !important;
+    /* font-weight: 200 !important; */
     background-color: #535F2D;
     color: #fff;
     padding: 10px 15px;
@@ -56,6 +71,7 @@
     width: max-content;
     cursor: pointer;
     transition: all 0.3s 0s ease-in-out;
+    
 
   }
 

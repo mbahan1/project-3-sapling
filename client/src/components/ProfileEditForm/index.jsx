@@ -51,7 +51,7 @@ export default function ProfileEditForm(props) {
     return(
         <div className="profileEditFormComponent">
             <div> 
-                <h2>Edit Your Profile, {props.profile.firstName} </h2>
+                <h2 className="headerEditProfile">Edit Your Profile, {props.profile.firstName} </h2>
             </div>
             <form className="profileEditForm">
                 <label htmlFor="firtName">First Name</label>

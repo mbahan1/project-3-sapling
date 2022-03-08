@@ -50,7 +50,28 @@
     justify-content: end;
     margin-top: 10px
 }
-
+.editDeleteCommentBtn {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 1px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    /* display: inline-block !important; */
+    text-decoration: none;
+    border: 0px;
+    
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+}
+    
+.editDeleteCommentBtn:hover {
+    background-color: #616e34; 
+    color: white;
+}
 .manifest-lst {
     display: flex;
     margin: 50px;
@@ -93,4 +114,20 @@
   .edit-profile-btn:hover {
     background-color: #616e34; 
     color: white;
+    }
+
+
+    .postfeed-profilePage {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
+    
+    background-color: #f5e8dd;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    border-radius: 2%;  
+    color: #2d3318;
+    text-align:left;
+    text-indent: 2%;
+    margin: auto;
+    padding-top: 10px;
     }

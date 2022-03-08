@@ -17,7 +17,26 @@
 }
 
 .loginBtn {
-    background-color:#535F2D;
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
+    letter-spacing: 2px;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 1px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+}
+
+.loginBtn:hover {
+    background-color: #616e34; 
+    color: white;
 }
 .loginForm-input {
     margin: 5px 0px;
@@ -27,8 +46,10 @@
 }
 
 .linkToSignUp {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
@@ -36,4 +57,9 @@
     font-family: 'Montserrat', sans-serif;  
     font-weight: 600;
     color: #4B2E75
+}
+
+
+.signUp{
+    color:#4B2E75
 }

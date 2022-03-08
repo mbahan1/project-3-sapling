@@ -63,3 +63,22 @@
 .signUp{
     color:#4B2E75
 }
+
+.home-page-signUp-btn{
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 400;
+    letter-spacing: 2px;
+    background-color:#4B2E75;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+
+}

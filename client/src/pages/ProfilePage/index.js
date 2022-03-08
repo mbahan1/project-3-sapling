@@ -18,7 +18,7 @@ export default function ProfilePage (props) {
     return(
         <div className="profilePage">
             <div className="profile-section">
-                <img alt={props.profile.zodiacSign} style={{width:"150px", height: "auto", borderRadius:"40px"}} 
+                <img alt={props.profile.zodiacSign}  
                         src={`/signs/${props.profile.zodiacSign}.webp`}/>
                 <h1>{props.profile.firstName} {props.profile.lastName}</h1>
                 <div className="profile">

@@ -60,7 +60,10 @@ function App() {
         return (
             <div className="App">
 
-                <NavBar firstName={profile.firstName}/>
+                <NavBar 
+                    firstName={profile.firstName}
+                    zodiacSign={profile.zodiacSign}
+                />
                 {/* <ToggleButton /> */}
                 {/* <ThemeButton /> */}
                 <Routes>

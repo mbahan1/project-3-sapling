@@ -14,7 +14,7 @@ const CommentEdit = (props) =>{
 
     return (
     <>
-    <h1>Edit Comment</h1>
+    <p>Edit Comment</p>
     <form>
         <input 
         onChange={(e)=> setUpdatedComment(e.target.value)}

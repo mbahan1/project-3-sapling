@@ -1,4 +1,4 @@
-import {NavLink, Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import saplingLogo from '../../assets/saplingLogo.png';
 import '../NavBar/style.css';
 import Logout from '../Logout';
@@ -24,18 +24,18 @@ export default function NavBar(props) {
       <NavLink to="/" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
-                    >My Profile Page</NavLink>
+                    >Profile Page</NavLink>
       <NavLink to="/posts" className='navbar__item'
                     style={({ isActive }) => 
                     ({ color: isActive ? 'white' : '#946ECA' })}
                     >Main Feed</NavLink> 
       <div className="dropdown">
-        <div className='loginUserName dropBtn'>
-            <span>{props.firstName}</span> 
-            <span>{props.lastName}</span>
+        <div className='loginUserName dropBtn'> 
+          <img alt={props.zodiacSign} style={{width:"50px", height: "auto", borderRadius:"30px", margin: "0 5px 0 0"}}
+                        src={`/signs/${props.zodiacSign}.webp`}/>
+          <span>{props.firstName}</span>
         </div>
         <div className="dropdown-content">
-          <Link to="profile/edit">Profile Edit</Link>
           <Logout /> 
         </div>
       </div>

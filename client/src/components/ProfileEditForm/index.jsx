@@ -48,6 +48,10 @@ export default function ProfileEditForm(props) {
         window.location = "/"
     }
 
+    const cancelClick = () => {
+        window.location ="/"
+    }
+
     return(
         <div className="profileEditFormComponent">
             <div> 
@@ -132,16 +136,22 @@ export default function ProfileEditForm(props) {
                 /> */}
 
                 <button className="profileUpd-btn"
-
                     onClick={handleSubmit}
                 > Update
                 </button>
             </form>
 
+<div className="profileEdit-btns">
             <button className="profileEdit-delete"
                     onClick={deleteSubmit}
                 > Delete Account
                 </button>
+            <button className="profileEdit-cancel"
+                onClick={cancelClick}
+            >Cancel
+            </button>
+            </div>
+
 
         </div>
     )

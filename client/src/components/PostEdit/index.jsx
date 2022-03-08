@@ -34,6 +34,10 @@ export default function PostEdit(props) {
         })
     }
 
+    const cancelClick = () => {
+        window.location ="/"
+    }
+
     useEffect(()=> {
         fetchPost()
     }, [])
@@ -74,6 +78,7 @@ export default function PostEdit(props) {
                     onClick={deleteSubmit}
                 > Delete
             </button>
+            <button onClick={cancelClick}>Cancel</button>
         
 
         </div>

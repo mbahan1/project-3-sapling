@@ -29,9 +29,18 @@ const Comment = (props) => {
         setEditComment((current)=> !current)
     }
 
+    const cancelClick = () => {
+        setEditComment(false)
+    }
+
     if(editComment) {
         return(
+            <>
             <CommentEdit postId={props.postId} commentId={props.commentId} body={props.body}/>
+            <button onClick={cancelClick}>Cancel</button>
+            </>
+            
+            
         )
     }
 

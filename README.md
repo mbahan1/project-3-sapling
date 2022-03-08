@@ -1,6 +1,6 @@
 # Sapling Social Media Site
 ## GA 1026 Project 3 
-by 
+by  
 Nesh Masood - [github](https://github.com/neshmasood),[LinkedIn](https://www.linkedin.com/in/neshmasood/)  
 Helena Markus - [github](https://github.com/helenamarkus14),[LinkedIn](https://www.linkedin.com/in/helena-markus/)  
 Jihye Kwak - [github](https://github.com/jihyekwak),[LinkedIn](https://www.linkedin.com/in/jihye-kwak/)  
@@ -40,13 +40,13 @@ starts the server and client side at the same time (needs concurrently installed
 Advice Slip JSON API[https://api.adviceslip.com/](https://api.adviceslip.com/)
 
 ## Image sources
-Tiny tab logo [https://depositphotos.com/116209008/stock-illustration-stylized-lotus-flower-icon-vector.html](https://depositphotos.com/116209008/stock-illustration-stylized-lotus-flower-icon-vector.html)
+Tiny tab logo [https://depositphotos.com/116209008/stock-illustration-stylized-lotus-flower-icon-vector.html](https://depositphotos.com/116209008/stock-illustration-stylized-lotus-flower-icon-vector.html)  
 
-Landing page gif [https://c.tenor.com/XO0nQRb4xe8AAAAC/meditation-grogu.gif](https://c.tenor.com/XO0nQRb4xe8AAAAC/meditation-grogu.gif)
+Landing page gif [https://c.tenor.com/XO0nQRb4xe8AAAAC/meditation-grogu.gif](https://c.tenor.com/XO0nQRb4xe8AAAAC/meditation-grogu.gif)  
 
-Site logo[]()
+Site logo[]()  
 
-Zodiac sign avatars [https://nypost.com/article/zodiac-signs-dates-personality-traits/](https://nypost.com/article/zodiac-signs-dates-personality-traits/)
+Zodiac sign avatars [https://nypost.com/article/zodiac-signs-dates-personality-traits/](https://nypost.com/article/zodiac-signs-dates-personality-traits/)  
 
 Zodiac sign chart[]()
 

@@ -47,7 +47,7 @@ export default function LoginForm() {
 
             <div className="linkToSignUp">
                 <span>Don't have an account?</span>
-                <Link to="signup"><button className="loginForm-input loginBtn">Sign up</button></Link>
+                <Link to="signup"><button className="home-page-signUp-btn">Sign up</button></Link>
             </div>
             <h3>{sucessMsg}</h3>
         </div>

@@ -21,7 +21,7 @@ const MainFeed = (props) => {
 
  
 		<div className="mainfeed-page">
-			<h3>Manifestations and Good Vibes Only</h3>
+			<h3 className="mainfeedTitle">Manifestations and Good Vibes Only</h3>
 			{posts.map((post) => {
 				return(
 					<div className="individualPosts">

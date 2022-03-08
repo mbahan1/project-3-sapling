@@ -37,7 +37,7 @@ export default function ProfilePage (props) {
             <div className="post-section">
                 <PostForm user={props.profile._id}/>
                 <div className="postfeed-profilePage">
-                    <h3>List of my Manifestations</h3>
+                    <h3 className="mainProfilePosts">List of my Manifestations</h3>
                     {props.profile.posts?.map((post) => {
                         return(
                             <div>

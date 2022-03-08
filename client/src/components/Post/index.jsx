@@ -67,7 +67,7 @@ function Post(props) {
 				/>
 				{props.currentUser===props.user? (
 					<div className="editPost-link">
-                    <Link to={`/posts/${props.id}`}><button>Edit Post/ Delete</button></Link>
+                    <Link to={`/posts/${props.id}`}><button className="edit-delete-btn">Edit Post/ Delete</button></Link>
                 </div>
 				): null}
 				

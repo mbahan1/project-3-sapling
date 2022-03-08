@@ -67,3 +67,26 @@
     text-align: center;
 }
 
+.signUp-login-btn{
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-color: #613f91;
+    color: #fff;
+    padding: 15px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+
+}
+
+.signUp-login-btn:hover {
+    background-color: #616e34; 
+    color: white;
+    }

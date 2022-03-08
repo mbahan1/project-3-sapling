@@ -55,7 +55,7 @@ export default function ProfilePage (props) {
                                     currentUser={props.profile._id}
                                 />
                                 <div className="editPost-link">
-                                    <Link to={`/posts/${post._id}`}><button>Edit / Delete</button></Link>
+                                    <Link to={`/posts/${post._id}`}><button className="editDeleteCommentBtn">Edit / Delete</button></Link>
                                 </div>
                             </div>
                         )

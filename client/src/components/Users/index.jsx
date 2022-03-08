@@ -8,7 +8,6 @@ const Users = () => {
 
     const fetchUsers = async () => {
         await userService.getAll().then((res)=> {
-            console.log("found users")
             setUsers(res.data.data)
         })
     }

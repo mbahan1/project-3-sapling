@@ -23,7 +23,8 @@ const PostForm = (props) => {
     };
 
     return (
-        <div className="post-container">
+        <div >
+            <div className="post-container">
             <form className="postForm">
                 <label>Post Title</label>
                     <input 
@@ -41,9 +42,11 @@ const PostForm = (props) => {
                         onChange={(e) => setBody(e.target.value)}
                         value={body}
                         type="text" name= "body" placeholder="" />                
-
             </form>
-            <button className="post-btn" onClick={handleSubmit}> Send it out to the world! </button>
+            <div >
+                <button className="post-Btn" onClick={handleSubmit}> Send it out to the world! </button>
+            </div>
+            </div>
         </div>
     );
 };

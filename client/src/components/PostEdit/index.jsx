@@ -68,19 +68,15 @@ export default function PostEdit(props) {
                     name="body"
                     placeholder={body}
                 />
-                <button className="submitButtonUpdate"
-                    onClick={handleSubmit}
-                > Update
-                </button>
+
                 
             </form>
-            <button className="deleteButtonPost"
-                    onClick={deleteSubmit}
-                > Delete
-            </button>
-            <button onClick={cancelClick}>Cancel</button>
-        
+            <div className="upd-delete-cancel-btn-section">
+                <button className="submitButtonUpdate" onClick={handleSubmit}> Update</button>
+                <button className="deleteButtonPost" onClick={deleteSubmit}> Delete</button>
+                <button className="cancelPostBtn" onClick={cancelClick}>Cancel</button>
 
+            </div>
         </div>
     )
 }

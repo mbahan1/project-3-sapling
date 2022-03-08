@@ -1,4 +1,5 @@
-import * as authService from "../../api/auth.service"
+import * as authService from "../../api/auth.service";
+import "./style.css";
 
 const Logout = () => {
 
@@ -9,7 +10,7 @@ const Logout = () => {
     }
     
     return (
-        <div>
+        <div className="profile-logout-section">
             <button 
                 className="logoutBtn"
                 onClick={logout}

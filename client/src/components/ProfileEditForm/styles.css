@@ -1,4 +1,69 @@
+
 .profileEditFormComponent {
+    display: flex;
+    width: 500px;
+    margin: 100px;
+    border-radius: 5px;
+    background-color:#afc08e;
+    padding: 20px;
+  }
+ 
+  /* .commentForm-input {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      box-sizing: border-box;
+  } */
+  .profileuUpd-btn {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 200 !important;
+    background-color: #535F2D;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3%;
+    margin: auto;
+    text-align: center;
+    display: inline-block !important;
+    text-decoration: none;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+
+  }
+
+  .comment-btn:hover {
+    background-color: #616e34; 
+    color: white;
+
+  }  
+
+
+
+
+/* .profileEditFormComponent {
+    width: 500px;
+    margin: 100px;
+} */
+
+.profileEditForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileEditForm-input {
+    margin: 5px 0px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+
+
+
+/* .profileEditFormComponent {
     width: 500px;
     margin: 100px auto;
 }
@@ -24,4 +89,4 @@
 
 .profile {
     background-color: #535F2D;
-}
+} */

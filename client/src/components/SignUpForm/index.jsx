@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import * as authService from "../../api/auth.service";
 import "./styles.css"
 
+// Main SignUp Form for New Users to enter their data
 export default function SignUpForm() {
 
     const [firstName, setFirstName] = useState("");

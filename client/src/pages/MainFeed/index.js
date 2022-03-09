@@ -3,6 +3,8 @@ import Post from "../../components/Post";
 import * as postService from "../../api/post.service";
 import "./styles.css";
 
+// Displays Feed of Posts of all Users
+
 const MainFeed = (props) => {
 
 	const [posts, setPosts] = useState([]);

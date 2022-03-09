@@ -91,8 +91,10 @@ export default function SignUpForm() {
                     <option value="aquarius">♒ Aquarius (January 20 - February 18)</option>
                     <option value="pisces">♓ Pisces (February 19 - March 20)</option>
                 </select>
+                <div className="message-signup-page">
+                    <span>* Sign-Up then Log-In to feel the energy! </span>
 
-                
+                </div>
                 <button 
                     className="signUpBtn signUpForm-input" 
                     onClick={handleSubmit}
@@ -102,6 +104,7 @@ export default function SignUpForm() {
             
             <div className="linkToSignUp">
                 <span>Have an account?</span>
+                
             <div className="logInLink">    
                 <Link to="/"><button className="signUp-login-btn">Log In</button></Link>
                 </div>

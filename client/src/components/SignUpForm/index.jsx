@@ -1,10 +1,7 @@
-import "./styles.css"
 import {useState} from "react";
 import { Link } from "react-router-dom";
 import * as authService from "../../api/auth.service";
-
-
-
+import "./styles.css"
 
 export default function SignUpForm() {
 
@@ -102,6 +99,7 @@ export default function SignUpForm() {
                 > Sign Up
                 </button>
             </form>
+            
             <div className="linkToSignUp">
                 <span>Have an account?</span>
             <div className="logInLink">    

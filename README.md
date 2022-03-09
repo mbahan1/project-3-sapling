@@ -7,14 +7,14 @@ Jihye Kwak - [github](https://github.com/jihyekwak), [LinkedIn](https://www.link
 Jack Glazer - [github](https://github.com/jackrobert0220), [LinkedIn](https://www.linkedin.com/in/jack-glazer/)  
 Michelle Bahan - [github](https://github.com/mbahan1), [LinkedIn](linkedin.com/in/michelle-bahan/)  
 
+## Project Description  
+Sapling is a class assigned social media site. We chose to make ours about putting positive energy into the world in the form of personal manifestation posts that other users can see, comment on and upvote, as well as giving users random fun and helpful bits of advice on their profile if they need some inspiration. It is meant to invoke calm and encourage personal positivity and growth.
+
 ## Deploy
 [https://sapling-1026.herokuapp.com/](https://sapling-1026.herokuapp.com/)
 
 ## Github
 [https://github.com/mbahan1/project-3-sapling](https://github.com/mbahan1/project-3-sapling)
-
-Project Description:
-Sapling is class assigned social media site. We chose to make ours about putting positive energy into the world in the form of personal manifestation posts that other users can see, comment on and upvote, as well as giving users random fun and helpful bits of advice on their profile if they need some inspiration. It is meant to invoke calm and encourage personal positivity and growth.
 
 ## Planning Docs
 [User Research](/planning/saplingUserResearchSurvey.pdf)  

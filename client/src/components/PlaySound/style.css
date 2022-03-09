@@ -1,7 +1,8 @@
 .music-button, .toggle-btn {
     display: flex;
+    flex-direction: column;
     margin: 50px;
-    border-radius: 5px;
+    border-radius: 10px;
     /* background-color:#afc08e; */
     background: linear-gradient(
       to right,
@@ -9,6 +10,11 @@
       #4B2E75
       
   ); 
-    padding: 20px;
+    padding: 10px;
     text-align: center;
   }
+
+p {
+  font-family: 'Montserrat', sans-serif; 
+  line-height: 0;
+}

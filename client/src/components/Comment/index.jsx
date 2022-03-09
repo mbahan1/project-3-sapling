@@ -4,7 +4,7 @@ import * as commentService from "../../api/comment.service";
 import CommentEdit from "../CommentEdit";
 import "./style.css";
 
-
+// Comment Box containing functions of commenting on a post
 const Comment = (props) => {
 
     const [author, setAuthor] = useState("");

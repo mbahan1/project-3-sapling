@@ -5,8 +5,8 @@ import ThemeButton from '../ThemeButton';
 import PlaySound from '../PlaySound';
 import './style.css';
 
-
-
+// Navigation Bar for top of page. 
+// ( Displays once User is Signed In
 export default function NavBar(props) {
 
     return(

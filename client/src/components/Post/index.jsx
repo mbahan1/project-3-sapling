@@ -9,6 +9,7 @@ import CommentForm from "../CommentForm";
 import * as postService from "../../api/post.service";
 import "./style.css";
 
+// Main Post Component with all Post functionality (forms and buttons)
 function Post(props) {
 
 	const [author, setAuthor] = useState("");

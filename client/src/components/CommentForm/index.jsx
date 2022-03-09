@@ -3,7 +3,7 @@ import { func } from "prop-types";
 import * as commentService from "../../api/comment.service";
 import "./style.css";
 
-
+// Main comment form
 const CommentForm = (props) => {
 
     const [body, setBody] = useState("");

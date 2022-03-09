@@ -4,7 +4,7 @@ import Quote from "../../components/Quote";
 import {Link} from "react-router-dom";
 import "./styles.css";
 
-
+// Displays Signed-In User's Profile and Data
 
 export default function ProfilePage (props) {
     

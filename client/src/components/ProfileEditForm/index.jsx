@@ -4,7 +4,7 @@ import * as authService from "../../api/auth.service";
 import "./styles.css";
 
 
-
+// Edit Profile Form
 export default function ProfileEditForm(props) {
 
     const [firstName, setFirstName] = useState("");

@@ -3,6 +3,7 @@ import { func } from "prop-types";
 import * as postService from "../../api/post.service";
 import "./style.css";
 
+// Make a Post Form
 const PostForm = (props) => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");

@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import * as authService from "../../api/auth.service";
 import "./styles.css";
 
+// Login form for Existing Users to Sign-In
 export default function LoginForm() {
 
     const [email, setEmail] = useState("");

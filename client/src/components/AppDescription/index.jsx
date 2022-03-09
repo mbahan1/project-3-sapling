@@ -1,6 +1,7 @@
 import "./styles.css";
 import saplingFlower from '../../assets/saplingFlower.png'
 
+// Displayed in Landing Page below SignUp Form
 export default function AppDescription() {
     return (
        
@@ -14,7 +15,7 @@ export default function AppDescription() {
             </div>
 
             <div className="howTo">
-
+            
             <img className="saplingFlower" src={saplingFlower} alt =""/>
             <h4 className="bottomText">Use Sapling for<br></br>  your daily mainifestation, <br></br> give others kudos, <br></br> and send positive vibrations into the world around you</h4>
             <h3 className="energy">Everything is <em>energy</em> and that's all there is to it</h3>

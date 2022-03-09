@@ -1,6 +1,7 @@
 import {useState} from "react";
 import * as commentService from "../../api/comment.service";
 
+// Edit Comment Form
 const CommentEdit = (props) =>{
 
     const [updatedComment, setUpdatedComment] = useState("")

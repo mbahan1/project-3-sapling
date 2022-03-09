@@ -3,11 +3,14 @@ import Sound from 'react-sound';
 import Music from '../../assets/soft-daydream.mp3';
 import './style.css';
 
+// Play Music Button
+// Click once to play, click again to stop
 const PlaySound = (
     handleSongLoading,
     handleSongPlaying,
     handleSongFinishedPlaying,
 ) => {
+    // Initial State is with No Sound
     const [isPlaying, setIsPlaying] = useState(false);
 
     return (

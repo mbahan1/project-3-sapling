@@ -2,6 +2,7 @@ import {useState} from "react";
 import * as postService from "../../api/post.service";
 import "./style.css";
 
+// Kudos (Like) Button
 const Kudos = (props) => {
 
     const [kudos, setKudos] = useState(`${props.kudos}`);

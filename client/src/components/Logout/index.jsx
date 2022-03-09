@@ -1,6 +1,7 @@
 import * as authService from "../../api/auth.service";
 import "./style.css";
 
+// Logout Button
 const Logout = () => {
 
     const logout = () => {

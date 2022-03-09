@@ -1,11 +1,9 @@
-import "./styles.css"
 import {useState} from "react";
 import { Link } from "react-router-dom";
 import * as authService from "../../api/auth.service";
+import "./styles.css"
 
-
-
-
+// Main SignUp Form for New Users to enter their data
 export default function SignUpForm() {
 
     const [firstName, setFirstName] = useState("");
@@ -25,7 +23,6 @@ export default function SignUpForm() {
             setEmail("");
             setPassword("");
             setZodiacSign("");
-            console.log(newUser);
             setSuccessMsg(`Welcome ${firstName} :)`);
             document.location = "/"
         })
@@ -40,7 +37,7 @@ export default function SignUpForm() {
             
             <form className="signUpForm">
             <h3 className='signUpHeader'>Sign up and start manifesting</h3>
-                <label htmlFor="firstName">First Name</label>
+                <label htmlFor="firstName">First Name*</label>
                 <input 
                     className="signUpForm-input"
                     onChange={(e)=> setFirstName(e.target.value)}
@@ -50,7 +47,7 @@ export default function SignUpForm() {
                     placeholder="First Name"  
                 />
 
-                <label htmlFor="lastName">Last Name</label>
+                <label htmlFor="lastName">Last Name*</label>
                 <input 
                     className="signUpForm-input"
                     onChange={(e)=> setLastName(e.target.value)}
@@ -60,25 +57,25 @@ export default function SignUpForm() {
                     placeholder="Last Name"
                 />
 
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Email ID*</label>
                 <input className="signUpForm-input"
                     onChange={(e)=> setEmail(e.target.value)}
                     value={email}
                     type="text"
                     name="email"
-                    placeholder="email"
+                    placeholder="Email Address"
                 />
 
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">Password*</label>
                 <input className="signUpForm-input"
                     onChange={(e)=> setPassword(e.target.value)}
                     value={password}
                     type="password"
                     name="password"
-                    placeholder="Password"
+                    placeholder="5+ Characters"
                 />
 
-                <label htmlFor="zodiacSign">Select Zodiac Sign</label>
+                <label htmlFor="zodiacSign">Select Zodiac Sign*</label>
                 <select className="signUpForm-input" onChange={(e)=>setZodiacSign(e.target.value)}>
                     <option>- - -</option>
                     <option value="aries">♈ Aries (March 21 - April 19)</option>
@@ -94,16 +91,20 @@ export default function SignUpForm() {
                     <option value="aquarius">♒ Aquarius (January 20 - February 18)</option>
                     <option value="pisces">♓ Pisces (February 19 - March 20)</option>
                 </select>
+                <div className="message-signup-page">
+                    <span>* Sign-Up then Log-In to feel the energy! </span>
 
-                
+                </div>
                 <button 
                     className="signUpBtn signUpForm-input" 
                     onClick={handleSubmit}
                 > Sign Up
                 </button>
             </form>
+            
             <div className="linkToSignUp">
                 <span>Have an account?</span>
+                
             <div className="logInLink">    
                 <Link to="/"><button className="signUp-login-btn">Log In</button></Link>
                 </div>

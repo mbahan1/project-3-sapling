@@ -1,12 +1,8 @@
-// Welcome Page contains
-// LoginForm Component
-// Manifest app description Component
-// Link to SignUp Page
-
 import AppDescription from "../../components/AppDescription";
 import LoginForm from "../../components/LoginForm";
 import "./styles.css"
 
+// Landing Page
 export default function WelcomePage() {
     return (
         <div className="welcomePage">

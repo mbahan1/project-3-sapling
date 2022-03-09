@@ -1,10 +1,10 @@
 import {useEffect, useState} from "react";
 import * as userService from "../../api/user.service";
-import * as postService from "../../api/post.service";
+import * as commentService from "../../api/comment.service";
 import CommentEdit from "../CommentEdit";
 import "./style.css";
 
-
+// Comment Box containing functions of commenting on a post
 const Comment = (props) => {
 
     const [author, setAuthor] = useState("");
@@ -21,7 +21,7 @@ const Comment = (props) => {
     }, [])
 
     const deleteComment = async() => {
-        await postService.destroyComment(`${props.postId}`, `${props.commentId}`).then(()=> {
+        await commentService.destroyComment(`${props.postId}`, `${props.commentId}`).then(()=> {
             window.location = "/posts"
         })
     }
@@ -74,4 +74,4 @@ const Comment = (props) => {
     )
 }
 
-export default Comment
+export default Comment;

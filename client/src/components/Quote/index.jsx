@@ -1,7 +1,8 @@
-
 import { useEffect, useState } from "react";
 import "./style.css";
 
+// Daily Quote Button
+// Fetches random inspirational quote from a quote API
 export default function Quote() {
 
     const [quote, setQuote] = useState("")
@@ -28,5 +29,4 @@ export default function Quote() {
         </div>
     </div>
     )
-       
 }

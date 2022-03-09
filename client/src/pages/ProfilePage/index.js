@@ -2,22 +2,18 @@ import PostForm from "../../components/PostForm";
 import Post from "../../components/Post";
 import Quote from "../../components/Quote";
 import {Link} from "react-router-dom";
-
 import "./styles.css";
-// import ToggleButton from "../../components/ToggleButton";
 
+// Displays Signed-In User's Profile and Data
 
 export default function ProfilePage (props) {
     
-    // const sign = props.profile.zodiacSign;
-    // const signUrl = `"client/src/assets/"+"${sign}"+".webp"`
-
     return(
         <div className="profilePage">
+
             <div className="profile-section">
                 <img alt={props.profile.zodiacSign}  
                         src={`/signs/${props.profile.zodiacSign}.webp`}/>
-                
                 <div className="profile">
                 <h2>{props.profile.firstName} {props.profile.lastName}</h2>
                     <span>{props.profile.pronouns} </span>
@@ -27,14 +23,16 @@ export default function ProfilePage (props) {
                     <p>{props.profile.bio}</p>
                 </div>
                 <div>
-                    <Link to="/profile/edit"><button className="edit-profile-btn">Edit Profile</button></Link>
+                    <Link to="/profile/edit">
+                        <button className="edit-profile-btn">Edit Profile</button>
+                    </Link>
                 </div>    
                 <div className="quote-section">
                     <Quote />
                 </div>
             </div>
 
-            <div className="post-section">
+            <div className="posts-section">
                 <PostForm user={props.profile._id}/>
                 <div className="postfeed-profilePage">
                     <h3 className="mainProfilePosts">List of my Manifestations</h3>
@@ -57,10 +55,8 @@ export default function ProfilePage (props) {
                             </div>
                         )
                     }).reverse()}
-
-                    </div>
-
                 </div>
             </div>
+        </div>
     )
 }

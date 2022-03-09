@@ -1,6 +1,7 @@
 import * as authService from "../../api/auth.service";
 import "./style.css";
 
+// Logout Button
 const Logout = () => {
 
     const logout = () => {
@@ -16,9 +17,7 @@ const Logout = () => {
                 onClick={logout}
             >Log Out</button>
         </div>
-        
     )
-    
 }
 
 export default Logout;

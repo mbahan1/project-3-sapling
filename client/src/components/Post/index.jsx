@@ -1,15 +1,15 @@
-// Post Component
-import Kudos from "../Kudos";
 import { string } from "prop-types";
 import { array } from "prop-types";
 import { number } from "prop-types";
 import {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
-import * as postService from "../../api/post.service";
-import CommentForm from "../CommentForm";
+import Kudos from "../Kudos";
 import Comment from "../Comment";
+import CommentForm from "../CommentForm";
+import * as postService from "../../api/post.service";
 import "./style.css";
 
+// Main Post Component with all Post functionality (forms and buttons)
 function Post(props) {
 
 	const [author, setAuthor] = useState("");

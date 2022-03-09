@@ -1,12 +1,12 @@
 import {NavLink} from 'react-router-dom';
 import saplingLogoSomeWhite from '../../assets/saplingLogoSomeWhite.png';
-import '../NavBar/style.css';
 import Logout from '../Logout';
 import ThemeButton from '../ThemeButton';
 import PlaySound from '../PlaySound';
+import './style.css';
 
-
-
+// Navigation Bar for top of page. 
+// ( Displays once User is Signed In
 export default function NavBar(props) {
 
     return(

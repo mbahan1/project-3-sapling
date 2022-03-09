@@ -3,6 +3,8 @@ import Post from "../../components/Post";
 import * as postService from "../../api/post.service";
 import "./styles.css";
 
+// Displays Feed of Posts of all Users
+
 const MainFeed = (props) => {
 
 	const [posts, setPosts] = useState([]);
@@ -19,7 +21,6 @@ const MainFeed = (props) => {
 
 	return (
 
- 
 		<div className="mainfeed-page">
 			<h3 className="mainfeedTitle">Manifestations and Good Vibes Only</h3>
 			{posts.map((post) => {
@@ -38,7 +39,6 @@ const MainFeed = (props) => {
 					</div>
 				);
 			})};
-
 		</div>
 	);
 }

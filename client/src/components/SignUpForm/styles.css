@@ -1,8 +1,5 @@
 .signUpFormComponent {
     /* width: 500px; */
-
-
-
     margin: 100px; 
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
     width: 25%;
@@ -37,7 +34,7 @@
 .signUpForm-input {
     font-family: 'Montserrat', sans-serif;  
     font-weight: 400;
-    background-color: #f0e7e0;
+    background-color: #dfd7d1;
     color: #a288c7;
     margin: 5px 0px ;
     height: 30px;
@@ -52,12 +49,20 @@
     font-size: 1rem;
     border-radius: 0.25rem;
     width: 30%;
-    margin-left: 160px;
+    margin-left: 100px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
+.signUpBtn:hover {
+    background-color: #613f91; 
+    color: white;
+}
+
+
+
 .logInLink {
-    margin-right: 35px;
+    margin-right: 80px;
 
 }
 .signUpHeader {
@@ -68,13 +73,14 @@
 }
 
 .signUp-login-btn{
-    font-size: 10px;
+    font-size: 16px;
     letter-spacing: 2px;
     font-weight: 500;
-    background-color: #613f91;
+    background-color: #946ECA; 
+    border-color: #613f91;
     color: #fff;
-    padding: 15px 15px;
-    border-radius: 3%;
+    padding: 10px 10px;
+    border-radius: 9%;
     margin: auto;
     text-align: center;
     display: inline-block !important;
@@ -87,6 +93,18 @@
 }
 
 .signUp-login-btn:hover {
-    background-color: #616e34; 
+    background-color: #613f91; 
     color: white;
-    }
+}
+
+
+.linkToSignUp{
+    color: #ffffff;
+
+}
+
+.message-signup-page{
+    font-size: 12px;
+    padding:5%;
+    color:#ddcaf7
+}

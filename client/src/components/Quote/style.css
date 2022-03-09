@@ -30,4 +30,12 @@
   .quote-btn:hover {
     background-color: #616e34; 
     color: white;
-    }
+}
+
+h2, p {
+  font-family: 'Montserrat', sans-serif; 
+}
+
+h2 {
+  font-weight: 600;
+}

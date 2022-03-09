@@ -13,33 +13,16 @@ import Users from "./components/Users"
 // import ToggleButton from './components/ToggleButton';
 // import ThemeButton from './components/ThemeButton';
 
-// const reducer = (prevState, action) => {
-//     switch(action.type) {
-//         case "setIsLoggedIn" :
-//             return {...prevState, isLoggedIn : action.payload};  
-//         default: 
-//             return prevState;
-//     }     
-// }
-
-// const initialState = {
-//     isLoggedIn : false
-// }
-
 function App() {
 
-    // const [state, dispatch] = useReducer(reducer, initialState);
-    // const {isLoggedIn} = state;
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [profile, setProfile] = useState("");
 
     const userActive = () => {
         if(authService.currentUser()) {
-            // dispatch({type: "isLoggedIn", payload: true})
             setIsLoggedIn(true);
             fetchProfile()
         } else {
-            // dispatch({type: "isLoggedIn", payload: false})
             setIsLoggedIn(false);
         }
     }

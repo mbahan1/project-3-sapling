@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { func } from "prop-types";
 import * as postService from "../../api/post.service";
 import "./style.css";
 

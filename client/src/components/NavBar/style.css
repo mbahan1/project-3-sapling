@@ -5,7 +5,7 @@ body {
 main {
     margin: 16px;
 }
-.loginUserName {}
+/* .loginUserName {} */
 .navbar {
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ main {
     font-weight: bolder;
 }
 .navbar__item:hover {
-   color: #616e34;
+    color: #616e34;
 }
 
 img {
@@ -47,15 +47,11 @@ img {
 .dropBtn {
     font-family: 'Montserrat', sans-serif; 
     font-weight: 200;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding: 16px 16px;
     cursor: pointer;
-    vertical-align: middle;
     font-size: 200%;
     font-weight: bolder;
+    display: inline-block;
 }
 
 .dropdown {
@@ -92,9 +88,8 @@ img {
     font-family: 'Montserrat', sans-serif; 
     font-weight: 400;
     border: none;
-    font-size: 120%;
+    font-size: 80%;
     cursor: pointer;
-    background-color: white;
     margin: auto auto;
 }
 

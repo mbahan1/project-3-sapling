@@ -7,14 +7,12 @@ export default function LoginForm() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [sucessMsg, setSuccessMsg] =useState("");
     
     const handleSubmit = async (e) => {
         e.preventDefault();
         await authService.login(email, password).then(()=> {
             setEmail("")
             setPassword("")
-            setSuccessMsg("Welcome :)")
             document.location = "/"
         })
     }
@@ -49,7 +47,6 @@ export default function LoginForm() {
                 <span>Don't have an account?</span>
                 <Link to="signup"><button className="home-page-signUp-btn">Sign up</button></Link>
             </div>
-            <h3>{sucessMsg}</h3>
         </div>
     )
 }

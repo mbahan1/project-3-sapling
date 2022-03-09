@@ -1,70 +1,67 @@
+.post-container {
+display: flex;
+flex-direction: column ;
+margin: 50px;
+border-radius: 5px;
+background: linear-gradient(
+    to right,
+    #A1B182,
+    #4B2E75  
+); 
+padding: 20px;
+text-align: center;
+}
 
- .post-container {
-    display: flex;
-    flex-direction: column ;
-    margin: 50px;
-    border-radius: 5px;
-    background: linear-gradient(
-      to right,
-      #A1B182,
-      #4B2E75
-      
-  ); 
-    padding: 20px;
-    text-align: center;
-  }
- 
-  .postForm-input {
+.postForm-input {
+font-family: 'Montserrat', sans-serif;  
+font-weight: 600;
+width: 60%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+background-color: beige;
+color: #4B2E75;
+}
 
-    font-family: 'Montserrat', sans-serif;  
-    font-weight: 600;
-      width: 50%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      box-sizing: border-box;
-      background-color: beige;
-      color: #4B2E75;
-  }
-textArea.postForm-textarea {
+.postForm-textarea {
   font-family: 'Montserrat', sans-serif;  
   font-weight: 600;
   height: 100px;
 }
-  .postForm-textarea{
-    width: 50%;
-    color: #535F2D;
-    background-color: beige;
-  }
+
+.postForm-textarea{
+  width: 60%;
+  color: #535F2D;
+  background-color: beige;
+}
   
 
-  .post-Btn {
+.post-Btn {
   
-    font-size: 10px;
-    letter-spacing: 2px;
-    font-weight: 200 !important;
-    background-color: #535F2D;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 3%;
-    margin: max-content;
-    text-align: center;
-    display: inline-block !important;
-    text-decoration: none;
-    border: 0px;
-    width: max-content;
-    cursor: pointer;
-    transition: all 0.3s 0s ease-in-out;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 200 !important;
+  background-color: #535F2D;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3%;
+  margin: max-content;
+  text-align: center;
+  display: inline-block !important;
+  text-decoration: none;
+  border: 0px;
+  width: max-content;
+  cursor: pointer;
+  transition: all 0.3s 0s ease-in-out;
   
 
-  }
-  .post-Btn:hover {
-    background-color: #616e34; 
-    color: white;
-    }
-    
+}
 
-    form.postForm {
-      font-family: 'Montserrat', sans-serif;  
-    font-weight: 600;
-    }
+.post-Btn:hover {
+  background-color: #616e34; 
+  color: white;
+}
+
+.postForm-label {
+  display: block;
+}

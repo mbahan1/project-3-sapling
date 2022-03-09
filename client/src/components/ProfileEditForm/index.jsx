@@ -40,8 +40,6 @@ export default function ProfileEditForm(props) {
         }
     }
 
-
-    // Delete User not working. still in the database.
     const deleteSubmit = () => {
         userService.destroy(`${props.profile._id}`);
         authService.logout();
@@ -141,18 +139,16 @@ export default function ProfileEditForm(props) {
                 </button>
             </form>
 
-<div className="profileEdit-btns">
-            <button className="profileEdit-delete"
+            <div className="profileEdit-btns">
+                <button className="profileEdit-delete"
                     onClick={deleteSubmit}
                 > Delete Account
                 </button>
-            <button className="profileEdit-cancel"
-                onClick={cancelClick}
-            >Cancel
-            </button>
+                <button className="profileEdit-cancel"
+                    onClick={cancelClick}
+                >Cancel
+                </button>
             </div>
-
-
         </div>
     )
 }

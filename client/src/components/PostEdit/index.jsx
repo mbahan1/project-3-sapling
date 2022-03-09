@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import * as postService from "../../api/post.service";
 import "./styles.css";
 
-
 export default function PostEdit(props) {
 
     const {id} =useParams();

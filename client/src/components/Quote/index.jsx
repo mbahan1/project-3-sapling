@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import "./style.css";
 
@@ -19,14 +18,12 @@ export default function Quote() {
     return (
     <div>
         <div>
-        <h3>Daily Quote</h3>
-        <p>{quote}</p>
+            <h2>Daily Quote</h2>
+            <p>{quote}</p>
         </div>
         <div>
-        <button className="quote-btn" onClick={getQuote}>Get New Quote</button>
-
+            <button className="quote-btn" onClick={getQuote}>Get New Quote</button>
         </div>
     </div>
     )
-       
 }

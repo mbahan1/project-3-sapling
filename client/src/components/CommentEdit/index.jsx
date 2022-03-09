@@ -1,5 +1,5 @@
 import {useState} from "react";
-import * as postService from "../../api/post.service";
+import * as commentService from "../../api/comment.service";
 
 const CommentEdit = (props) =>{
 
@@ -7,30 +7,28 @@ const CommentEdit = (props) =>{
 
     const updateComment = async() => {
         let updatedPost = {body: updatedComment}
-        await postService.updateComment(`${props.postId}`, updatedPost, `${props.commentId}`).then((res)=> {
+        await commentService.updateComment(`${props.postId}`, updatedPost, `${props.commentId}`).then((res)=> {
             console.log(res.data)
         })
     }
 
     return (
-    <>
-    <p>Edit Comment</p>
-    <form>
-        <input 
-        onChange={(e)=> setUpdatedComment(e.target.value)}
-        name="body"
-        value={updatedComment}
-        type="text"
-        placeholder={props.body}
-        />
-        <button 
-            className="edit-comment-btn"
-            onClick={updateComment}>Edit Comment</button>
-    </form>
-    </>
-
+    <div>
+        <p>Edit Comment</p>
+        <form>
+            <input 
+            onChange={(e)=> setUpdatedComment(e.target.value)}
+            name="body"
+            value={updatedComment}
+            type="text"
+            placeholder={props.body}
+            />
+            <button 
+                className="edit-comment-btn"
+                onClick={updateComment}>Edit Comment</button>
+        </form>
+    </div>
     )
-
 }
 
 export default CommentEdit;

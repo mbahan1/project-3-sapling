@@ -15,13 +15,6 @@ const index = (req, res) => {
         })
 }
 
-// //Show
-// const show = (req, res) => {
-//     db.Post.findOne(
-//         {_id: req.params.id, "comments._id": req.params.commentid}
-//     ), (err, foundPost)
-// }
-
 //Create
 const create = (req, res) => {
     db.Post.findById(req.params.id, (err, foundPost) => {

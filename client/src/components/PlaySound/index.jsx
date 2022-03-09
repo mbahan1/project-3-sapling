@@ -3,7 +3,6 @@ import Sound from 'react-sound';
 import Music from '../../assets/soft-daydream.mp3';
 import './style.css';
 
-
 const PlaySound = (
     handleSongLoading,
     handleSongPlaying,
@@ -23,7 +22,7 @@ const PlaySound = (
                     onLoading={handleSongLoading}
                     onPlaying={handleSongPlaying}
                     onFinishedPlaying={handleSongFinishedPlaying}
-           />     
+            />     
         </div>
     );
 };

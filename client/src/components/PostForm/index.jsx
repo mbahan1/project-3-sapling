@@ -12,11 +12,9 @@ const PostForm = (props) => {
         let res = await postService.create(newPost).then(() => {
             setTitle("");
             setBody("");
-            console.log(newPost);
             document.location = "/posts"
         });
         
-        //201 = create error
         if(!res ===201) {
             alert(`ERROR! It was code: ${res.status}`);
         }
@@ -26,7 +24,7 @@ const PostForm = (props) => {
         <div >
             <div className="post-container">
             <form className="postForm">
-                <label>Title</label>
+                <label className="postForm-label">Title</label>
                     <input 
                         className="postForm-input"
                         onChange={(e) => setTitle(e.target.value)}
@@ -36,7 +34,7 @@ const PostForm = (props) => {
                         placeholder=""
                     /> <br></br>
 
-                    <label>What do you want to manifest today?</label>
+                    <label className="postForm-label">What do you want to manifest today?</label>
                         <textarea 
                             className="postForm-textarea"
                             onChange={(e) => setBody(e.target.value)}
@@ -44,16 +42,16 @@ const PostForm = (props) => {
                             type="text" name= "body" placeholder="" />                
                 </form>
                 <div >
-                    <button className="post-Btn" onClick={handleSubmit}> Send it out to the world! </button>
+                    <button 
+                        className="post-Btn" 
+                        onClick={handleSubmit}
+                    > Send it out to the world! 
+                    </button>
                 </div>
             </div>
         </div>
     );
 };
-
-PostForm.propTypes = {
-    refreshPosts: func,
-}
 
 
 export default PostForm;

@@ -19,7 +19,6 @@ const MainFeed = (props) => {
 
 	return (
 
- 
 		<div className="mainfeed-page">
 			<h3 className="mainfeedTitle">Manifestations and Good Vibes Only</h3>
 			{posts.map((post) => {
@@ -38,7 +37,6 @@ const MainFeed = (props) => {
 					</div>
 				);
 			})};
-
 		</div>
 	);
 }

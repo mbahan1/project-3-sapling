@@ -20,11 +20,12 @@ export default function Quote() {
     return (
     <div>
         <div>
-            <h2>Daily Quote</h2>
-            <p>{quote}</p>
+        <h3>Words of Advice</h3>
+        <p>{quote}</p>
         </div>
         <div>
-            <button className="quote-btn" onClick={getQuote}>Get New Quote</button>
+        <button className="quote-btn" onClick={getQuote}>Click to Read</button>
+
         </div>
     </div>
     )
